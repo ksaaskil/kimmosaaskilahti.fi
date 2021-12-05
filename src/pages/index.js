@@ -52,8 +52,8 @@ const Links = () => {
         alignItems="center"
         justifyContent={{ base: "center", md: "start" }}
       >
-        <ExternalLink href="https://dev.to/ksaaskil">
-          <Icon alignSelf="center" boxSize={8} viewBox="0 0 132 66">
+        <ExternalLink href="https://dev.to/ksaaskil" backgroundColor="black" px={2}>
+          <Icon alignSelf="center" boxSize={8} viewBox="0 0 132 66" pos="relative" top={-2}>
             <DevToIcon />
           </Icon>
         </ExternalLink>

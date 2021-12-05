@@ -9,8 +9,7 @@ const BookshelfHeader = () => {
   return (
     <Box>
       <Text fontSize="lg">
-        Here are some books that have measurably contributed to my technical and
-        non-technical skills.
+        Here are some of my favorite books that have measurably contributed to my technical and non-technical skills.
       </Text>
     </Box>
   )
@@ -67,6 +66,16 @@ const BookList = ({ books, title }) => {
 export default ({ data }) => {
   const nonTechBooks = [
     {
+      title: "Making of a Manager",
+      author: "Julie Zhuo",
+      cover: "making-of-a-manager",
+    },
+    {
+      title: "Team of Rivals: The Political Genius of Abraham Lincoln",
+      author: "Doris Kearns Goodwin",
+      cover: "team-of-rivals",
+    },
+    {
       title: "How to Win Friends and Influence People",
       author: "Dale Carnegie",
       cover: "how-to-influence",
@@ -76,23 +85,15 @@ export default ({ data }) => {
       author: "Eric Ries",
       cover: "lean-startup",
     },
-    {
+    /*  {
       title: "The Clean Coder",
       author: "Robert C. Martin",
       cover: "clean-coder",
-    },
+    }, */
     {
-      title: "Concise Laws of Human Nature",
-      author: "Robert Greene",
-      cover: "concise-laws",
-    },
-    {
-      title:
-        "The Five Dysfunctions of a Team: Participant Workbook for Team Leaders",
+      title: "The Five Dysfunctions of a Team",
       author: "Patrick Lencioni",
-      cover: "five-dysfunctions-workbook",
-      url:
-        "https://www.amazon.com/Five-Dysfunctions-Team-Participant-Workbook/dp/1118118782",
+      cover: "five-dysfunctions",
     },
   ]
 
@@ -112,6 +113,11 @@ export default ({ data }) => {
       title: "Functional Programming in Scala",
       author: "Paul Chiusano and Rúnar Bjarnason",
       cover: "functional-programming-in-scala",
+    },
+    {
+      title: "Machine Learning Design Patterns",
+      author: "Valliappa Lakshmanan, Sara Robinson, and Michael Munn",
+      cover: "machine-learning-design-patterns",
     },
     {
       title: "Clean Code",

@@ -3,7 +3,7 @@ title: Software R&D in a service company
 published: false
 description: What I've learned during my two years as an R&D developer in a consulting company
 tags: 
-//cover_image: https://direct_url_to_image.jpg
+canonical_url: https://kimmosaaskilahti.fi/blog/2022-02-06-rd-in-service-company/
 ---
 
 I've been part of R&D in a service company for almost two years now. By service company, I mean consulting: we help other companies solve problems. Working in R&D in a service company has some interesting differences to R&D in product companies in which I've worked previously. 

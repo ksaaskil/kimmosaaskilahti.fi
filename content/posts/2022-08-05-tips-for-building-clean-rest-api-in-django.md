@@ -16,7 +16,7 @@ I highly recommend reading [_Tips for Building High-Quality Django Apps at Scale
 
 Let's start from discussing API design. Putting effort into thinking about how the backend interfaces with clients is a key for keeping the codebase maintainable and API operations re-usable across clients.
 
-The recommended background reading for this section is [RESTful API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) by Microsoft. The tips discussed in this section are not specific to Django.
+The recommended background reading for this section is [_RESTful API design_](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) by Microsoft. The tips discussed in this section are not specific to Django.
 
 ### Keep an OpenAPI specification
 
@@ -70,7 +70,7 @@ But we can do better. What would happen if we had thousands of users and needed 
 }
 ```
 
-We have paid heavy price for too strict payload. Always keep extensibility in mind when designing.
+We have paid the price of using too strict payload formats and having to update all clients when migrating to a more flexible format. Always keep extensibility in mind when designing.
 
 Note that this does not apply to request payloads. For example, it's perfectly fine to use request payloads such as 
 
@@ -85,7 +85,13 @@ The backend can easily query for more information if needed. It is also easier t
 
 ### Keep API resources decoupled from database models
 
-### Pagination
+This is so important that I'll explicitly mention the quote from the [best practices document](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) mentioned above:
+
+> Avoid introducing dependencies between the web API and the underlying data sources. For example, if your data is stored in a relational database, the web API doesn't need to expose each table as a collection of resources. In fact, that's probably a poor design. Instead, think of the web API as an abstraction of the database. If necessary, introduce a mapping layer between the database and the web API. That way, client applications are isolated from changes to the underlying database scheme.
+
+For basic API resources such as `User`, you will have a corresponding database table `users`. But when developing, always keep in mind that not all API resources need to expose all four CRUD operations. Not all database models need to be exposed as API resources. Not all API resources correspond to some database table.
+
+Separate the concerns between the API and the database. gives you as an architect a lot of flexibility in both how you design your database and what resources you expose to the outside world.
 
 ## Structuring code
 

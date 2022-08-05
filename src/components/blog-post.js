@@ -68,9 +68,7 @@ const components = {
       {props.children}
     </Alert>
   ),
-  inlineCode: props => (
-    <Code bg="rgb(40, 42, 54)" color="#8BE9FD" fontSize="inherit" {...props} />
-  ),
+  inlineCode: props => <Code color="#009090	" fontSize="inherit" {...props} />,
   hr: props => <Divider borderColor="gray.100" my={6} {...props} />,
   a: props => <ChakraUILink color="blue.500" {...props} />,
   img: props => <Image {...props} rounded="sm" />,

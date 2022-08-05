@@ -6,6 +6,8 @@ tags:
 canonical_url: https://kimmosaaskilahti.fi/blog/2022-08-05-tips-for-building-clean-rest-api-in-django/
 ---
 
+> This article is work in progress  🚧
+
 Some two years ago I started developing a software application for training data annotation at Silo AI. The heart application of the application is a REST API built in [Django](https://www.djangoproject.com/). The API serves as the backend for a Vue front-end and Python SDK.
 
 Before starting this project, I did not have any experience of using Django. In this post, I'd like to share some of the lessons learned and tips for creating a clean REST API in Django.
@@ -101,10 +103,11 @@ Separate the concerns between the API and the database. gives you as an architec
 
 ### Repositories
 
-### Queries and serialization need to be close
-
 ## Testing
 
+### Test views for maximum coverage
+
+### Adopt test-driven development
 
 ## Frequently asked questions
 

@@ -110,3 +110,10 @@ Separate the concerns between the API and the database. gives you as an architec
 
 ### Why not use Django REST framework?
 
+[Django REST framework](https://www.django-rest-framework.org/) is a great toolkit for building Web APIs. It is hugely popular and simplifies building REST APIs in Django, offering tooling for model serialization, registering routes and even adding support for authentication. In future projects, I would consider using it.
+
+The main reason for not using the framework was to reduce the learning curve for me and other developers. Django itself is a huge framework with a lot to learn, and adopting another framework on top of this seemed like a risk.
+
+We also wanted to keep maximum flexibility. We wanted to be able to customize how to implement features such as user authentication, role-based access control, and how to serve  big data sets. Django REST framework probably can handle all this, but it seemed easier for us to build such custom features directly on top of vanilla Django.
+
+Finally, it seemed that Django REST framework could encourage some bad practices such as exposing database models directly as API resources. As mentioned in the beginning of the article, we wanted to avoid falling into the trap of too tightly coupling data models to API resources.

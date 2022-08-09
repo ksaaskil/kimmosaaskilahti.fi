@@ -93,7 +93,7 @@ This is so important that I'll explicitly mention the quote from the [best pract
 
 For basic API resources such as `User`, you will have a corresponding database table `users`. But when developing, always keep in mind that not all API resources need to expose all four CRUD operations. Not all database models need to be exposed as API resources. Not all API resources correspond to some database table.
 
-Separate the concerns between the API and the database. gives you as an architect a lot of flexibility in both how you design your database and what resources you expose to the outside world.
+Separate the concerns between the API and the database. This gives you as an architect a lot of flexibility in both how you design your database and what resources you expose to the outside world.
 
 ## Structuring code
 

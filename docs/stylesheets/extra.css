@@ -9,11 +9,19 @@
     src: url('../fonts/Lexend_Deca/LexendDeca-Regular.ttf') format('truetype');
 } */
 
+/**
+Lush
+Embers: #b82601
+Ink: #062F4F
+Posy: #813772
+Black: #000000
+**/
+
 :root>* {
-    --md-primary-fg-color: #ffffff;
+    --md-primary-fg-color: #062F4F;
     --md-primary-fg-color--light: #dbe5f5;
     --md-primary-fg-color--dark: #90030C;
-    --md-primary-bg-color: #0e0b16;
+    --md-primary-bg-color: #ffffff;
     --md-primary-soft-green: #c8e3dd;
     --md-primary-baby-blue: #dbe5f5;
     --md-primary-grey: #989db6;
@@ -21,7 +29,7 @@
     --md-primary-yellow: #f4d78d;
     --md-primary-bright-green: #12b597;
     --md-primary-bright-blue: #2763d6;
-    --md-accent-fg-color: #a239ca;
+    --md-accent-fg-color: #b82601;
     /* Links */
     --md-typeset-a-color: var(--md-primary-bright-blue);
     /* Text font */

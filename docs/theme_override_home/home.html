@@ -51,9 +51,9 @@
     }
 
     .tx-hero .md-button--primary {
-        background-color: var(--md-primary-bg-color);
+        background-color: var(--md-accent-fg-color);
         color: #ffffff;
-        border-color: var(--md-primary-bg-color)
+        border-color: var(--md-accent-fg-color)
     }
 
     .tx-hero .md-button:focus,
@@ -260,13 +260,17 @@
     .md-footer-social {
         padding-top: 20px;
     }
+
+    .invert {
+        filter: invert(100%);
+    }
 </style>
 
 <section class="tx-container">
     <div class="md-grid md-typeset">
         <div class="tx-hero">
             <div class="tx-hero__image">
-                <img src="assets/icon-192.png" draggable="false">
+                <img src="assets/icon-192.png" draggable="false" class="invert">
             </div>
             <div class="tx-hero__content">
                 <h1>Kimmo Sääskilahti</h1>

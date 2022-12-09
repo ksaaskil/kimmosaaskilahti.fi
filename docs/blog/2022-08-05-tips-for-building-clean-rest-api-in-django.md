@@ -6,19 +6,15 @@ tags:
 canonical_url: https://kimmosaaskilahti.fi/blog/2022-08-05-tips-for-building-clean-rest-api-in-django/
 ---
 
-!!! info
+Two and a half years ago I started developing a software application for creating training data for ML applications. The heart application of this annotation tool is a REST API built with [Django](https://www.djangoproject.com/). The API serves as the backend for a Vue front-end and a Python SDK.
 
-    This article is work in progress  🚧
-
-Some two years ago I started developing a software application for training data annotation at Silo AI. The heart application of the application is a REST API built in [Django](https://www.djangoproject.com/). The API serves as the backend for a Vue front-end and Python SDK.
-
-Before starting this project, I did not have any experience of using Django. In this post, I'd like to share some of the lessons learned and tips for creating a clean REST API in Django.
+Before starting the project, I did not have any experience of using Django. In this post, I'd like to share some of the lessons learned from creating and maintaining a REST API built with Django.
 
 I highly recommend reading [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5) by DoorDash. Many of the tips below are inspired by the article and have proved to be invaluable for keeping the codebase maintainable.
 
-## API design
+## Designing the API
 
-Let's start from discussing API design. Putting effort into thinking about how the backend interfaces with clients is a key for keeping the codebase maintainable and API operations re-usable across clients.
+Putting effort into thinking about the interface between the backend and clients is a key for keeping the codebase maintainable and API operations re-usable across clients.
 
 The recommended background reading for this section is [_RESTful API design_](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) by Microsoft. The tips discussed in this section are not specific to Django.
 
@@ -273,6 +269,10 @@ In this example, the view function calls the function `repositories.Organization
 
 ## Testing
 
+!!! warning
+
+    This section is to be done.
+
 ### Test views for maximum coverage
 
 ### Adopt test-driven development
@@ -288,3 +288,7 @@ The main reason for not using the framework was to reduce the learning curve for
 We also wanted to keep maximum flexibility. We wanted to be able to customize how to implement features such as user authentication, role-based access control, and how to serve  big data sets. Django REST framework probably can handle all this, but it seemed easier for us to build such custom features directly on top of vanilla Django.
 
 Finally, it seemed that Django REST framework could encourage some bad practices such as exposing database models directly as API resources. As mentioned in the beginning of the article, we wanted to avoid falling into the trap of too tightly coupling data models to API resources.
+
+### Why does it sound so similar to domain-driven design?
+
+That's right, concepts like services and repositories come from domain-driven design. I'm a big fan of the [Architecture Patterns With Python](https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/) book. The ideas of domain-driven design make a lot of sense but I have struggled to learn how to put them to real practical use without over-complicating things. The ideas mentioned here are my poor attempt to adapt ideas from the book to "practical Django".

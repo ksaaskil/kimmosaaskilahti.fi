@@ -249,19 +249,7 @@ def serialize_dataclass(val: typing.Any):
     return asdict(val)
 ```
 
-Putting it together, here's an example of a view used for listing user's organizations:
-
-```python
-class MeOrganizations(LoginRequiredMixin, View):
-    def get(self, request):
-        # List of `transports.Organization` objects
-        organizations = repositories.Organizations.get_organizations_for_user(
-            user_id=request.user.id
-        )
-        return JsonResponse({"organizations": [serialize_dataclass(org) for org in organizations]})
-```
-
-In this example, the view function calls the function `repositories.Organizations.get_organizations_for_user` that returns a list of objects of type `transports.Organization]`. We then serialize them and return the response to the user encoded as JSON. To learn about repositories, keep reading.
+Before we can write a view returning the list of organizations, we need to learn about _repositories_.
 
 !!! tip
 
@@ -304,6 +292,24 @@ class Organizations:
 The static method `get_organizations_for_user` takes `user_id` as input argument and returns a list of `transports.CompactOrganization` objects. The helper method `_make_membership_queryset` sets up the [Django queryset](https://docs.djangoproject.com/en/4.1/topics/db/queries/#retrieving-objects) and uses [`select_related()`](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#django.db.models.query.QuerySet.select_related) to follow the foreign key `organization` in the query. Optimizations like `select_related` and [`prefetch_related`](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#prefetch-related) are very important for performance, to minimize the number of database queries. Django is very good at hiding away complexity such as querying the database, so it's very important that the code for building queries and the code for accessing properties are as closely located as possible. In the case above, it's easy to see that accessing the `organization` attribute of the membership object does not incur any performance penalty from extra database queries. If the "serialization" function was located in some other module, it would be hard to keep the queries and attribute access in sync.
 
 Finally, the helper method `_make_transport` converts the Django models to transport objects. In this simple case, this method does not need to access any nested attributes of the model object. But if you need to access a nested attribute such as `obj.created_by.email`, ensure that the corresponding columns are already fetched as part of the original query.
+
+### Putting it together
+
+Here's an example of a view used for listing user's organizations:
+
+```python
+class MeOrganizations(LoginRequiredMixin, View):
+    def get(self, request):
+        # List of `transports.Organization` objects
+        organizations = repositories.Organizations.get_organizations_for_user(
+            user_id=request.user.id
+        )
+        return JsonResponse({"organizations": [serialize_dataclass(org) for org in organizations]})
+```
+
+In this example, the view function calls the function `repositories.Organizations.get_organizations_for_user` that returns a list of objects of type `transports.Organization]`. We then serialize them and return the response to the user encoded as JSON.
+
+Note how the view never needs to interact with any Django models. We have decoupled views from the data layer by introducing the transport layer and repositories. For a view responsible for creating, updating or deleting Django models, we would use the service layer to ensure separate concerns.
 
 <!--
 ## Testing

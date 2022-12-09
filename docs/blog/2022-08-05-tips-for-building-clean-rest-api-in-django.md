@@ -6,7 +6,9 @@ tags:
 canonical_url: https://kimmosaaskilahti.fi/blog/2022-08-05-tips-for-building-clean-rest-api-in-django/
 ---
 
-> This article is work in progress  🚧
+!!! info
+
+    This article is work in progress  🚧
 
 Some two years ago I started developing a software application for training data annotation at Silo AI. The heart application of the application is a REST API built in [Django](https://www.djangoproject.com/). The API serves as the backend for a Vue front-end and Python SDK.
 
@@ -95,17 +97,19 @@ For basic API resources such as `User`, you will have a corresponding database t
 
 Separate the concerns between the API and the database. This gives you as an architect a lot of flexibility in both how you design your database and what resources you expose to the outside world.
 
-## Structuring code
+## Defining the data and service layer
 
-### Models
+### Keep your models lean
 
 When I first started developing the annotation tool, my only source of best practices for Django was [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5). The article recommended to avoid "fat models" that include business logic inside model methods. We have followed this approach and, based on my experience, it was a very good decision.
 
-Getting the data models right is a difficult task. There are lots of them and they may be coupled in complex ways. You can keep the models much more readable by keeping the number of model methods as small as possible. Most importantly, keep business logic out of the models.
+Getting the data layer right is a difficult task. There are lots of models in the data layer and the models may be coupled in complex ways. You can keep your model code much more readable by keeping the number of model methods to the minimum. Do not mix the data layer with the service layer (discussed below).
 
 As a practical example, here is a slightly modified example from our codebase, the Django model for `AnnotationGuideline`:
 
 ```python
+# models.py
+
 class AnnotationGuideline(ModelBase):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     project = models.ForeignKey(
@@ -131,13 +135,15 @@ Every model inherits from a custom abstract `ModelBase` model that adds fields s
 
 The model includes two foreign keys, representing the project and annotation UI that the annotation guideline belongs to. We also keep an incremental `version` field to keep track of versions. This model also implements its own `save()` method to customize the saving logic. In this case, the `save()` function ensures that version number is always incremented by one (code not shown).
 
-### Services
+### Add a separate layer for business logic
 
-If the business logic does not belong to models, where should it go? I recommend creating a separate module named "services" or "control".
+If the business logic does not belong to models, where should it go? I recommend creating a separate module for "services". Under services, add all functions that you use to create, update or delete models in your data layer.
 
-Here's an example from our `services.py`, a function used for creating new organizations:
+Here's an example function used for creating new organizations:
 
 ```python
+# services.py
+
 def create_organization(creating_user_email: str, name: str):
     """Create new organization. Add the creating user to the organization.
 
@@ -156,7 +162,7 @@ def create_organization(creating_user_email: str, name: str):
     new_organization = Organization.objects.create(name=name, created_by=user)
 
     add_member_to_organization(added_by=None, user=user, organization=new_organization)
-    # Add admin role to user in organization
+
     add_role_binding(
         user=user,
         created_by=user,
@@ -167,9 +173,101 @@ def create_organization(creating_user_email: str, name: str):
     return new_organization
 ```
 
-The function takes the e-mail of the creating user and organization name as input arguments. The function includes business logic such as (1) checking that the user can create organizations, (2) creating the organization, (3) adding the user as a member to the organization, and (4) making the user an administrator in the organization.
+The function takes two input arguments: the e-mail of the creating user and organization name. The function then takes care of the full business logic, including: (1) checking that the user can create organizations, (2) creating the organization, (3) adding the user as a member to the organization, and (4) making the user an administrator in the organization.
 
-### Transports
+We can use this function whenever we want to create new organizations. Functions like this are usually called from Django HTTP views, but they might also be called from unit tests (to set up tests, for example) or from non-HTTP "views" like Kafka consumers. 
+
+Notice how the services pattern separates the concerns. If the business logic changes, we usually do not need to modify the data layer. The drawback is that it might sometimes be difficult to track where models are being managed, because these functions are outside of the models. 
+
+This pattern also helps us mentally avoid the coupling between the data layer and the user-facing entities exposed by the REST API. If we added all business logic in model methods, that would encourage a mental pattern where modifications in API entities would be mapped 1-to-1 to modifications in the data layer.
+
+This pattern is also mentioned in the [Tips for Building High-Quality Django Apps at Scale](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5) article under the section "_Avoid using the ORM as the main interface to your data_".
+
+## Writing views
+
+In [Django views](https://docs.djangoproject.com/en/4.1/topics/http/views/), we respond to HTTP requests with HTTP responses. The request has a method like `POST` and targets a specific route such as `/organizations`. The request contains additional parameters either in a payload (typically encoded as JSON) or as query parameters. As response, the API sends a payload typically corresponding to some entity.
+
+Let's say that the user wants to query all organizations that they belong to. This could be implemented by operation `GET /me/organizations`. The response could be a list of organizations such as
+
+```json
+{ 
+    "organizations": [
+        {
+            "id": "f360a209-c9ac-43d3-9b9c-ad1a3cb5bd0b",
+            "name": "Mega Corp."
+        },
+        {
+            "id": "e4aa065d-9b6a-450c-ac6d-936e04f25448",
+            "name": "Acme Corp."
+        }
+    ]
+}
+```
+
+In this example, our view would first query the organizations to which the user belongs. These would be represented by Django models of type `Organization`. Then we need to _serialize_ the model to convert each of them to objects such as above that include fields `id` and `name`. I call these objects "transport" models, because they represent the models transported between the systems such as backend and frontend.
+
+Note that the data model and the client-facing transport model may be closely related, but still very different. The data model could have fields such as `created_by` and `created_at` that are either never exposed to clients or are only returned in specific queries. The transport models returned from the API might have fields not present in the model directly, such as the number of members in the organization. How do we do the conversion from the list of Django models to such "transport" objects? My recommendation is to create modules for repositories and transports.
+
+### Create a separate layer for transport objects
+
+I recommend defining the transport models in their own module. Every model returned from the API then has a corresponding definition in this transport layer.
+
+For the example above, we would add the following transport:
+
+```python
+# transports.py
+
+@dataclass(frozen=True)
+class CompactOrganization:
+    id: str
+    name: str
+```
+
+This model would correspond to the "compact" organization returned as part of list queries such as above.
+
+!!! info
+
+    To implement a query asking for more detailed organization information about an organization (most likely implemented in operation such as `GET /organizations/:organizationId`), we would add a separate model `Organization` that might include fields such as `created_by` and `created_at`:
+
+    ```python
+    # transports.py
+
+    @dataclass(frozen=True)
+    class Organization:
+        id: str
+        name: str
+        created_by: CompactUser
+        created_at: datetime
+    ```
+
+Dataclasses are great, because they work nicely together with Python typing and are very simple to serialize to JSON. To serialize, we would create a function `serialize_dataclass` like this:
+
+```python
+from dataclasses import asdict, is-dataclass
+
+def serialize_dataclass(val: typing.Any):
+    if not is_dataclass(val) or isinstance(val, type):
+        raise ValidationError(f"Not a dataclass, got type: {type(val)}")
+    return asdict(val)
+```
+
+Putting it together, here's an example of a view used for listing user's organizations:
+
+```python
+class MeOrganizations(LoginRequiredMixin, View):
+    def get(self, request):
+        # List of `transports.Organization` objects
+        organizations = repositories.Organizations.get_organizations_for_user(
+            user=request.user
+        )
+        return JsonResponse({"organizations": [serialize_dataclass(org) for org in organizations]})
+```
+
+In this example, the view function calls the function `repositories.Organizations.get_organizations_for_user` that returns a list of objects of type `transports.Organization]`. We then serialize them and return the response to the user encoded as JSON. To learn about repositories, keep reading.
+
+!!! tip
+
+    [FastAPI](https://fastapi.tiangolo.com/) makes it very natural to create transport models using `pydantic`. See [tutorial](https://fastapi.tiangolo.com/tutorial/body/#create-your-data-model).
 
 ### Repositories
 

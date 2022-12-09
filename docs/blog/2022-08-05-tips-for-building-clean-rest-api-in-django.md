@@ -91,15 +91,85 @@ This is so important that I'll explicitly mention the quote from the [best pract
 
 > Avoid introducing dependencies between the web API and the underlying data sources. For example, if your data is stored in a relational database, the web API doesn't need to expose each table as a collection of resources. In fact, that's probably a poor design. Instead, think of the web API as an abstraction of the database. If necessary, introduce a mapping layer between the database and the web API. That way, client applications are isolated from changes to the underlying database scheme.
 
-For basic API resources such as `User`, you will have a corresponding database table `users`. But when developing, always keep in mind that not all API resources need to expose all four CRUD operations. Not all database models need to be exposed as API resources. Not all API resources correspond to some database table.
+For basic API resources such as `User`, you will have a corresponding database table `users` and Django model `User`. But keep in mind that not all API resources need to expose all four CRUD operations. Not all database models need to be exposed as API resources. Not all API resources correspond to some database table.
 
 Separate the concerns between the API and the database. This gives you as an architect a lot of flexibility in both how you design your database and what resources you expose to the outside world.
 
 ## Structuring code
 
-### Transports
+### Models
+
+When I first started developing the annotation tool, my only source of best practices for Django was [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5). The article recommended to avoid "fat models" that include business logic inside model methods. We have followed this approach and, based on my experience, it was a very good decision.
+
+Getting the data models right is a difficult task. There are lots of them and they may be coupled in complex ways. You can keep the models much more readable by keeping the number of model methods as small as possible. Most importantly, keep business logic out of the models.
+
+As a practical example, here is a slightly modified example from our codebase, the Django model for `AnnotationGuideline`:
+
+```python
+class AnnotationGuideline(ModelBase):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    project = models.ForeignKey(
+        Project, on_delete=models.SET_NULL, null=True, blank=False
+    )
+    version = models.PositiveIntegerField(null=False, blank=False)
+    ui = models.ForeignKey(
+        AnnotationUI, on_delete=models.SET_NULL, null=True, blank=False
+    )
+    text = models.CharField(max_length=1024, null=False, blank=True)
+
+    @transaction.atomic
+    def save(self, *args, **kwargs):
+        # Custom save logic such as validation
+        ...
+
+    class Meta:
+        db_table = "annotation_guidelines"
+        indexes = [...]
+```
+
+Every model inherits from a custom abstract `ModelBase` model that adds fields such as `created_at` and `updated_at`. Models also include `id` field used as primary key. Using UUIDs for primary keys has worked very well for us.
+
+The model includes two foreign keys, representing the project and annotation UI that the annotation guideline belongs to. We also keep an incremental `version` field to keep track of versions. This model also implements its own `save()` method to customize the saving logic. In this case, the `save()` function ensures that version number is always incremented by one (code not shown).
 
 ### Services
+
+If the business logic does not belong to models, where should it go? I recommend creating a separate module named "services" or "control".
+
+Here's an example from our `services.py`, a function used for creating new organizations:
+
+```python
+def create_organization(creating_user_email: str, name: str):
+    """Create new organization. Add the creating user to the organization.
+
+    Args:
+        name (str): Organization name
+
+    Returns:
+        Organization: Created organization
+    """
+
+    if not can_create_organization(user_email=creating_user_email):
+        logger.warn(f"User {creating_user_email} prevented from creating organization")
+        raise Forbidden()
+
+    user = get_user(email=creating_user_email)
+    new_organization = Organization.objects.create(name=name, created_by=user)
+
+    add_member_to_organization(added_by=None, user=user, organization=new_organization)
+    # Add admin role to user in organization
+    add_role_binding(
+        user=user,
+        created_by=user,
+        target_obj=new_organization,
+        organization=new_organization,
+        role=roles.Admin,
+    )
+    return new_organization
+```
+
+The function takes the e-mail of the creating user and organization name as input arguments. The function includes business logic such as (1) checking that the user can create organizations, (2) creating the organization, (3) adding the user as a member to the organization, and (4) making the user an administrator in the organization.
+
+### Transports
 
 ### Repositories
 

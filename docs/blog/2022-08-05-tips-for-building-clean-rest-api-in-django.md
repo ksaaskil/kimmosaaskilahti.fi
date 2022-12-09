@@ -12,13 +12,17 @@ Before starting the project, I did not have any experience of using Django. In t
 
 I highly recommend reading [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5) by DoorDash. Many of the tips below are inspired by the article and have proved to be invaluable for keeping the codebase maintainable.
 
+!!! info "Additional information"
+
+    If you're familiar with [domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design), some of the concepts below like services and repositories will sound familiar. This is no coincidence, because I'm a big fan of the book [_Architecture Patterns With Python_](https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/). However, the terms used here are not to directly related to domain-driven design. For example, the "service layer" mentioned below is a mix of the "service layer" and "domain services" discussed in the book. Similarly, the concepts of repositories are related but used a bit differently here.
+
 ## Designing the API
 
 Putting effort into thinking about the interface between the backend and clients is a key for keeping the codebase maintainable and API operations re-usable across clients.
 
 The recommended background reading for this section is [_RESTful API design_](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) by Microsoft. The tips discussed in this section are not specific to Django.
 
-### Keep an OpenAPI specification
+### Document your API with OpenAPI
 
 Unless you're creating a very small API, you need to document your API. The industry standard is to use [OpenAPI specification](https://swagger.io/specification/), formerly known as Swagger.
 
@@ -70,7 +74,7 @@ But we can do better. What would happen if we had thousands of users and needed 
 }
 ```
 
-We have paid the price of using too strict payload formats and having to update all clients when migrating to a more flexible format. Always keep extensibility in mind when designing.
+I have paid the price of using too strict payload formats before, having to update all clients when migrating to a more flexible format. Always keep extensibility in mind when designing.
 
 Note that this does not apply to request payloads. For example, it's perfectly fine to use request payloads such as 
 
@@ -87,7 +91,7 @@ The backend can easily query for more information if needed. It is also easier t
 
 This is so important that I'll explicitly mention the quote from the [best practices document](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) mentioned above:
 
-> Avoid introducing dependencies between the web API and the underlying data sources. For example, if your data is stored in a relational database, the web API doesn't need to expose each table as a collection of resources. In fact, that's probably a poor design. Instead, think of the web API as an abstraction of the database. If necessary, introduce a mapping layer between the database and the web API. That way, client applications are isolated from changes to the underlying database scheme.
+> "_Avoid introducing dependencies between the web API and the underlying data sources. For example, if your data is stored in a relational database, the web API doesn't need to expose each table as a collection of resources. In fact, that's probably a poor design. Instead, think of the web API as an abstraction of the database. If necessary, introduce a mapping layer between the database and the web API. That way, client applications are isolated from changes to the underlying database scheme._"
 
 For basic API resources such as `User`, you will have a corresponding database table `users` and Django model `User`. But keep in mind that not all API resources need to expose all four CRUD operations. Not all database models need to be exposed as API resources. Not all API resources correspond to some database table.
 
@@ -135,20 +139,16 @@ The model includes two foreign keys, representing the project and annotation UI 
 
 If the business logic does not belong to models, where should it go? I recommend creating a separate module for "services". Under services, add all functions that you use to create, update or delete models in your data layer.
 
+!!! info "Additional information"
+
+    The pattern mentioned in the [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5) article under the section "_Avoid using the ORM as the main interface to your data_" is closely related.
+
 Here's an example function used for creating new organizations:
 
 ```python
 # services.py
 
 def create_organization(creating_user_email: str, name: str):
-    """Create new organization. Add the creating user to the organization.
-
-    Args:
-        name (str): Organization name
-
-    Returns:
-        Organization: Created organization
-    """
 
     if not can_create_organization(user_email=creating_user_email):
         logger.warn(f"User {creating_user_email} prevented from creating organization")
@@ -177,7 +177,9 @@ Notice how the services pattern separates the concerns. If the business logic ch
 
 This pattern also helps us mentally avoid the coupling between the data layer and the user-facing entities exposed by the REST API. If we added all business logic in model methods, that would encourage a mental pattern where modifications in API entities would be mapped 1-to-1 to modifications in the data layer.
 
-This pattern is also mentioned in the [Tips for Building High-Quality Django Apps at Scale](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5) article under the section "_Avoid using the ORM as the main interface to your data_".
+!!! info "Additional information"
+
+    The service layer introduced in the book [_Architecture Patterns With Python_](https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/) is defined as the layer that _drives_ the application by running a bunch of simple steps like getting data, updating the domain model and persisting the changes. The actual business logic is contained in _domain services_. In our case, we do not have separate domain models containing business logic, so the service layer is responsible for both the "mundane tasks" and business logic.
 
 ## Writing views
 
@@ -221,7 +223,7 @@ class CompactOrganization:
 
 This model would correspond to the "compact" organization returned as part of list queries such as above.
 
-!!! info
+!!! info "Additional information"
 
     To implement a query asking for more detailed organization information about an organization (most likely implemented in operation such as `GET /organizations/:organizationId`), we would add a separate model `Organization` that might include fields such as `created_by` and `created_at`:
 
@@ -254,7 +256,7 @@ class MeOrganizations(LoginRequiredMixin, View):
     def get(self, request):
         # List of `transports.Organization` objects
         organizations = repositories.Organizations.get_organizations_for_user(
-            user=request.user
+            user_id=request.user.id
         )
         return JsonResponse({"organizations": [serialize_dataclass(org) for org in organizations]})
 ```
@@ -263,10 +265,47 @@ In this example, the view function calls the function `repositories.Organization
 
 !!! tip
 
-    [FastAPI](https://fastapi.tiangolo.com/) makes it very natural to create transport models using `pydantic`. See [tutorial](https://fastapi.tiangolo.com/tutorial/body/#create-your-data-model).
+    [FastAPI](https://fastapi.tiangolo.com/) makes it very natural to create transport models using [`pydantic`](https://docs.pydantic.dev/). See the [tutorial](https://fastapi.tiangolo.com/tutorial/body/#create-your-data-model).
 
 ### Repositories
 
+In domain-driven design, repositories are an abstraction over data storage, allowing one to decouple the domain model layer from the storage layer. This way, we can keep our models independent of implementation details (like the database), similarly to the [hexagonal architecture](https://netflixtechblog.com/ready-for-changes-with-hexagonal-architecture-b315ec967749). It also makes the system more testable by hiding away the complexity of interacting with a database.
+
+In our case, we want to abstract away the complexities of the underlying data layer from our views. For example, a view responsible for fetching the list of organizations should not need to know whether we're reading them from Django or from some other source like a NoSQL database. The view should only interact with transport objects. We therefore introduce repositories as an abstraction layer for getting data.
+
+As an example, here's a repository for `Organization` objects and a static method for fetching the list of organizations by user:
+
+```python
+# repositories.py
+
+class Organizations:
+    @staticmethod
+    def _make_membership_queryset() -> QuerySet[models.OrganizationMembership]:
+        return models.OrganizationMembership.objects.select_related(
+            "organization"
+        )
+
+    @staticmethod
+    def _make_transport(obj: models.Organization):
+        return transports.CompactOrganization(
+            id=obj.id,
+            name=obj.name
+        )
+
+    @staticmethod
+    def get_organizations_for_user(
+        user_id: uuid.UUID
+    ) -> typing.Sequence[transports.CompactOrganization]:
+        queryset = Organizations._make_membership_queryset().filter(user_id=user_id)
+        organizations = (obj.organization for obj in queryset)
+        return [Organizations._make_transport(org) for org in organizations]
+```
+
+The static method `get_organizations_for_user` takes `user_id` as input argument and returns a list of `transports.CompactOrganization` objects. The helper method `_make_membership_queryset` sets up the [Django queryset](https://docs.djangoproject.com/en/4.1/topics/db/queries/#retrieving-objects) and uses [`select_related()`](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#django.db.models.query.QuerySet.select_related) to follow the foreign key `organization` in the query. Optimizations like `select_related` and [`prefetch_related`](https://docs.djangoproject.com/en/4.1/ref/models/querysets/#prefetch-related) are very important for performance, to minimize the number of database queries. Django is very good at hiding away complexity such as querying the database, so it's very important that the code for building queries and the code for accessing properties are as closely located as possible. In the case above, it's easy to see that accessing the `organization` attribute of the membership object does not incur any performance penalty from extra database queries. If the "serialization" function was located in some other module, it would be hard to keep the queries and attribute access in sync.
+
+Finally, the helper method `_make_transport` converts the Django models to transport objects. In this simple case, this method does not need to access any nested attributes of the model object. But if you need to access a nested attribute such as `obj.created_by.email`, ensure that the corresponding columns are already fetched as part of the original query.
+
+<!--
 ## Testing
 
 !!! warning
@@ -276,6 +315,7 @@ In this example, the view function calls the function `repositories.Organization
 ### Test views for maximum coverage
 
 ### Adopt test-driven development
+-->
 
 ## Frequently asked questions
 
@@ -288,7 +328,3 @@ The main reason for not using the framework was to reduce the learning curve for
 We also wanted to keep maximum flexibility. We wanted to be able to customize how to implement features such as user authentication, role-based access control, and how to serve  big data sets. Django REST framework probably can handle all this, but it seemed easier for us to build such custom features directly on top of vanilla Django.
 
 Finally, it seemed that Django REST framework could encourage some bad practices such as exposing database models directly as API resources. As mentioned in the beginning of the article, we wanted to avoid falling into the trap of too tightly coupling data models to API resources.
-
-### Why does it sound so similar to domain-driven design?
-
-That's right, concepts like services and repositories come from domain-driven design. I'm a big fan of the [Architecture Patterns With Python](https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/) book. The ideas of domain-driven design make a lot of sense but I have struggled to learn how to put them to real practical use without over-complicating things. The ideas mentioned here are my poor attempt to adapt ideas from the book to "practical Django".

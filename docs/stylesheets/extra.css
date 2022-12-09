@@ -1,0 +1,46 @@
+/* @font-face {
+    font-family: 'WorkSans';
+    src: url('../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url('../fonts/Lexend_Deca/LexendDeca-Regular.ttf') format('truetype');
+} */
+
+:root>* {
+    --md-primary-fg-color: #ffffff;
+    --md-primary-fg-color--light: #dbe5f5;
+    --md-primary-fg-color--dark: #90030C;
+    --md-primary-bg-color: #000000;
+    --md-primary-soft-green: #c8e3dd;
+    --md-primary-baby-blue: #dbe5f5;
+    --md-primary-grey: #989db6;
+    --md-primary-rose: #f3d0c7;
+    --md-primary-yellow: #f4d78d;
+    --md-primary-bright-green: #12b597;
+    --md-primary-bright-blue: #2763d6;
+    /* Links */
+    --md-typeset-a-color: var(--md-primary-bright-blue);
+    /* Text font */
+    --md-text-font: "WorkSans";
+}
+
+/* a.md-button.md-button--primary {
+    background-color: var(--md-primary-bright-blue);
+    border-color: var(--md-accent-fg-color);
+    color: #ffffff;
+}
+
+a.md-button.md-button--primary:hover {
+    background-color: var(--md-primary-bright-green);
+    color: #000000;
+}
+
+a.md-button.md-button:hover {
+    color: #000000;
+} */
+
+.md-sidebar--secondary {
+    display: none;
+}

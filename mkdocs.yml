@@ -18,6 +18,12 @@ nav:
       - Home: index.md
   - Blog:
       - Tips for building clean REST API in Django: blog/2022-08-05-tips-for-building-clean-rest-api-in-django.md
+      - How to lead an engineering team at Google: blog/2021-09-05-team-lead-at-google.md
+      - Notes of Clean Architecture: blog/2021-08-04-notes-of-clean-architecture.md
+      - Custom user authentication in Django, with tests: blog/2021-04-18-django-custom-authentication.md
+      - Creating Django REST API with custom user model and tests: blog/2021-04-02-django-custom-user.md
+      - How to process CPU-intensive tasks from asynchronous stream: blog/2021-01-09-multiprocessing-asyncio.md
+      - How to speed up I/O-intensive tasks with multithreading and asyncio: blog/2021-01-03-asyncio-workers.md
       - Using fp-ts for HTTP requests and validation: blog/2019-08-29-fp-ts.md
 markdown_extensions:
   - pymdownx.highlight:

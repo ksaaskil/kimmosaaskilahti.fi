@@ -1,8 +1,9 @@
-/* @font-face {
+@font-face {
     font-family: 'WorkSans';
     src: url('../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf') format('truetype');
 }
 
+/*
 @font-face {
     font-family: 'LexendDeca';
     src: url('../fonts/Lexend_Deca/LexendDeca-Regular.ttf') format('truetype');
@@ -12,7 +13,7 @@
     --md-primary-fg-color: #ffffff;
     --md-primary-fg-color--light: #dbe5f5;
     --md-primary-fg-color--dark: #90030C;
-    --md-primary-bg-color: #000000;
+    --md-primary-bg-color: #0e0b16;
     --md-primary-soft-green: #c8e3dd;
     --md-primary-baby-blue: #dbe5f5;
     --md-primary-grey: #989db6;
@@ -20,6 +21,7 @@
     --md-primary-yellow: #f4d78d;
     --md-primary-bright-green: #12b597;
     --md-primary-bright-blue: #2763d6;
+    --md-accent-fg-color: #a239ca;
     /* Links */
     --md-typeset-a-color: var(--md-primary-bright-blue);
     /* Text font */

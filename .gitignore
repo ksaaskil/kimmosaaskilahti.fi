@@ -4,3 +4,4 @@ out/
 .cache/
 public/
 .vscode/
+.python-version

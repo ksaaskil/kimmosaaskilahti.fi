@@ -30,6 +30,7 @@ nav:
       - Why I love learning functional programming: blog/2020-08-01-why-i-love-learning-fp.md
       - How I accidentally learned functional programming: blog/2020-05-04-how-i-accidentally-learned-fp.md
       - Introduction to composable optics with monocle-ts: blog/2020-02-16-introduction-to-composable-optics-with-monocle-ts.md
+      - Introduction to property-based testing: blog/2020-03-29-introduction-to-property-based-testing.md
       - Covariance and contravariance in generic types: blog/2020-02-10-covariance-and-contravariance-in-generic-types.md
       - Using fp-ts for HTTP requests and validation: blog/2019-08-29-fp-ts.md
 markdown_extensions:

@@ -6,9 +6,9 @@ tags:
 canonical_url: https://kimmosaaskilahti.fi/blog/2022-08-05-tips-for-building-clean-rest-api-in-django/
 ---
 
-Two and a half years ago I started developing a software application for creating training data for ML applications. The heart application of this annotation tool is a REST API built with [Django](https://www.djangoproject.com/). The API serves as the backend for a Vue front-end and a Python SDK.
+Two and a half years ago we started developing a software application for creating training data for ML applications. The heart application of this annotation tool is a REST API built with [Django](https://www.djangoproject.com/). The API serves as the backend for a Vue front-end and a Python SDK.
 
-Before starting the project, I did not have any experience of using Django. In this post, I'd like to share some of the lessons learned from creating and maintaining a REST API built with Django.
+Before starting the project, I personally did not have any experience of using Django. In this post, I'd like to share some of the lessons learned from creating and maintaining a REST API built with Django.
 
 I highly recommend reading [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5) by DoorDash. Many of the tips below are inspired by the article and have proved to be invaluable for keeping the codebase maintainable.
 
@@ -26,7 +26,7 @@ The recommended background reading for this section is [_RESTful API design_](ht
 
 Unless you're creating a very small API, you need to document your API. The industry standard is to use [OpenAPI specification](https://swagger.io/specification/), formerly known as Swagger.
 
-When starting development, I searched for tools that could auto-generate the API documentation from code, similar to [FastAPI](https://fastapi.tiangolo.com/tutorial/first-steps/). I could not find anything for Django, so I decided to start maintaining `openapi.yaml` in the repository by hand.
+When starting development, we searched for tools that could auto-generate the API documentation from code, similar to [FastAPI](https://fastapi.tiangolo.com/tutorial/first-steps/). We could not find anything for Django, so we decided to start maintaining `openapi.yaml` in the repository by hand.
 
 In hind-sight, this turned out to be a good decision. We have many developers contributing to the codebase, with variable knowledge of API design or how the existing API is structured. Having a separate `openapi.yaml` allows us to have discussions about API design in pull requests before diving into technical implementation. This helps us, for example, to keep the database models decoupled from the REST API resources and keep pull requests smaller.
 
@@ -101,7 +101,7 @@ Separate the concerns between the API and the database. This gives you as an arc
 
 ### Keep your models lean
 
-When I first started developing the annotation tool, my only source of best practices for Django was [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5). The article recommended to avoid "fat models" that include business logic inside model methods. We have followed this approach and, based on my experience, it was a very good decision.
+When we first started developing the annotation tool, my only source of best practices for Django was [_Tips for Building High-Quality Django Apps at Scale_](https://medium.com/@DoorDash/tips-for-building-high-quality-django-apps-at-scale-a5a25917b2b5). The article recommended to avoid "fat models" that include business logic inside model methods. We have followed this approach and, based on my experience, it was a very good decision.
 
 Getting the data layer right is a difficult task. There are lots of models in the data layer and the models may be coupled in complex ways. You can keep your model code much more readable by keeping the number of model methods to the minimum. Do not mix the data layer with the service layer (discussed below).
 

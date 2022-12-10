@@ -18,6 +18,7 @@ nav:
       - Home: index.md
   - Blog:
       - Tips for building clean REST API in Django: blog/2022-08-05-tips-for-building-clean-rest-api-in-django.md
+      - How to work in a software engineering team: blog/2022-02-25-how-to-work-in-software-engineering-team.md
       - How to lead an engineering team at Google: blog/2021-09-05-team-lead-at-google.md
       - Notes of Clean Architecture: blog/2021-08-04-notes-of-clean-architecture.md
       - Custom user authentication in Django, with tests: blog/2021-04-18-django-custom-authentication.md

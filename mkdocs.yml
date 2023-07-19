@@ -1,13 +1,15 @@
 theme:
   name: material
   features:
+    - navigation.indexes
     - navigation.tabs
+    - navigation.sections
   palette:
     scheme: default
   custom_dir: docs/theme_override_home/
   # logo: assets/logo.png
   # favicon: assets/images/favicon.ico
-site_name: Kimmo's home page
+site_name: Kimmo's blog
 site_url: https://kimmosaaskilahti.fi
 docs_dir: docs
 # repo_url: https://github.com/ksaaskil/kimmosaaskilahti.fi
@@ -17,7 +19,7 @@ nav:
   - Home:
       - Home: index.md
   - Blog:
-      - Blog: blog/index.md
+      - blog/index.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

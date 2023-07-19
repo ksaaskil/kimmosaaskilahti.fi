@@ -6,9 +6,15 @@ tags: learning,python,asyncio,multiprocessing
 thumbnail: reindeer
 date: 2021-01-09
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-01-09-multiprocessing-asyncio/
+categories:
+  - Python
 ---
 
+# How to process CPU-intensive tasks from asynchronous stream
+
 Hi! In the [previous article](https://kimmosaaskilahti.fi/blog/2021-01-03-asyncio-workers/), we saw how to speed up I/O-bound tasks with multithreading without any callbacks. In this article, I'd like to share how to speed up compute-intensive (CPU-bound) tasks with [`ProcessPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor), again using [`asyncio`](https://docs.python.org/3/library/asyncio.html) high-level methods to keep the code readable and without a single callback.
+
+<!-- more -->
 
 The full example can be found in the [concurrency-examples](https://github.com/ksaaskil/concurrency-examples/blob/master/asyncio-futures/processes-queue.py) repository.
 

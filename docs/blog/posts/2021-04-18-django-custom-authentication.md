@@ -6,9 +6,15 @@ tags: python,django,tutorial
 series: Granular role-based access control in Django
 date: 2021-04-18
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-04-18-django-custom-authentication/
+categories:
+  - Django
 ---
 
+# Custom user authentication in Django, with tests
+
 In the [previous part](https://dev.to/ksaaskil/setting-up-django-rest-api-with-custom-user-model-and-tests-5b8f), we created a custom user model in Django. In this part, I'd like to show how to roll custom authentication. Neither custom user model nor custom authentication are required for the granular role-based access control, but I'd like this series to be a complete tour of authentication and authorization in Django. The code accompanying the series can be found in [GitHub](https://github.com/ksaaskil/django-rbac). So let's get started!
+
+<!-- more -->
 
 ## Django authentication 101
 

@@ -3,11 +3,19 @@ title: How to work in a software engineering team
 published: true
 description: Reading notes of Chapter 2 of Software Engineering at Google
 tags: teamwork,personal,improvement,books
+date: 2022-02-25
+categories:
+  - Career development
+  - Reading notes
 ---
+
+# How to work in a software engineering team
 
 > This post is a summary of Chapter 2, "How to work well in teams", from *[Software Engineering at Google](https://abseil.io/resources/swe-book)*.
 
 Software development is a team endeavor. To succeed in a team, you must reorganize your behavior around the core principles of humility, respect, and trust. What makes or breaks your career is how well you collaborate with others.
+
+<!-- more -->
 
 ## Solicit feedback early
 

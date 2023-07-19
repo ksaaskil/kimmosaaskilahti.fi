@@ -17,23 +17,7 @@ nav:
   - Home:
       - Home: index.md
   - Blog:
-      - Tips for building clean REST API in Django: blog/2022-08-05-tips-for-building-clean-rest-api-in-django.md
-      - How to work in a software engineering team: blog/2022-02-25-how-to-work-in-software-engineering-team.md
-      - How to lead an engineering team at Google: blog/2021-09-05-team-lead-at-google.md
-      - Notes of Clean Architecture: blog/2021-08-04-notes-of-clean-architecture.md
-      - Custom user authentication in Django, with tests: blog/2021-04-18-django-custom-authentication.md
-      - Creating Django REST API with custom user model and tests: blog/2021-04-02-django-custom-user.md
-      - How to process CPU-intensive tasks from asynchronous stream: blog/2021-01-09-multiprocessing-asyncio.md
-      - How to speed up I/O-intensive tasks with multithreading and asyncio: blog/2021-01-03-asyncio-workers.md
-      - Are you an ideal team player?: blog/2020-12-19-ideal-team-player.md
-      - Functional programming tips to power up your Python code: blog/2020-11-29-fp-tips-for-python.md
-      - My three favorite non-programming books for developers: blog/2020-09-16-three-nonprogramming-books.md
-      - Why I love learning functional programming: blog/2020-08-01-why-i-love-learning-fp.md
-      - How I accidentally learned functional programming: blog/2020-05-04-how-i-accidentally-learned-fp.md
-      - Introduction to composable optics with monocle-ts: blog/2020-02-16-introduction-to-composable-optics-with-monocle-ts.md
-      - Introduction to property-based testing: blog/2020-03-29-introduction-to-property-based-testing.md
-      - Covariance and contravariance in generic types: blog/2020-02-10-covariance-and-contravariance-in-generic-types.md
-      - Using fp-ts for HTTP requests and validation: blog/2019-08-29-fp-ts.md
+      - blog/index.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -42,13 +26,14 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  # - meta
   - admonition
   - pymdownx.details
   - tables
   - toc:
       toc_depth: 3
-plugins: []
+plugins:
+  - blog:
+      post_excerpt: required
 extra:
   analytics:
     provider: google

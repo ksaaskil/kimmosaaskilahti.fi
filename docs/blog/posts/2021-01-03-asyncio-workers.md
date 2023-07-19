@@ -6,9 +6,15 @@ tags: learning,python,asyncio
 thumbnail: reindeer
 date: 2021-01-03
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-01-03-asyncio-workers/
+categories:
+  - Python
 ---
 
+# How to speed up I/O-intensive tasks with multithreading and asyncio
+
 Recently I had to perform a batch processing task where a thousands of images were downloaded from S3, the images were processed and then uploaded to a new bucket in S3. As the processing was relatively lightweight, most of the computation time was spent on downloading and uploading images, that is, I/O. Such I/O bound tasks are a great fit for multithreading (CPU-bound tasks better fit multiprocessing, with all its quirks related to serialization). In this post, I'd like to share a small example how to run tasks in a thread pool.
+
+<!-- more -->
 
 We'll use [`ThreadPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor) to execute tasks in a configurable number of worker threads. One option would be to submit tasks to the pool with `executor.submit()`. This method returns a [`concurrent.futures.Future`](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future) object, to which one can add callbacks with [`add_done_callback()`](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future.add_done_callback). However, callbacks are evil and it's best to avoid them if possible.
 

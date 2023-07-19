@@ -5,9 +5,16 @@ description: What are the SOLID principles and what makes a good architecture
 tags: books,architecture,career
 date: 2021-08-04
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-08-04-notes-of-clean-architecture/
+categories:
+  - Software architecture
+  - Reading notes
 ---
 
+# Notes of Clean Architecture
+
 I recently finished reading [Clean Architecture](https://www.goodreads.com/book/show/18043011-clean-architecture) by Robert C. Martin. This book accompanied with [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code) and [Clean Coder](https://www.goodreads.com/book/show/10284614-the-clean-coder) are very useful reading for any professional software developer, even though they are getting old and there are better books available out there. This post briefly summarizes Clean Architecture.
+
+<!-- more -->
 
 The book begins by discussing the __cost of a mess__.  Making a mess is always slower than staying clean. Messy software slows down the development. A simple way to avoid making a mess is to practice test-driven development.
 

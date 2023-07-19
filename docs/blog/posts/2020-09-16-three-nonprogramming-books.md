@@ -6,9 +6,15 @@ tags: learning,books
 thumbnail: reindeer
 date: 2020-09-16
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-09-16-three-nonprogramming-books/
+categories:
+  - Career development
 ---
 
+# My three favorite non-programming books for developers
+
 Back when starting my first software development job I thought my success at work would be directly determined by my programming skills. Of course, that's not the case. One can be the most productive and clever programmer in the world, but that alone isn't sufficient for a satisfactory career in software development. You'll need to get along with people, know which problems _not_ to fix, deal with pressure, etc.
+
+<!-- more -->
 
 So while keeping up with the latest advances in software development is important, I think it's just as important to keep learning other aspects of a software developers' working day. Sometimes such skills such as getting along with your colleagues are called "soft skills", a term I find a bit patronizing considering that the actual coding is only half the job.
 

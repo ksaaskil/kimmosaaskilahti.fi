@@ -4,9 +4,16 @@ published: true
 description: Lessons learned from two years of developing and maintaining a Django backend
 tags: python,django,rest
 canonical_url: https://kimmosaaskilahti.fi/blog/2022-08-05-tips-for-building-clean-rest-api-in-django/
+date: 2022-08-05
+categories:
+  - Django
 ---
 
+# Tips for building a clean REST API in Django
+
 Two and a half years ago we started developing a software application for creating training data for ML applications. The heart application of this annotation tool is a REST API built with [Django](https://www.djangoproject.com/). The API serves as the backend for a Vue front-end and a Python SDK.
+
+<!-- more -->
 
 Before starting the project, I personally did not have any experience of using Django. In this post, I'd like to share some of the lessons learned from creating and maintaining a REST API built with Django.
 

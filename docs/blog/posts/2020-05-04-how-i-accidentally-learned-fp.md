@@ -6,9 +6,16 @@ slug: how-i-accidentally-learned-functional-programming
 date: 2020-04-05
 description: By writing classes with too many responsibilities.
 tags: functional, python
+categories:
+  - Functional programming
+  - Python
 ---
 
+# How I accidentally learned functional programming
+
 I had two courses in programming at the university, in Java and C. The Java course taught object-oriented programming: objects, classes, inheritance and all that.
+
+<!-- more -->
 
 After graduating as a physics major, I got my first job as an algorithm and software developer. My first algorithm was one that required loading some data at the application start-up. When the app was running, the algorithm would then get various inputs and, with the help of the data loaded at start-up, compute useful outputs from the inputs.
 

@@ -6,9 +6,16 @@ tags: learning,teamwork,leadership
 thumbnail: reindeer
 date: 2020-12-19
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-12-19-ideal-team-player/
+categories:
+  - Career development
+  - Reading notes
 ---
 
+# Are you an ideal team player?
+
 [_The Five Dysfunctions of a Team_](https://www.goodreads.com/book/show/21343.The_Five_Dysfunctions_of_a_Team) by Patrick Lencioni is a classic in teamwork literature. Recently I've been reading the author's follow-up book [_The Ideal Team Player_](https://www.goodreads.com/book/show/28930640-the-ideal-team-player). I've only started reading the fable, but I couldn't help taking a peek at the end of the book where I found an interesting self-evaluation test for anyone interested in improving their team work skills. I thought it's quite cool so I'll share it here!
+
+<!-- more -->
 
 Think how **your teammates** would respond to the following claims about you (the original claims were written in the first person but for me, it felt easier to think in third person). 
 

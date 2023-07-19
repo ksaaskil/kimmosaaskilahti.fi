@@ -9,9 +9,16 @@ slug: introduction-to-composable-optics-with-monocle-ts
 canonical_url: https://meeshkan.com/blog/intro-to-composable-optics-with-monocle-ts/
 tags: typescript, optics, functional, javascript
 series: Introduction to optics with monocle-ts
+categories:
+  - Functional programming
+  - TypeScript
 ---
 
+# Introduction to composable optics with monocle-ts
+
 Optics are a functional programming toolbox for zooming into nested data structures. They are designed for composability, allowing you to create complex operations step-by-step by composing simple components. Optics also never modify their input data structures, ensuring your objects stay nice and immutable.
+
+<!-- more -->
 
 Giulio Canti's [monocle-ts](https://github.com/gcanti/monocle-ts) library is a TypeScript port of Scala's [Monocle](https://julien-truffaut.github.io/Monocle/) library, which in turn is inspired by Haskell's [Lens](https://hackage.haskell.org/package/lens) library. It provides "a highly generic toolbox for composing families of getters, folds, isomorphisms, traversals, setters and lenses and their indexed variants."
 

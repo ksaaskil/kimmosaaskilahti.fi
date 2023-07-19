@@ -5,9 +5,16 @@ description: Reading notes from the book Software Engineering at Google
 tags: career,leadership,learning
 date: 2021-09-08
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-09-05-team-lead-at-google/
+categories:
+  - Career development
+  - Reading notes
 ---
 
-> This article is a summary of the _Chapter 5: How to Lead a Team_ from the book [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/).
+# How to lead an engineering team at Google
+
+This article is a summary of the _Chapter 5: How to Lead a Team_ from the book [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/).
+
+<!-- more -->
 
 ## Types of team leads at Google
 

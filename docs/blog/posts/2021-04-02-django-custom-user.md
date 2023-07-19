@@ -7,9 +7,15 @@ series: Granular role-based access control in Django
 thumbnail: reindeer
 date: 2021-04-02
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-04-02-django-custom-user/
+categories:
+  - Django
 ---
 
+# Creating Django REST API with custom user model and tests
+
 In this short series of articles, I'd like to share how to implement granular, resource-level role-based access control in Django. We'll build a REST API that returns 401s (Unauthorized) for unauthenticated users, 404s for authenticated users not authorized to view given resources, and 403s (Forbidden) for users authorized to view resources but forbidden to perform given actions.
+
+<!-- more -->
 
 We'll be using vanilla Django without extra frameworks or dependencies throughout. This doesn't mean you shouldn't use publicly available packages, but sticking to pure Django is a good choice when you want to learn things and when you need the most flexibility. Remember, though, that user authentication is one place where you don't want to mess things up: the more code you write, the better test suite you'll need!
 

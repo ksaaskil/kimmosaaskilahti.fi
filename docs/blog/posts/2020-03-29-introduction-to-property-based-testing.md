@@ -6,9 +6,15 @@ slug: introduction-to-property-based-testing
 path: /blog/introduction-to-property-based-testing
 description: Verify assumptions about your code.
 tags: testing, functional, property-based
+categories:
+  - Software testing
 ---
 
+# Introduction to property-based testing
+
 Property-based testing is a testing paradigm supporting regular example-based unit tests. In the [Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer) book, the authors recommend to use property-based testing for verifying assumptions about their code. It forces you to think about the actual preconditions, postconditions and invariants of your code instead of implicitly coming up with such rules through hard-coded examples.
+
+<!-- more -->
 
 I recently gave a presentation at work about property-based testing. You can find the slides at [ksaaskil.github.io/introduction-to-property-based-testing/](https://ksaaskil.github.io/introduction-to-property-based-testing/) and the accompanying code in [github.com/ksaaskil/introduction-to-property-based-testing](https://github.com/ksaaskil/introduction-to-property-based-testing). The presentation also contains some material about testing stateful systems, an intriguing but complex topic.
 

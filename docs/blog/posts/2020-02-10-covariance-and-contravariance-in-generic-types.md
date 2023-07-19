@@ -7,9 +7,15 @@ canonical_url: https://meeshkan.com/blog/covariance-and-contravariance-in-generi
 slug: covariance-and-contravariance-in-generic-types
 path: /blog/covariance-and-contravariance-in-generic-types
 tags: python, generics, corgis
+categories:
+  - Python
 ---
 
+# Covariance and contravariance in generic types
+
 Static typing is awesome. It helps to detect bugs, acts as in-code documentation and makes development more enjoyable. Recently I've started to use Python's [typing](https://docs.python.org/3/library/typing.html) module to add static typing to all of my Python projects. Python's typing system may not be as as powerful as one might hope, but I think once you go typed, you don't go back.
+
+<!-- more -->
 
 It is, however, easy to run into non-intuitive errors when defining types for generic types such as lists and dictionaries. Assume, for example, that a `DogContainer` takes a [List](https://docs.python.org/3/library/typing.html#typing.List) of `Dog`s in the constructor:
 

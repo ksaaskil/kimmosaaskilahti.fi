@@ -8,6 +8,8 @@ date: 2020-09-16
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-09-16-three-nonprogramming-books/
 categories:
   - Career development
+authors:
+  - ksaaskil
 ---
 
 # My three favorite non-programming books for developers

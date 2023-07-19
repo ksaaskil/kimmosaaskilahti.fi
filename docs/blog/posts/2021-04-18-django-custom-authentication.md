@@ -8,6 +8,8 @@ date: 2021-04-18
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-04-18-django-custom-authentication/
 categories:
   - Django
+authors:
+  - ksaaskil
 ---
 
 # Custom user authentication in Django, with tests

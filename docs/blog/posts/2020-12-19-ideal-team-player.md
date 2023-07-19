@@ -9,6 +9,8 @@ canonical_url: https://kimmosaaskilahti.fi/blog/2020-12-19-ideal-team-player/
 categories:
   - Career development
   - Reading notes
+authors:
+  - ksaaskil
 ---
 
 # Are you an ideal team player?

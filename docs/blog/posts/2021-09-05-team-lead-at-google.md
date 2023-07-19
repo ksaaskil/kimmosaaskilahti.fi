@@ -8,6 +8,8 @@ canonical_url: https://kimmosaaskilahti.fi/blog/2021-09-05-team-lead-at-google/
 categories:
   - Career development
   - Reading notes
+authors:
+  - ksaaskil
 ---
 
 # How to lead an engineering team at Google

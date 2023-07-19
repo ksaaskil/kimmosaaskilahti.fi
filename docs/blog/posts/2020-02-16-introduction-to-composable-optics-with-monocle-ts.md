@@ -12,6 +12,8 @@ series: Introduction to optics with monocle-ts
 categories:
   - Functional programming
   - TypeScript
+authors:
+  - ksaaskil
 ---
 
 # Introduction to composable optics with monocle-ts

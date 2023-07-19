@@ -9,6 +9,8 @@ date: 2021-04-02
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-04-02-django-custom-user/
 categories:
   - Django
+authors:
+  - ksaaskil
 ---
 
 # Creating Django REST API with custom user model and tests

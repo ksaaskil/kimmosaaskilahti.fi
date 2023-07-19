@@ -9,6 +9,8 @@ path: /blog/covariance-and-contravariance-in-generic-types
 tags: python, generics, corgis
 categories:
   - Python
+authors:
+  - ksaaskil
 ---
 
 # Covariance and contravariance in generic types

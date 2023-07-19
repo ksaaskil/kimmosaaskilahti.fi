@@ -10,6 +10,8 @@ canonical_url: https://kimmosaaskilahti.fi/blog/2020-11-29-fp-tips-for-python/
 categories:
   - Python
   - Functional programming
+authors:
+  - ksaaskil
 ---
 
 # Functional programming tips to power up your Python code

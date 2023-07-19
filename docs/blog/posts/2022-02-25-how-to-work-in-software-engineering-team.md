@@ -7,6 +7,8 @@ date: 2022-02-25
 categories:
   - Career development
   - Reading notes
+authors:
+  - ksaaskil
 ---
 
 # How to work in a software engineering team

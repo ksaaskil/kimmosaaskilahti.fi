@@ -9,6 +9,8 @@ date: 2020-08-01
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-08-01-why-i-love-learning-fp/
 categories:
   - Functional programming
+authors:
+  - ksaaskil
 ---
 
 # Why I love learning functional programming

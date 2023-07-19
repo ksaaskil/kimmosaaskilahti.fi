@@ -7,6 +7,8 @@ canonical_url: https://kimmosaaskilahti.fi/blog/2022-08-05-tips-for-building-cle
 date: 2022-08-05
 categories:
   - Django
+authors:
+  - ksaaskil
 ---
 
 # Tips for building a clean REST API in Django

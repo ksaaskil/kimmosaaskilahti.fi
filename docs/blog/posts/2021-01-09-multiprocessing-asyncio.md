@@ -8,6 +8,8 @@ date: 2021-01-09
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-01-09-multiprocessing-asyncio/
 categories:
   - Python
+authors:
+  - ksaaskil
 ---
 
 # How to process CPU-intensive tasks from asynchronous stream

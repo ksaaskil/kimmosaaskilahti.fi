@@ -8,6 +8,8 @@ description: Verify assumptions about your code.
 tags: testing, functional, property-based
 categories:
   - Software testing
+authors:
+  - ksaaskil
 ---
 
 # Introduction to property-based testing

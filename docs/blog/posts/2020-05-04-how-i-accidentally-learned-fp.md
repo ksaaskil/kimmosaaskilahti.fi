@@ -9,6 +9,8 @@ tags: functional, python
 categories:
   - Functional programming
   - Python
+authors:
+  - ksaaskil
 ---
 
 # How I accidentally learned functional programming

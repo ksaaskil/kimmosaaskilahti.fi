@@ -8,6 +8,8 @@ canonical_url: https://kimmosaaskilahti.fi/blog/2021-08-04-notes-of-clean-archit
 categories:
   - Software architecture
   - Reading notes
+authors:
+  - ksaaskil
 ---
 
 # Notes of Clean Architecture

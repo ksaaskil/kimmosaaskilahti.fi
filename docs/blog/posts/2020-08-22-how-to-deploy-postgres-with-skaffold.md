@@ -3,6 +3,7 @@ title: How to deploy Postgres on Kubernetes with Skaffold
 description: Learn Kubernetes concepts such as ConfigMaps, Secrets, PersistentVolumes, PersistentVolumeClaims, StatefulSets, and Services
 tags:
   - Kubernetes
+  - Skaffold
 cover_image: https://dev-to-uploads.s3.amazonaws.com/i/0tpyw63lq1mti1jee6xt.jpg
 series: How to develop Kubernetes-native applications with Skaffold
 date: 2020-08-22

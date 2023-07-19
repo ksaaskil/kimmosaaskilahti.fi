@@ -4,6 +4,7 @@ description: Learn Kubernetes concepts such as deployments, services, and jobs
 tags:
    - Django
    - Kubernetes
+   - Skaffold
 series: How to develop Kubernetes-native applications with Skaffold
 date: 2021-04-21
 authors:

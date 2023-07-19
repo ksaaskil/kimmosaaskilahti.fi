@@ -6,7 +6,6 @@ tags:
   - Python
   - Functional programming
 series: Learning functional programming
-thumbnail: reindeer
 date: 2020-11-29
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-11-29-fp-tips-for-python/
 categories:

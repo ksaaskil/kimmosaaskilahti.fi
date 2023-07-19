@@ -5,7 +5,6 @@ description: Yet another blog post on why learning functional programming is fun
 tags:
   - Functional programming
 series: Learning functional programming
-thumbnail: reindeer
 date: 2020-08-01
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-08-01-why-i-love-learning-fp/
 categories:

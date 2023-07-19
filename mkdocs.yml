@@ -5,14 +5,18 @@ theme:
     - navigation.tabs
     - navigation.sections
   palette:
-    scheme: default
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   custom_dir: docs/theme_override_home/
-  # logo: assets/logo.png
-  # favicon: assets/images/favicon.ico
 site_name: Kimmo's blog
 site_url: https://kimmosaaskilahti.fi
 docs_dir: docs
-# repo_url: https://github.com/ksaaskil/kimmosaaskilahti.fi
 extra_css:
   - stylesheets/extra.css
 nav:

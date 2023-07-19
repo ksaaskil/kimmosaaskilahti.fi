@@ -17,6 +17,10 @@ Posy: #813772
 Black: #000000
 **/
 
+[data-md-color-scheme="slate"] {
+    --md-hue: 250;
+}
+
 :root>* {
     --md-primary-fg-color: #062F4F;
     --md-primary-fg-color--light: #dbe5f5;

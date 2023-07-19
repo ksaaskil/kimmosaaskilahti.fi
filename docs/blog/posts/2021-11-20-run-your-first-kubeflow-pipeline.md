@@ -1,8 +1,9 @@
 ---
 title: Run your first Kubeflow pipeline
-published: true
 description: Setup local cluster, install KFP and run a pipeline
-tags: tutorial,mlops,kubeflow,machinelearning
+tags:
+  - MLOps
+  - Kubernetes
 date: 2021-11-20
 categories:
   - Tutorials

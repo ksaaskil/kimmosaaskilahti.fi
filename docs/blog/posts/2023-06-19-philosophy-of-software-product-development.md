@@ -1,9 +1,8 @@
 ---
 title: A philosophy of software product development
-published: true
 description: What I have learned of product development during my seven years in the industry
-tags: development, learning, startup, productdevelopment
-cover_image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2sx5f2d80uvry7j9gzpn.jpg
+tags:
+  - Philosophy
 date: 2023-06-19
 categories:
   - Product development

@@ -1,14 +1,14 @@
 ---
 title: Creating Django REST API with custom user model and tests
-published: true
 description: Prepare for change by building for flexibility
-tags: python,django
+tags:
+  - Python
+  - Django
 series: Granular role-based access control in Django
-thumbnail: reindeer
 date: 2021-04-02
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-04-02-django-custom-user/
 categories:
-  - Django
+  - Software development
 authors:
   - ksaaskil
 ---

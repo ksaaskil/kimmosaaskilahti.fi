@@ -1,17 +1,16 @@
 ---
 title: Deploy Django on Kubernetes with Skaffold, for development and production
-published: true
 description: Learn Kubernetes concepts such as deployments, services, and jobs
-tags: django,kubernetes,beginner,skaffold
+tags:
+   - Django
+   - Kubernetes
 series: How to develop Kubernetes-native applications with Skaffold
-cover_image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2iwachz9w87omjdlqd75.jpg
 date: 2021-04-21
 authors:
   - ksaaskil
 categories:
   - Tutorials
-  - Kubernetes
-  - Django
+  - Software development
 ---
 
 # Deploy Django on Kubernetes with Skaffold, for development and production

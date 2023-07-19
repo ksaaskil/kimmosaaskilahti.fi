@@ -1,13 +1,15 @@
 ---
 title: Custom user authentication in Django, with tests
-published: true
 description: Understand how authentication works and how to customize it
-tags: python,django,tutorial
+tags:
+  - Python
+  - Django
 series: Granular role-based access control in Django
 date: 2021-04-18
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-04-18-django-custom-authentication/
 categories:
-  - Django
+  - Software development
+  - Tutorials
 authors:
   - ksaaskil
 ---

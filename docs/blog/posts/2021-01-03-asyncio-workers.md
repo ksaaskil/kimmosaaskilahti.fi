@@ -1,13 +1,13 @@
 ---
 title: How to speed up I/O-intensive tasks with multithreading and asyncio
-published: true
 description: Avoid callbacks with asyncio like a boss
-tags: learning,python,asyncio
+tags:
+  - Python
 thumbnail: reindeer
 date: 2021-01-03
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-01-03-asyncio-workers/
 categories:
-  - Python
+  - Software development
 authors:
   - ksaaskil
 ---

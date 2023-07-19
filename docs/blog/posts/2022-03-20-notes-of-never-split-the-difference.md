@@ -1,12 +1,11 @@
 ---
 title: "Notes of Never Split the Difference: Negotiating as if your life depended on it"
-published: true
 description: Former FBI top hostage negotiator's tools for negotation
-tags: books,learning
 date: 2022-03-20
+tags:
+  - Reading notes
 categories:
   - Career development
-  - Reading notes
 authors:
   - ksaaskil
 ---

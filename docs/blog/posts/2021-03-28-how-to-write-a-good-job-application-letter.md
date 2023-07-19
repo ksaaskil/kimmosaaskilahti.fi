@@ -1,8 +1,8 @@
 ---
 title: How to write a good job application as software developer
-published: true
 description: Make sure your application doesn't go unnoticed
-tags: career,recruitment,hiring
+tags:
+  - Recruitment
 cover_image: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w1ec00nfp5dkt7z1xgkf.jpg
 date: 2021-03-28
 authors:

@@ -2,13 +2,14 @@
 title: Why I love learning functional programming
 published: true
 description: Yet another blog post on why learning functional programming is fun and useful
-tags: learning,functional,python,haskell
+tags:
+  - Functional programming
 series: Learning functional programming
 thumbnail: reindeer
 date: 2020-08-01
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-08-01-why-i-love-learning-fp/
 categories:
-  - Functional programming
+  - Software development
 authors:
   - ksaaskil
 ---

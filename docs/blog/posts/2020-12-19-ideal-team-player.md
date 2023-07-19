@@ -2,13 +2,14 @@
 title: Are you an ideal team player?
 published: true
 description: Quick quiz from Patrick Lencioni's Ideal Team Player book
-tags: learning,teamwork,leadership
+tags:
+  - Teamwork
+  - Reading notes
 thumbnail: reindeer
 date: 2020-12-19
 canonical_url: https://kimmosaaskilahti.fi/blog/2020-12-19-ideal-team-player/
 categories:
   - Career development
-  - Reading notes
 authors:
   - ksaaskil
 ---

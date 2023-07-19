@@ -24,6 +24,7 @@ nav:
       - Home: index.md
   - Blog:
       - blog/index.md
+      - blog/tags.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -38,6 +39,8 @@ markdown_extensions:
   - toc:
       toc_depth: 3
 plugins:
+  - tags:
+      tags_file: blog/tags.md
   - blog:
       post_excerpt: required
 extra:

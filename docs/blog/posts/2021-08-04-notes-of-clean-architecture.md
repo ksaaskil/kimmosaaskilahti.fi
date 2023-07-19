@@ -1,13 +1,12 @@
 ---
 title: Notes of Clean Architecture
-published: true
 description: What are the SOLID principles and what makes a good architecture
-tags: books,architecture,career
+tags:
+  - Reading notes
 date: 2021-08-04
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-08-04-notes-of-clean-architecture/
 categories:
-  - Software architecture
-  - Reading notes
+  - Software development
 authors:
   - ksaaskil
 ---

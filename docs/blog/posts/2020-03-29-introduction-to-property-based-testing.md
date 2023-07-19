@@ -5,9 +5,11 @@ date: 2020-03-29
 slug: introduction-to-property-based-testing
 path: /blog/introduction-to-property-based-testing
 description: Verify assumptions about your code.
-tags: testing, functional, property-based
+tags:
+  - Testing
+  - Functional programming
 categories:
-  - Software testing
+  - Software development
 authors:
   - ksaaskil
 ---

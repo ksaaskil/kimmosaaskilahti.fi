@@ -1,13 +1,12 @@
 ---
 title: How to process CPU-intensive tasks from asynchronous stream
-published: true
 description: Avoid callbacks with asyncio.run_in_executor
-tags: learning,python,asyncio,multiprocessing
-thumbnail: reindeer
+tags:
+  - Python
 date: 2021-01-09
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-01-09-multiprocessing-asyncio/
 categories:
-  - Python
+  - Software development
 authors:
   - ksaaskil
 ---

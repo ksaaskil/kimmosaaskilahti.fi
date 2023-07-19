@@ -1,12 +1,13 @@
 ---
 title: Tips for building a clean REST API in Django
-published: true
 description: Lessons learned from two years of developing and maintaining a Django backend
-tags: python,django,rest
+tags:
+  - Python
+  - Django
 canonical_url: https://kimmosaaskilahti.fi/blog/2022-08-05-tips-for-building-clean-rest-api-in-django/
 date: 2022-08-05
 categories:
-  - Django
+  - Software development
 authors:
   - ksaaskil
 ---

@@ -1,12 +1,12 @@
 ---
 title: How to work in a software engineering team
-published: true
 description: Reading notes of Chapter 2 of Software Engineering at Google
-tags: teamwork,personal,improvement,books
 date: 2022-02-25
+tags:
+  - Reading notes
+  - Teamwork
 categories:
   - Career development
-  - Reading notes
 authors:
   - ksaaskil
 ---

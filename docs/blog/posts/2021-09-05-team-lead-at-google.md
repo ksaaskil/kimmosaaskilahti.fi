@@ -2,12 +2,13 @@
 title: How to lead an engineering team at Google
 published: true
 description: Reading notes from the book Software Engineering at Google
-tags: career,leadership,learning
+tags:
+  - Reading notes
+  - Teamwork
 date: 2021-09-08
 canonical_url: https://kimmosaaskilahti.fi/blog/2021-09-05-team-lead-at-google/
 categories:
   - Career development
-  - Reading notes
 authors:
   - ksaaskil
 ---

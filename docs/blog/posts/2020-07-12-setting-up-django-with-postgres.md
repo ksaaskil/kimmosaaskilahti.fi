@@ -1,8 +1,6 @@
 ---
 title: Setting up Django app with Postgres database and health check
-published: true
 description: Second part of the tutorial on developing a Django application backed by Postgres on local Kubernetes
-tags: python,kubernetes,tutorial
 cover_image: https://dev-to-uploads.s3.amazonaws.com/i/m1sf6hythxk4cl0z780y.jpg
 series: How to develop Kubernetes-native applications with Skaffold
 date: 2020-07-12
@@ -10,6 +8,8 @@ authors:
   - ksaaskil
 categories:
   - Tutorials
+tags:
+  - Python
   - Kubernetes
   - Django 
 ---

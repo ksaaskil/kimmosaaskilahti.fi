@@ -1,15 +1,12 @@
 ---
 title: Introduction to composable optics with monocle-ts
-published: true
 description: With io-ts, Elvis and Metallica.
 cover_image: https://dev-to-uploads.s3.amazonaws.com/i/y2qfq36rrsa4avuf9yoa.jpg
 date: 2020-02-16
-path: /blog/introduction-to-composable-optics-with-monocle-ts
-slug: introduction-to-composable-optics-with-monocle-ts
 canonical_url: https://meeshkan.com/blog/intro-to-composable-optics-with-monocle-ts/
-tags: typescript, optics, functional, javascript
-series: Introduction to optics with monocle-ts
 categories:
+  - Software development
+tags:
   - Functional programming
   - TypeScript
 authors:

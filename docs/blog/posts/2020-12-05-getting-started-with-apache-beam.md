@@ -1,8 +1,9 @@
 ---
 title: Getting started with Apache Beam for distributed data processing
-published: true
 description: Run your first big data processing job on Google cloud Dataflow with Apache Beam Python SDK
-tags: beam,python,tutorial,dataflow
+tags:
+  - Python
+  - Apache Beam
 cover_image: https://dev-to-uploads.s3.amazonaws.com/i/dp54fmlcjyk00satyy08.png
 date: 2020-12-05
 authors:

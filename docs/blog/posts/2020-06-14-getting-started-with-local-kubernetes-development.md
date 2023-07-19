@@ -2,7 +2,9 @@
 title: Getting started with local development on Kubernetes with Skaffold
 published: true
 description: First part of the tutorial on creating and running a Django application backed by Postgres on local Kubernetes
-tags: python,kubernetes,tutorial
+tags:
+  - Kubernetes
+  - Skaffold
 series: How to develop Kubernetes-native applications with Skaffold
 cover_image: https://dev-to-uploads.s3.amazonaws.com/i/1pq5nioxw7qj9h9nrkwd.jpg
 date: 2020-06-14
@@ -10,7 +12,6 @@ authors:
   - ksaaskil
 categories:
   - Tutorials
-  - Kubernetes
 ---
 
 # Getting started with local development on Kubernetes with Skaffold

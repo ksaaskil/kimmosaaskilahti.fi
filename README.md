@@ -9,18 +9,38 @@ My home page made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-
 
 ### Install dependencies
 
-```bash
-$ pip install -r requirements.txt
+```sh
+pip install -r requirements.txt
 ```
 
 ### Run development server
 
-```bash
-$ mkdocs serve
+```sh
+mkdocs serve
 ```
 
 ### Export static files
 
-```bash
-$ mkdocs build
+```sh
+mkdocs build
+```
+
+## Development
+
+Install development dependencies:
+
+```sh
+pip install -r requirements-dev.txt
+```
+
+Install pre-commit hooks:
+
+```sh
+pre-commit install
+```
+
+Run all files if needed:
+
+```sh
+pre-commit run --all-files
 ```

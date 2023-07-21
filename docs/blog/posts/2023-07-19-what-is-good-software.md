@@ -17,32 +17,48 @@ During the last three years, I've had the opportunity to conduct 70 technical in
 
 <!-- more -->
 
-In my experience, the answer to the question "_What is good software?_" tells something about the seniority level of the candidate. While there is no right or wrong answer to the question, I've found that senior developers tend to approch the question at higher level than more junior developers.
+Below, I will go through the broad categories of answers starting from "high level" and proceeding towards "low level". In my experience, more senior developers typically start their answers from higher level than more junior developers.
 
-Martin Fowler [divides](https://martinfowler.com/articles/is-quality-worth-cost.html) software quality attributes into external and internal attributes. The distinction is that users of the software can directly see external quality but have no direct visibility to internal quality. Below, I will group the categories into these two categories.
+<!--In my experience, the answer to the question "_What is good software?_" tells something about the seniority level of the candidate. While there is no right or wrong answer to the question, I've found that senior developers tend to approch the question at higher level than more junior developers.
 
-## External quality
+Martin Fowler [divides](https://martinfowler.com/articles/is-quality-worth-cost.html) software quality attributes into external and internal attributes. The distinction is that users of the software can directly see external quality but have no direct visibility to internal quality. Below, I will group the categories into these two categories.-->
+
+<!--## External quality-->
 
 ### Good software creates value
 
 In general, the purpose of software is to create value to its users and the business. If the software does not create value to users or the business, it is bad software.
 
-How can software fail to create value to its users? Most typically, the software fails to solve any real problem or meet the needs of its users. Following a development process such as Lean UX can reduce the probability of building something that no-one wants, but understanding what users really need is super hard.
+How can software fail to create value to its users? Most typically, the software fails to solve any real problem or meet the needs of its users. Following a development process such as Lean UX can reduce the probability of building something that no-one wants.
 
-It could be argued that value creation is not a software issue but a product issue. This is perhaps true. I have work experience only from relatively small companies, where every software developer is essentially a product developer as well and the distinction between software and product does not really matter. Every software developer makes product decisions every day.
+!!! question "Is it not a product issue if the product does not create value?"
 
-### Good software meets requirements
+    This argument makes sense in many companies, where software development teams have no control of product decisions. I have experience of working only in relatively small companies, where every software developer is essentially a product developer and every developer makes product decisions every day. In this case, the distinction between software and product does not really matter.
 
 ### Good software has good user experience
 
-## Internal quality
+Good software has happy users. Users are happy when the user experience (UX) is good. Google's [UX design course](https://www.coursera.org/professional-certificates/google-ux-design) defines good user experience as useful, usable, enjoyable and equitable. Software is useful  creates value. Usable software is reliable and easy to use. Enjoyability means that the software actually feels good to use. Equitable software is usable for all types of people in the target group.
 
-### Easy to change
+### Good software meets requirements
 
-### Easy to maintain
+In many companies, stakeholders and customers set the requirements that the software is expected to meet. Good software meets the requirements set by its stakeholders.
 
-### Tested
+Modern organizations have acknowledged that creating a big list of requirements upfront is a bad idea. Instead, stakeholders and the development team should work together to learn how to address the real needs of the users of the software. This avoids the common pitfalls of so-called "waterfall" projects, where little room is given for iterative learning and exploration.
 
-### Clean code
+### Good software is easy to change
 
-### Documentation
+Common idiom in software development says that it's better to have bad software that's easy to change than perfect software that's impossible to change. Good software adapts to change when the user and business requirements change. When changes are made, new version of the software can be released with confidence.
+
+The book _Pragmatic Programmer_ summarizes the essence of good design as *Good design is easy to change*. So-called best practices of software development are considered best practices, because they make the software easier to change. For example, loose coupling makes it easier to switch specific parts of the software without affecting other parts. Removing duplication makes it easier to change logic shared by multiple components.
+
+### Good software is easy to maintain
+
+Developers like software that is easy to maintain. Most of their time is spent on creating cool new features and improving the user experience instead of fire-fighting and fixing bugs. When there are problems, the underlying issues are easy to discover and isolate.
+
+Good logging and monitoring infrastructure makes it easier to discover and isolate production issues. Monitoring system sends alerts of potential issues already before any bug reports from customers start arriving. When software bugs are found and fixed, test automation and structured release process give confidence that the changed did not introduce any regression.
+
+### Good software is tested
+
+### Good software has clean code
+
+### Good software is well documented

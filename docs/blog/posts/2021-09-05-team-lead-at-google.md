@@ -25,7 +25,7 @@ There are two types of engineering team leads at Google: engineering managers an
 
 Engineering manager is responsible for the performance, productivity and happiness of every person on their team, including their tech lead. Engineering manager needs to find the careful balance between the needs of the product and the team.
 
-Tech lead is responsible for the technical aspects of the product, including technology choices, architecture, priorities, velocity, and general project management. Most tech leads are also individual contributors. 
+Tech lead is responsible for the technical aspects of the product, including technology choices, architecture, priorities, velocity, and general project management. Most tech leads are also individual contributors.
 
 On small teams, there can be a "tech lead manager" handling both the people and technical needs of the team. It's very hard to do both of these jobs well in a growing team, however.
 
@@ -35,11 +35,11 @@ All engineering team leads at Google are expected to have an engineering backgro
 
 The best advice for a new manager is "Resist the urge to manage." Even though you're called a manager, you should not actively manage the people who report to you. The symptoms of too much managing include, but are not limited to, micromanaging, ignoring low performers, and hiring pushovers (people that easy to push around).
 
-The most important thing to do as the leader is to _serve your team_. Strive to create an atmosphere of __humility, respect, and trust__. Remove bureaucratic obstacles, help the team achieve consensus, or give them the driving vision. Advise the team when necessary, but do not fear getting your hands dirty. _Manage only the technical and social health of the team._
+The most important thing to do as the leader is to _serve your team_. Strive to create an atmosphere of **humility, respect, and trust**. Remove bureaucratic obstacles, help the team achieve consensus, or give them the driving vision. Advise the team when necessary, but do not fear getting your hands dirty. _Manage only the technical and social health of the team._
 
 Historically, managers treated their employees like cart drivers treating their mules: motivate them with a carrot, and if that didn't work, whip them with a stick. This still continues today in many industries. Avoid this like plague.
 
-Engineers working on large codebases can take months to get up to speed on a new team, and these people need nurturing, time, and space to think and create. Managers foster humility, respect, and trust in their team instead of "managing" in the traditional sense. A good manager forges the way for a team, looks out for their safety and well-being, and ensures their needs are met. 
+Engineers working on large codebases can take months to get up to speed on a new team, and these people need nurturing, time, and space to think and create. Managers foster humility, respect, and trust in their team instead of "managing" in the traditional sense. A good manager forges the way for a team, looks out for their safety and well-being, and ensures their needs are met.
 
 > Traditional managers worry about how to get things done, whereas great managers worry about what things get done (and trust their team to figure out how to do it).
 
@@ -83,13 +83,13 @@ Humility comes first in "humility, respect, and trust". Being humble is not the 
 
 Cultivate a strong collective team ego and identity. Trust your team and respect their abilities and prior accomplishments. Giving your team ownership gives them a greater sense of accountability and responsibility.
 
-You do not need to have all the answers. If you act like you do, you will lose the respect of your team. Find people who give you good constructive criticism. Avoid the urge to be territorial. 
+You do not need to have all the answers. If you act like you do, you will lose the respect of your team. Find people who give you good constructive criticism. Avoid the urge to be territorial.
 
 Apologize when you make a mistake. You need to sincerely mean it. Apologizing does not make you vulnerable. Instead, you will earn respect.
 
 **Positive pattern #2: Be a Zen Master**
 
-Engineers typically develop an excellent sense of skepticism and cynicism. As a team leader, you need to be less vocally skeptical while letting your team know you're aware of the intricacies and obstacles involved in the planned work. 
+Engineers typically develop an excellent sense of skepticism and cynicism. As a team leader, you need to be less vocally skeptical while letting your team know you're aware of the intricacies and obstacles involved in the planned work.
 
 Always maintain your calm. The higher you up in the company hierarchy, the bigger effect your behavior has on the organization. The leader is always on stage and always being watched. Do you show confidence or fear? You attitude spreads infectiously to your team.
 

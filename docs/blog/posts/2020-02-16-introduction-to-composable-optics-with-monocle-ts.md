@@ -187,9 +187,8 @@ With the `modify` method you can create a setter that modifies fields with the g
 
 ```ts
 const upperCase = (s: string): string => s.toUpperCase()
-const upperCasePersonName: (p: Person) => Person = personToName.modify(
-  upperCase
-)
+const upperCasePersonName: (p: Person) => Person =
+  personToName.modify(upperCase)
 const elvisUpperCased = upperCasePersonName(elvis)
 expect(elvisUpperCased).toHaveProperty("firstName", "ELVIS")
 ```
@@ -236,9 +235,8 @@ The helper functions `none` and `some` allow creating options with empty and non
 Now we need to define the `set` function for our `Optional<Array<Person>, Person>`. The required signature is `set: (p: Person) => (ps: Person[]) => Person[]`. What is `set` supposed to do? It should set a person as the first member of the array if the array is not empty. Here's our implementation:
 
 ```ts
-const set: (p: Person) => (ps: Person[]) => Person[] = (p: Person) => (
-  ps: Person[]
-) => (ps.length === 0 ? [] : [p, ...ps.slice(1)])
+const set: (p: Person) => (ps: Person[]) => Person[] =
+  (p: Person) => (ps: Person[]) => (ps.length === 0 ? [] : [p, ...ps.slice(1)])
 ```
 
 It's very important to notice here what `set` does _not_ do. First, it does not add the given person to the array if the array is empty. `Optional` should only work as a setter when the target value would be non-empty. If the target value is empty, the setter should be no-op. Second, `set` does not prepend given person to the array but replaces the old value with the new value, therefore keeping the length of the list intact.
@@ -258,9 +256,8 @@ Now we're ready to define `head` zooming into the first value of an array of per
 ```ts
 const getOption: (ps: Person[]) => Option<Person> = (personArray: Person[]) =>
   personArray.length === 0 ? none : some(personArray[0])
-const set: (p: Person) => (ps: Person[]) => Person[] = (p: Person) => (
-  ps: Person[]
-) => (ps.length === 0 ? [] : [p, ...ps.slice(1)])
+const set: (p: Person) => (ps: Person[]) => Person[] =
+  (p: Person) => (ps: Person[]) => (ps.length === 0 ? [] : [p, ...ps.slice(1)])
 const head: Optional<Array<Person>, Person> = new Optional<
   Array<Person>,
   Person
@@ -272,9 +269,8 @@ To apply our new Optional on a band, let's compose it with the `members` Lens:
 ```ts
 const membersLens = Lens.fromProp<Band>()("members")
 
-const bandToFirstMember: Optional<Band, Person> = membersLens.composeOptional(
-  head
-)
+const bandToFirstMember: Optional<Band, Person> =
+  membersLens.composeOptional(head)
 ```
 
 We've written our first optics composition! Compositions are written with `composeX` methods of optics.
@@ -305,9 +301,8 @@ In this case `getOption` returns a `none` as expected. Let's go even further and
 
 ```ts
 const nameLens = Lens.fromProp<Person>()("firstName")
-const nameOptional: Optional<Band, string> = bandToFirstMember.composeLens(
-  nameLens
-)
+const nameOptional: Optional<Band, string> =
+  bandToFirstMember.composeLens(nameLens)
 
 const upperCase = (s: string): string => s.toUpperCase()
 

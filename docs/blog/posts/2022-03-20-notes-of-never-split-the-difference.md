@@ -12,7 +12,7 @@ authors:
 
 # Notes of Never Split the Difference: Negotiating as if your life depended on it
 
-This post is a summary of [*Never Split the Difference*](https://info.blackswanltd.com/never-split-the-difference) by Chris Voss.
+This post is a summary of [_Never Split the Difference_](https://info.blackswanltd.com/never-split-the-difference) by Chris Voss.
 
 <!-- more -->
 
@@ -46,25 +46,25 @@ Remember the three voice tones available to negotiators:
 
 ## Tactical empathy
 
-Empathy is the ability to recognize the perspective of a counterpart, and the vocalization of that recognition. It's paying attention to other human being, asking what they're feeling, and making a commitment to understanding their world. 
+Empathy is the ability to recognize the perspective of a counterpart, and the vocalization of that recognition. It's paying attention to other human being, asking what they're feeling, and making a commitment to understanding their world.
 
 Empathy is not sympathy. Empathy is not about agreeing with the other person's values or consolidating them.
 
 Tactical empathy is understanding the feelings and mindset of another in the moment and hearing what is behind those feelings. It's bringing our attention to both the emotional obstacles and the potential pathways to getting an agreement done.
 
-Emotions can be verbalized by *labeling*. Spot the counterpart's feelings, turn them into words, and very calmly and respectfully repeat their emotions back to them. It's a way of validating someone's emotion by acknowledging it.
+Emotions can be verbalized by _labeling_. Spot the counterpart's feelings, turn them into words, and very calmly and respectfully repeat their emotions back to them. It's a way of validating someone's emotion by acknowledging it.
 
 Labels can be phrased as statements or questions. Labels almost always begin with roughly the same words:
 
-- *It seems like...*
-- *It sounds like...*
-- *It looks like...*
+- _It seems like..._
+- _It sounds like..._
+- _It looks like..._
 
 Once you've thrown out the label, be quiet and listen. Let it sink in.
 
 Labels can defuse emotions by silencing the part of the brain generating fear.
 
-Take the sting out of your counterpart's accusations by acknowledging their accusations. List every terrible thing your counterpart *could* say about you. Clear the barriers to agreement. Speaking the accusations aloud will encourage the other person to claim that the opposite is true.
+Take the sting out of your counterpart's accusations by acknowledging their accusations. List every terrible thing your counterpart _could_ say about you. Clear the barriers to agreement. Speaking the accusations aloud will encourage the other person to claim that the opposite is true.
 
 ## Getting to no
 
@@ -82,7 +82,7 @@ Persuasion is about getting the other party convince themselves that the solutio
 
 The moment you've convinced someone that you truly understand their dreams and feelings, mental and behavioral change becomes possible. This lays the foundation for a breakthrough.
 
-Strive for "that's right." Use a summary to trigger it. Combine a label with paraphrasing. Identify, rearticulate and emotionally affirm their world. 
+Strive for "that's right." Use a summary to trigger it. Combine a label with paraphrasing. Identify, rearticulate and emotionally affirm their world.
 
 Be very careful of "you're right." The counterpart agrees, but they do not own the conclusion. Telling people "you're right" is a way to put a smile on the other person's face so they can stop bothering you.
 

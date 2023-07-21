@@ -142,7 +142,7 @@ Next, we add a Python function-based component that handles the archive download
 # pipeline.py
 
 @component(
-    packages_to_install=["pandas==1.1.4"], 
+    packages_to_install=["pandas==1.1.4"],
     output_component_file="component.yaml"
 )
 def merge_csv(tar_data: Input[Artifact], output_csv: Output[Dataset]):

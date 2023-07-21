@@ -11,7 +11,7 @@ categories:
 tags:
   - Python
   - Kubernetes
-  - Django 
+  - Django
 ---
 
 # Setting up Django app with Postgres database and health check
@@ -188,7 +188,7 @@ http {
 }
 ```
 
-Here we simply hard-code the proxy to forward requests to `localhost:8000`, where our Django app will be running. In production usage, we would read the address from environment variables at deploy time. 
+Here we simply hard-code the proxy to forward requests to `localhost:8000`, where our Django app will be running. In production usage, we would read the address from environment variables at deploy time.
 
 ## Conclusion
 

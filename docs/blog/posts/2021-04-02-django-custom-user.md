@@ -33,7 +33,7 @@ $ pyenv virtualenv 3.8.1 django-rbac-3.8.1
 $ pyenv local django-rbac.3.8.1
 ```
 
-Let's install Django and create a project called `rbac`: 
+Let's install Django and create a project called `rbac`:
 
 ```bash
 # django-rbac/
@@ -61,7 +61,7 @@ MIDDLEWARE = [
 ]
 ```
 
-We'll create the `rbac.core` app soon below. We use Django's [authentication system](https://docs.djangoproject.com/en/3.1/topics/auth/default/) for authenticating users, which requires us to include `django.contrib.auth` app and `django.contrib.auth.middleware.AuthenticationMiddleware` middleware. We also need `django.contrib.sessions` app and `SessionMiddleware` for managing user sessions. We also include [`CommonMiddleware`](https://docs.djangoproject.com/en/3.1/ref/middleware/#module-django.middleware.common) and [`SecurityMiddleware`](https://docs.djangoproject.com/en/3.1/ref/middleware/#module-django.middleware.security) even if not strictly required. 
+We'll create the `rbac.core` app soon below. We use Django's [authentication system](https://docs.djangoproject.com/en/3.1/topics/auth/default/) for authenticating users, which requires us to include `django.contrib.auth` app and `django.contrib.auth.middleware.AuthenticationMiddleware` middleware. We also need `django.contrib.sessions` app and `SessionMiddleware` for managing user sessions. We also include [`CommonMiddleware`](https://docs.djangoproject.com/en/3.1/ref/middleware/#module-django.middleware.common) and [`SecurityMiddleware`](https://docs.djangoproject.com/en/3.1/ref/middleware/#module-django.middleware.security) even if not strictly required.
 
 Our views and models will live under `core` app. Let's create such an app and move it under `rbac`:
 

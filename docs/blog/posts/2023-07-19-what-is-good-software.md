@@ -37,7 +37,7 @@ How can software fail to create value to its users? Most typically, the software
 
 ### Good software has good user experience
 
-Good software has happy users. Users are happy when the user experience (UX) is good. Google's [UX design course](https://www.coursera.org/professional-certificates/google-ux-design) defines good user experience as useful, usable, enjoyable and equitable. Software is useful  creates value. Usable software is reliable and easy to use. Enjoyability means that the software actually feels good to use. Equitable software is usable for all types of people in the target group.
+Good software has happy users. Users are happy when the user experience (UX) is good. Google's [UX design course](https://www.coursera.org/professional-certificates/google-ux-design) defines good user experience as useful, usable, enjoyable and equitable. Software is useful creates value. Usable software is reliable and easy to use. Enjoyability means that the software actually feels good to use. Equitable software is usable for all types of people in the target group.
 
 ### Good software meets requirements
 
@@ -49,7 +49,7 @@ Modern organizations have acknowledged that creating a big list of requirements 
 
 Common idiom in software development says that it's better to have bad software that's easy to change than perfect software that's impossible to change. Good software adapts to change when the user and business requirements change. When changes are made, new version of the software can be released with confidence.
 
-The book _Pragmatic Programmer_ summarizes the essence of good design as *Good design is easy to change*. So-called best practices of software development are considered best practices, because they make the software easier to change. For example, loose coupling makes it easier to switch specific parts of the software without affecting other parts. Removing duplication makes it easier to change logic shared by multiple components.
+The book _Pragmatic Programmer_ summarizes the essence of good design as _Good design is easy to change_. So-called best practices of software development are considered best practices, because they make the software easier to change. For example, loose coupling makes it easier to switch specific parts of the software without affecting other parts. Removing duplication makes it easier to change logic shared by multiple components.
 
 ### Good software is easy to maintain
 

@@ -2,9 +2,9 @@
 title: Deploy Django on Kubernetes with Skaffold, for development and production
 description: Learn Kubernetes concepts such as deployments, services, and jobs
 tags:
-   - Django
-   - Kubernetes
-   - Skaffold
+  - Django
+  - Kubernetes
+  - Skaffold
 series: How to develop Kubernetes-native applications with Skaffold
 date: 2021-04-21
 authors:
@@ -91,7 +91,7 @@ Let's add this Dockerfile also to the list of artifacts to build:
 
 ```yaml
 # skaffold.yaml
-...
+---
 build:
   artifacts:
     - image: django-store
@@ -110,7 +110,7 @@ We'll be adding our deployment configuration to `k8s/store.yaml`. Remember how w
 
 ```yaml
 # skaffold.yaml
-...
+---
 deploy:
   kubectl:
     manifests:

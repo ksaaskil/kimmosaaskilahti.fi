@@ -94,7 +94,7 @@ Why did we also define `get_user` above in `CheckPasswordBackend`? That's a very
 
 So now we have a great new authentication backend, how do we actually use it? We write a view `auth/login` that allows users to login with their email and password. If the user identity is verified, we log them in by calling [`login()`](https://docs.djangoproject.com/en/3.2/topics/auth/default/#django.contrib.auth.login). This creates a session for the user and stores the `sessionid` in a cookie, allowing the user to perform authenticated requests.
 
-Before implementing the `login` view, let's be responsible developers and write tests. 
+Before implementing the `login` view, let's be responsible developers and write tests.
 
 ### Tests
 

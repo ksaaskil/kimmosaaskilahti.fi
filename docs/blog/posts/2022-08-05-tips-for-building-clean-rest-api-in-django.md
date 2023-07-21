@@ -47,20 +47,16 @@ When designing what to return from the API, always return objects that can be ex
 For example, consider an API operation `GET /users` returning the list of users and having another endpoint `GET /users/:id` for getting details about a single user by user ID. The minimal payload to return from the endpoint would be
 
 ```json
-[
-    "user-id-1",
-    "user-id-2",
-    "user-id-3"
-]
+["user-id-1", "user-id-2", "user-id-3"]
 ```
 
 This gets the job done but is impossible to extend without breaking the schema. For example, we might notice our API to be too chatty and want to add user names to the payload. The following structure is a step in the right direction:
 
 ```json
 [
-    { "id": "user-id-1", "name": "User 1"},
-    { "id": "user-id-2", "name": "User 2"},
-    { "id": "user-id-3", "name": "User 3"}
+  { "id": "user-id-1", "name": "User 1" },
+  { "id": "user-id-2", "name": "User 2" },
+  { "id": "user-id-3", "name": "User 3" }
 ]
 ```
 
@@ -70,23 +66,23 @@ But we can do better. What would happen if we had thousands of users and needed 
 
 ```json
 {
-    "users": [
-        { "id": "user-id-1", "name": "User 1"},
-        { "id": "user-id-2", "name": "User 2"},
-        { "id": "user-id-3", "name": "User 3"}
-    ],
-    "pagination": {
-        "page": 1,
-        "prev": null,
-        "next": "/users?page=2",
-        "per_page": 3,
-    }
+  "users": [
+    { "id": "user-id-1", "name": "User 1" },
+    { "id": "user-id-2", "name": "User 2" },
+    { "id": "user-id-3", "name": "User 3" }
+  ],
+  "pagination": {
+    "page": 1,
+    "prev": null,
+    "next": "/users?page=2",
+    "per_page": 3
+  }
 }
 ```
 
 I have paid the price of using too strict payload formats before, having to update all clients when migrating to a more flexible format. Always keep extensibility in mind when designing.
 
-Note that this does not apply to request payloads. For example, it's perfectly fine to use request payloads such as 
+Note that this does not apply to request payloads. For example, it's perfectly fine to use request payloads such as
 
 ```json
 {
@@ -181,9 +177,9 @@ def create_organization(creating_user_email: str, name: str):
 
 The function takes two input arguments: the e-mail of the creating user and organization name. The function then takes care of the full business logic, including: (1) checking that the user can create organizations, (2) creating the organization, (3) adding the user as a member to the organization, and (4) making the user an administrator in the organization.
 
-We can use this function whenever we want to create new organizations. Functions like this are usually called from Django HTTP views, but they might also be called from unit tests (to set up tests, for example) or from non-HTTP "views" like Kafka consumers. 
+We can use this function whenever we want to create new organizations. Functions like this are usually called from Django HTTP views, but they might also be called from unit tests (to set up tests, for example) or from non-HTTP "views" like Kafka consumers.
 
-Notice how the services pattern separates the concerns. If the business logic changes, we usually do not need to modify the data layer. The drawback is that it might sometimes be difficult to track where models are being managed, because these functions are outside of the models. 
+Notice how the services pattern separates the concerns. If the business logic changes, we usually do not need to modify the data layer. The drawback is that it might sometimes be difficult to track where models are being managed, because these functions are outside of the models.
 
 This pattern also helps us mentally avoid the coupling between the data layer and the user-facing entities exposed by the REST API. If we added all business logic in model methods, that would encourage a mental pattern where modifications in API entities would be mapped 1-to-1 to modifications in the data layer.
 
@@ -198,17 +194,17 @@ In [Django views](https://docs.djangoproject.com/en/4.1/topics/http/views/), we 
 Let's say that the user wants to query all organizations that they belong to. This could be implemented by operation `GET /me/organizations`. The response could be a list of organizations such as
 
 ```json
-{ 
-    "organizations": [
-        {
-            "id": "f360a209-c9ac-43d3-9b9c-ad1a3cb5bd0b",
-            "name": "Mega Corp."
-        },
-        {
-            "id": "e4aa065d-9b6a-450c-ac6d-936e04f25448",
-            "name": "Acme Corp."
-        }
-    ]
+{
+  "organizations": [
+    {
+      "id": "f360a209-c9ac-43d3-9b9c-ad1a3cb5bd0b",
+      "name": "Mega Corp."
+    },
+    {
+      "id": "e4aa065d-9b6a-450c-ac6d-936e04f25448",
+      "name": "Acme Corp."
+    }
+  ]
 }
 ```
 
@@ -341,6 +337,6 @@ Note how the view never needs to interact with any Django models. We have decoup
 
 The main reason for not using the framework was to reduce the learning curve for me and other developers. Django itself is a huge framework with a lot to learn, and adopting another framework on top of this seemed like a risk.
 
-We also wanted to keep maximum flexibility. We wanted to be able to customize how to implement features such as user authentication, role-based access control, and how to serve  big data sets. Django REST framework probably can handle all this, but it seemed easier for us to build such custom features directly on top of vanilla Django.
+We also wanted to keep maximum flexibility. We wanted to be able to customize how to implement features such as user authentication, role-based access control, and how to serve big data sets. Django REST framework probably can handle all this, but it seemed easier for us to build such custom features directly on top of vanilla Django.
 
 Finally, it seemed that Django REST framework could encourage some bad practices such as exposing database models directly as API resources. As mentioned in the beginning of the article, we wanted to avoid falling into the trap of too tightly coupling data models to API resources.

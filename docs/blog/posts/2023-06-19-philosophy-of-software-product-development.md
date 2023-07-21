@@ -34,7 +34,7 @@ It is important to have faith in your vision and to persevere. But it's also imp
 
 ## Focus on the user
 
-[Focus on the user and all else will follow](https://about.google/philosophy/). The success or failure of your product is determined by the value you create to your users. 
+[Focus on the user and all else will follow](https://about.google/philosophy/). The success or failure of your product is determined by the value you create to your users.
 
 Teams often seem to focus on everything else other than their users. They spend time on crafting elaborate growth strategies, building quarterly development roadmaps, filling backlogs to ensure there's enough work for everyone, etc. These can all be important, but they're secondary to serving users. If the team fails to secure _long-term trust relationships with users who find the product useful, usable, enjoyable and equitable_, everything else will be in vain.
 
@@ -42,7 +42,7 @@ Establish a great customer support. Reflect on the feedback you get from your us
 
 It should be an exception to ignore user feedback. If you find yourself constantly ignoring user feedback, you're either working with the wrong users or you're blinded by confirmation bias.
 
-Learn what makes good user UX and how to create products with good UX. See [Google's UX Design](https://www.coursera.org/professional-certificates/google-ux-design) course, [_Lean UX_](https://leanuxbook.com/), [_The Design of Everyday Things-](https://www.nngroup.com/books/design-everyday-things-revised/), or [_Universal methods of Design_](https://www.oreilly.com/library/view/universal-methods-of/9781592537563/). Everyone in the team should be familiar with such principles.
+Learn what makes good user UX and how to create products with good UX. See [Google's UX Design](https://www.coursera.org/professional-certificates/google-ux-design) course, [_Lean UX_](https://leanuxbook.com/), [\_The Design of Everyday Things-](https://www.nngroup.com/books/design-everyday-things-revised/), or [_Universal methods of Design_](https://www.oreilly.com/library/view/universal-methods-of/9781592537563/). Everyone in the team should be familiar with such principles.
 
 ## Establish a cross-functional core team
 

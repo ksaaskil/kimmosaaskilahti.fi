@@ -289,4 +289,3 @@ If you had `skaffold dev --port-forward` running throughout this tutorial, you s
 ## Conclusion
 
 That concludes the tutorial on how to get Postgres running on Kubernetes. In the next and final part, we'll finally deploy the Django application we built in Part 2, backed by Postgres. See you then!
-

@@ -22,12 +22,12 @@ Hi! In this post, I'd like to present my favorite functional programming techniq
 
 ### Use list comprehensions
 
-The first technique is to use [list comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) to create lists and to perform operations such as `map` and `filter` on lists. 
+The first technique is to use [list comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) to create lists and to perform operations such as `map` and `filter` on lists.
 
 In Haskell, we would use list comprehensions as follows:
 
 ```haskell
-ghci> [x*2 | x <- [1..10], x*2 >= 12] 
+ghci> [x*2 | x <- [1..10], x*2 >= 12]
 [12,14,16,18,20]
 ```
 
@@ -76,7 +76,6 @@ In Python, we could write
 ```
 
 but this would compute `x*x` twice for every element. We can circumvent this by using an [auxiliary one-element tuple](https://stackoverflow.com/a/33562793/10561443) as follows:
-
 
 ```python
 >>> [y for x in range(1, 51) for y in (x*x,) if y % 5 == 0]
@@ -142,7 +141,7 @@ def change_doggie_name(doggie: Doggie, new_name: str) -> Doggie:
   return replace(doggie, name=new_name)
 ```
 
-Creating a new object every time will incur a performance penalty, so it's up to you to decide if the overhead is too large for your program. 
+Creating a new object every time will incur a performance penalty, so it's up to you to decide if the overhead is too large for your program.
 
 It's important to remember that frozen dataclasses aren't truly mutable, as we can still mutate all mutable data structures within our class:
 
@@ -185,8 +184,8 @@ With that said, most data structures I've encountered are at most two to three l
 
 ```python
 def change_doggie_color(doggie: Doggie, new_color: str):
-  return replace(doggie, 
-                 attributes=replace(doggie.attributes, 
+  return replace(doggie,
+                 attributes=replace(doggie.attributes,
                                     color=new_color))
 ```
 
@@ -208,7 +207,7 @@ new_dict = { **old_dict, "key": value }
 
 One advantage in treating our lists as read-only is that if we use Python's [`typing`](https://docs.python.org/3/library/typing.html) system (we should!) for static type checking, we can use the read-only [`typing.Sequence`](https://docs.python.org/3/library/typing.html#typing.Sequence) type for our lists instead of the mutable [`typing.List`](https://docs.python.org/3/library/typing.html#typing.Sequence) type. Because `typing.Sequence[T]` is a read-only collection for values of type `T`, it's [covariant](https://kimmosaaskilahti.fi/blog/2020-02-10-covariance-and-contravariance-in-generic-types/) in `T`:
 
->`typing.Sequence[A] <: typing.Sequence[B] if A <: B`
+> `typing.Sequence[A] <: typing.Sequence[B] if A <: B`
 
 This means that we can use `typing.Sequence[A]` where-ever `typing.Sequence[B]` is expected, as long as `A` is a subtype of `B`. For similar reasons, it's better to use the read-only [`typing.Mapping`](https://docs.python.org/3/library/typing.html#typing.Mapping) for dictionaries instead of [`typing.Dict`](https://docs.python.org/3/library/typing.html#typing.Mapping).
 

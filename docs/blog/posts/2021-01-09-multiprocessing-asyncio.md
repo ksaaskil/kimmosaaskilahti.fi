@@ -105,7 +105,7 @@ async def source_to_queue(source, queue):
         print(f"{threading.current_thread().name}: Submitted to queue", event)
 ```
 
-When started, the coroutine iterates over the asynchronous stream `source` and puts events to the queue when new events are received. Because reading the event source and pushing the events to queue is a non-blocking operation, we can use [`loop.create_task`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task) to kick off `source_to_queue` in the main thread's event loop: 
+When started, the coroutine iterates over the asynchronous stream `source` and puts events to the queue when new events are received. Because reading the event source and pushing the events to queue is a non-blocking operation, we can use [`loop.create_task`](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.create_task) to kick off `source_to_queue` in the main thread's event loop:
 
 ```python
 async def main():

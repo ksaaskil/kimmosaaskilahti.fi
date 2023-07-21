@@ -13,7 +13,7 @@ authors:
 
 # How to work in a software engineering team
 
-> This post is a summary of Chapter 2, "How to work well in teams", from *[Software Engineering at Google](https://abseil.io/resources/swe-book)*.
+> This post is a summary of Chapter 2, "How to work well in teams", from _[Software Engineering at Google](https://abseil.io/resources/swe-book)_.
 
 Software development is a team endeavor. To succeed in a team, you must reorganize your behavior around the core principles of humility, respect, and trust. What makes or breaks your career is how well you collaborate with others.
 
@@ -27,19 +27,19 @@ Many programmers are afraid to share their work early because it means peers wil
 
 Hiding code is harmful. You don't know if you're on right track without showing it to others. You easily make fundamental design mistakes early on. You risk reinventing wheels. The more feedback you solicit early on, the lower the risk of wasted work.
 
-*Fail early, fail fast, fail often.*
+_Fail early, fail fast, fail often._
 
 Sharing knowledge and know-how increases the bus factor: the number of people that need to get hit by a bus before your project is doomed. People in your team might move away, leave the company, and take sick leave.
 
-*It's better to be one part of a successful project than the critical part of a failed project.*
+_It's better to be one part of a successful project than the critical part of a failed project._
 
 Working with other people directly increases the collective wisdom behind the effort. The fastest way to solve roadblocks is having a couple of peers look over your shoulder and have them tell you how you goofed. This is why teams sit together and do pair programming in software engineering companies.
 
-*Programming is hard. Software engineering is even harder. You need that second pair of eyes.*
+_Programming is hard. Software engineering is even harder. You need that second pair of eyes._
 
 ## Always take small steps
 
-*Programmers work best in tight feedback loops*: write a new function, compile. Add a test, compile. Refactor code, compile. This is how we keep code quality high and make sure our software is evolving correctly, bit by bit.
+_Programmers work best in tight feedback loops_: write a new function, compile. Add a test, compile. Refactor code, compile. This is how we keep code quality high and make sure our software is evolving correctly, bit by bit.
 
 Remember the DevOps philosophy:
 
@@ -55,7 +55,7 @@ Working alone is inherently riskier than working with others. Your primary conce
 
 Software engineering is a team endeavor. You need to work with other people.
 
-*Share your vision. Divide the labor. Learn from others. Create a brilliant team.*
+_Share your vision. Divide the labor. Learn from others. Create a brilliant team._
 
 Healthy social interaction and collaboration are based on three pillars:
 
@@ -85,7 +85,7 @@ A good way to give criticism in code reviews can be, for example, like this: "He
 
 Learn to take criticism. Trust that the other person has your best interests and those of your project at heart. Your self-worth shouldn't be connected to the code you write.
 
-*You are not your code.*
+_You are not your code._
 
 Failure is an option. If you're not failing every now and then, you're not being innovative enough or taking enough risks. Failure is a golden opportunity to learn and improve for the next go-around. By the same token, if you do the same thing over and over and keep failing, it's not failure, it's incompetence.
 

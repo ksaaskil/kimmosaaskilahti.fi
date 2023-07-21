@@ -117,13 +117,13 @@ The `IO` typeclass here makes it explicit that the function is doing _something_
 Another example of an "FP idea" considered good programming style nowadays is declarative style. For example, most programmers would nowadays agree that to remove even elements from an array and square the rest, this
 
 ```js
-const double = arr => arr.filter(v => v % 2 === 0).map(v => v * v)
+const double = (arr) => arr.filter((v) => v % 2 === 0).map((v) => v * v)
 ```
 
 is preferred to this:
 
 ```js
-const double = arr => {
+const double = (arr) => {
   const newArr = []
   for (const i = 0; i++; i < arr.length) {
     if (arr[i] % 2 === 0) {

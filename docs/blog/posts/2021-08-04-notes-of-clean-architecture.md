@@ -17,13 +17,13 @@ I recently finished reading [Clean Architecture](https://www.goodreads.com/book/
 
 <!-- more -->
 
-The book begins by discussing the __cost of a mess__.  Making a mess is always slower than staying clean. Messy software slows down the development. A simple way to avoid making a mess is to practice test-driven development.
+The book begins by discussing the **cost of a mess**. Making a mess is always slower than staying clean. Messy software slows down the development. A simple way to avoid making a mess is to practice test-driven development.
 
 > "The only way to go fast is to go well."
 
 Software is a competition of two values: behavior and architecture. Well-behaving program does what it's expected to do. Good architecture makes the program easy to change.
 
-> Clean architecture is more important than behavior in the sense that a non-working program that's easy to change beats a working program that's impossible to change. 
+> Clean architecture is more important than behavior in the sense that a non-working program that's easy to change beats a working program that's impossible to change.
 
 Behavior is often urgent but typically not that important. Architecture is always important but typically not that urgent.
 

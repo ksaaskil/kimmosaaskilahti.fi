@@ -19,9 +19,9 @@ authors:
 
 <!-- more -->
 
-Think how **your teammates** would respond to the following claims about you (the original claims were written in the first person but for me, it felt easier to think in third person). 
+Think how **your teammates** would respond to the following claims about you (the original claims were written in the first person but for me, it felt easier to think in third person).
 
-The response scale is: **Usually=3, Sometimes=2, Rarely=1**. 
+The response scale is: **Usually=3, Sometimes=2, Rarely=1**.
 
 #### Humility
 

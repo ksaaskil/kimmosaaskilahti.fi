@@ -75,7 +75,7 @@ async def main(tasks=20):
         ]
 ```
 
-Function [`asyncio.get_running_loop()`](https://docs.python.org/3.7/library/asyncio-eventloop.html#asyncio.get_running_loop) returns the running event loop. We then create a future for each of the 20 tasks we want to run using `loop.run_in_executor(pool, execute_hello, task)`. 
+Function [`asyncio.get_running_loop()`](https://docs.python.org/3.7/library/asyncio-eventloop.html#asyncio.get_running_loop) returns the running event loop. We then create a future for each of the 20 tasks we want to run using `loop.run_in_executor(pool, execute_hello, task)`.
 
 So far, so good. If we now execute the script, we can see that the pool executes four tasks at a time and takes around five seconds to complete as expected. However, we're still missing any clean-up code and error handling.
 

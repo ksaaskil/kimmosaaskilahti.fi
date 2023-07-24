@@ -53,12 +53,38 @@ The book _Pragmatic Programmer_ summarizes the essence of good design as _Good d
 
 ### Good software is easy to maintain
 
-Developers like software that is easy to maintain. Most of their time is spent on creating cool new features and improving the user experience instead of fire-fighting and fixing bugs. When there are problems, the underlying issues are easy to discover and isolate.
+Developers like software that is easy to maintain. Most of their time is spent on creating cool new features and improving the user experience instead of fire-fighting and fixing bugs.
 
-Good logging and monitoring infrastructure makes it easier to discover and isolate production issues. Monitoring system sends alerts of potential issues already before any bug reports from customers start arriving. When software bugs are found and fixed, test automation and structured release process give confidence that the changed did not introduce any regression.
+Good logging and monitoring infrastructure makes it easier to discover and isolate production issues. Monitoring system may send an alert of a new potential issue before any bug reports from customers have started arriving. Bugs are fast to fix: test automation and structured release process give the development team confidence that the change did not introduce any other regression. Release process is straightforward: a new version can be deployed in minutes or hours.
 
 ### Good software is tested
 
+Writing tests serves multiple purposes to improve the quality of software.
+
+The most obvious benefit is that test suites and test automation help to discover broken code. It is much easier to refactor code that is properly tested. A team leveraging test automation spends less time fire-fighting in production, because bugs and issues are discovered earlier in the development cycle.
+
+Tests can also improve software design and architecture. When software is designed to be easy to test, it is more likely to be designed well and also easy to change.
+
+Finally, tests serve as documentation of intent. Well-written tests tell a story of how each piece of software has been designed to work.
+
+### Good software uses the right technology
+
+Good software uses proper tools and technology to serve its needs.
+
+For example, the choice of the programming language has been done by considering multiple aspects. Skills of the development team, availability of libraries and scalability requirements all affect the decision.
+
+When the business environment changes and requirements evolve, the choice of technology also evolves. For example, it is a perfectly valid choice to start by building an easy-to-maintain monolith. When the software grows, breaking it down into microservices might be justifiable. Each microservice might then be written in a different language, maintained by a different team and deployed independently.
+
 ### Good software has clean code
 
+The definition of clean code varies from one developer to another, but in general, working with clean code is more enjoyable than working with messy code.
+
+Clean code is structured into properly-sized modules that each serve a clear purpose. Abstractions are well designed and each layer of abstraction is justifiable. Software is configurable so that its behavior can be properly changed between multiple environments.
+
+Good code reads like a good story. Functions have a single responsibility: they delegate complex tasks to other functions. There are no surprises such as weird side effects: the less WTF moments, the better.
+
 ### Good software is well documented
+
+Good software is nice to get to know to. There is documentation explaining how the software has been designed, how to run the system locally, how to release new versions and how to contribute to the codebase.
+
+Comments in the code explain _why_ code is written as it is. There might be warnings for new developers and links to specific issues. Comments are typically not used to explain _how_ the code works: the code mostly explains itself.

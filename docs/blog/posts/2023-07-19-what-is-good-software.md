@@ -1,7 +1,8 @@
 ---
 title: What is good software?
-draft: true
+published: true
 description: Lessons learned from 70 technical interviews
+canonical_url: https://kimmosaaskilahti.fi/blog/2023/07/19/what-is-good-software/
 tags:
   - Philosophy
 date: 2023-07-19

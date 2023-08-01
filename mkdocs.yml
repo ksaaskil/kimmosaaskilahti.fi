@@ -25,7 +25,11 @@ nav:
   - Blog:
       - blog/index.md
       - blog/tags.md
+  - Photography:
+      - Photography: photography/index.md
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -43,6 +47,7 @@ plugins:
       tags_file: blog/tags.md
   - blog:
       post_excerpt: required
+  - glightbox
 extra:
   analytics:
     provider: google

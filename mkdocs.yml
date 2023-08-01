@@ -14,7 +14,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   custom_dir: docs/theme_override_home/
-site_name: Kimmo's blog
+site_name: Kimmo's home page
 site_url: https://kimmosaaskilahti.fi
 docs_dir: docs
 extra_css:

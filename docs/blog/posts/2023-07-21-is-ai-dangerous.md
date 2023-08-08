@@ -1,5 +1,5 @@
 ---
-title: On the dangers of large language models
+title: Dangers of large language models
 draft: true
 description: Some thoughts on AI threats, open source and what to study
 tags:
@@ -11,7 +11,7 @@ authors:
   - ksaaskil
 ---
 
-# On the dangers of large language models
+# Dangers of large language models
 
 _A man who is not afraid of the sea will soon be drowned, he said, for he will be going out on a day he shouldn't. But we do be afraid of the sea, and we do only be drownded now and again._ -John Millington Synge
 

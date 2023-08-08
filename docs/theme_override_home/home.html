@@ -267,6 +267,17 @@
   .invert {
     filter: invert(100%) opacity(0.95);
   }
+
+  .logos {
+    display: flex;
+    margin-top: 50px;
+    gap: 30px;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
 </style>
 
 <section class="tx-container full-page">
@@ -277,7 +288,10 @@
       </div>
       <div class="tx-hero__content">
         <h1>Kimmo's home page</h1>
-        <p>Welcome to my home page where you can read my blog posts about software engineering and see some of my wildlife photos!</p>
+        <p>
+          Welcome to my home page where you can read my blog posts about
+          software engineering and see some of my wildlife photos!
+        </p>
         <a
           href="{{ page.next_page.url | url }}"
           title="{{ page.next_page.title | striptags }}"
@@ -290,5 +304,25 @@
   </div>
 </section>
 
-{% endblock %} {% block content %}{% endblock %} {% block footer %}{% endblock
+<section>
+  <div class="logos">
+    <div class="logo">
+      <a href="https://fi.linkedin.com/in/kimmo-saaskilahti">
+        {% include ".icons/fontawesome/brands/linkedin.svg" %}
+      </a>
+    </div>
+    <div class="logo">
+      <a href="https://github.com/ksaaskil">
+        {% include ".icons/fontawesome/brands/github.svg" %}
+      </a>
+    </div>
+    <div class="logo">
+      <a href="https://scholar.google.fi/citations?user=r67e0OEAAAAJ&hl=en">
+        {% include ".icons/simple/googlescholar.svg" %}
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %} {% block content %} {% endblock %} {% block footer %} {% endblock
 %}

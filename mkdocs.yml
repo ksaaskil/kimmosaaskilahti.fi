@@ -4,6 +4,7 @@ theme:
     - navigation.indexes
     - navigation.tabs
     - navigation.sections
+    - navigation.footer
   palette:
     - scheme: default
       toggle:
@@ -52,3 +53,10 @@ extra:
   analytics:
     provider: google
     property: !ENV GA_TRACKING_ID
+  social:
+    - icon: simple/github
+      link: https://github.com/ksaaskil
+    - icon: simple/googlescholar
+      link: https://scholar.google.fi/citations?user=r67e0OEAAAAJ&hl=en
+    - icon: fontawesome/brands/linkedin
+      link: https://fi.linkedin.com/in/kimmo-saaskilahti

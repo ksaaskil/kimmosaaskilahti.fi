@@ -8,5 +8,16 @@ I postprocess photos using Adobe Lightroom Classic and Adobe Photoshop. I use Ni
 
 <figure markdown>
   ![Eurasian Wigeon](./20230720-IMG_3697-Edit.jpg){ loading=lazy }
-  <figcaption>Eurasian Wigeon photographed on July 20th, 2023 in Pornaistenniemi hide.</figcaption>
+  <figcaption>Eurasian Wigeon photographed in Pornaistenniemi hide in July 2023</figcaption>
 </figure>
+
+Wigeons are among the most beautiful waterfowl species. Their small, round head gives them a very elegant look. Especially the females and the young have beautiful feather ornaments in their back.
+
+### European Hare
+
+<figure markdown>
+  ![European Hare](./20230808-IMG_3806-Edit.jpg){ loading=lazy }
+  <figcaption>European Hare photographed through spotting scope in my backyard in August 2023</figcaption>
+</figure>
+
+One of the best things about living where I live in East Helsinki is that there is a lot of wildlife. There are woodpeckers, hawks, geese, tits, foxes, stoats... But perhaps most importantly, there are two kinds of bunnies: European hares and European rabbits. Seeing bunnies brings a lot of joy in my everyday life.

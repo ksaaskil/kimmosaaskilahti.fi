@@ -1,6 +1,6 @@
 ---
 title: Looking back on my career so far
-draft: true
+draft: false
 tags:
   - Philosophy
 date: 2023-08-09

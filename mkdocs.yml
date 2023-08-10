@@ -30,6 +30,7 @@ nav:
       - blog/tags.md
   - Photography:
       - Photography: photography/index.md
+  - Bookshelf: bookshelf/index.md
 markdown_extensions:
   - attr_list
   - md_in_html

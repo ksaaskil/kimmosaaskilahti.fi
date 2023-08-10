@@ -62,7 +62,7 @@ I wanted to get experience of building software products from scratch. I wanted 
 
 **What happened**
 
-What a ride it was working at Meeshkan! I was at Meeshkan for two years but it surely felt like a much longer time. Many people joined and left the company during my time there. Product ideas came and old products went obsolete. I saw our company [win the Slush 100 pitching competition](https://www.youtube.com/watch?v=s-A2puVVCKI) and raise a lot of money. 
+What a ride it was working at Meeshkan! I was at Meeshkan for two years but it surely felt like a much longer time. Many people joined and left the company during my time there. Product ideas came and old products went obsolete. I saw our company [win the Slush 100 pitching competition](https://www.youtube.com/watch?v=s-A2puVVCKI) and raise a lot of money.
 
 We built many software products from scratch and I learned more than I could have hoped for. I also got to learn product development, write blog posts, attend conferences, travel under mind-boggling schedules, interview candidates, learn about marketing, manage open source software...
 

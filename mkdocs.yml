@@ -1,5 +1,7 @@
 theme:
   name: material
+  logo: assets/icon-192-white.png
+  favicon: assets/icon-192-white.png
   features:
     - navigation.indexes
     - navigation.tabs

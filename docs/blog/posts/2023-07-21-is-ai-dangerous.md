@@ -42,6 +42,8 @@ What are then the risks of LLMs?
 ## Risks
 
 <!--## Disinformation: Robot calls, spam, deep fakes and all that
+
+On the dangers of stochastic parrots: Environmental effects. Unfathomable datasets encoding hegemony and bias. Form without meaning.
 -->
 
 Sam Altman, the CEO of OpenAI, was [interviewed by ABC News](https://abcnews.go.com/Technology/openai-ceo-sam-altman-ai-reshape-society-acknowledges/story?id=97897122) in March 2023. He made it clear that he was not worried of any omnipotent superbeing taking control: _"A common sci-fi fear that Altman doesn't share: AI models that don't need humans, that make their own decisions and plot world domination._" However, he was worried of which humans will be in control of these powerful AI systems.
@@ -57,3 +59,7 @@ What did the letter then warn us about?
 Consider that you're an unpopular dictator waging war against a neighbor country. You have eliminated almost all of your skilled generals in fear of a coup. You lack skilled strategists and you are given the opportunity to let an AI system take control of your troops such as autonomous drones. Sometimes the system makes bad mistakes that leads to the deaths of a lot of soldiers, but that's a price you're willing to pay. What would stop you from trying it out?-->
 
 ## Plugins allow FMs to interact with our world
+
+## References
+
+[_On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜_](https://dl.acm.org/doi/10.1145/3442188.3445922), Bender, Emily M. and Gebru, Timnit and McMillan-Major, Angelina and Shmitchell, Shmargaret. Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, p. 610-623, 2021.

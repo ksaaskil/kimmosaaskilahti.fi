@@ -94,13 +94,13 @@ I learned a lot about technical interviews by carrying out maybe 70 of them. I l
 
 I learned how to write good feedback and how to ask for feedback. Thinking in long term, this is perhaps the most important skill I acquired.
 
-## Sanoma Media Finland
+## Next steps
 
-I'm starting as Senior Developer at Sanoma Media Finland in 2023.
+I'm starting as Senior Developer in a large Finnish media company in 2023.
 
 **What I expect**
 
-I expect to have a sense of purpose being part of free media and a media house known for high-quality journalism. I expect to learn how to build robust and maintainable event-driven systems. I expect to learn more about real-time machine learning and recommendation systems. I expect to learn how to focus on outcomes instead of outputs. I expect to get to know great people and learn from them.
+I expect to have a sense of purpose being part of free media and high-quality journalism. I expect to learn how to build robust and maintainable event-driven systems. I expect to learn more about real-time machine learning and recommendation systems. I expect to learn how to focus on outcomes instead of outputs. I expect to get to know great people and learn from them.
 
 **What happened**
 

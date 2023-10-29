@@ -53,9 +53,6 @@ plugins:
       post_excerpt: required
   - glightbox
 extra:
-  analytics:
-    provider: google
-    property: !ENV GA_TRACKING_ID
   social:
     - icon: simple/github
       link: https://github.com/ksaaskil

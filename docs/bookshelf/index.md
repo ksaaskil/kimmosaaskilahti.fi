@@ -12,6 +12,14 @@ _The Making of a Manager_ by Julie Zhuo is my favorite book on management and te
 
 The advice in this book is useful for everyone who wants to improve the relationship with their manager and to learn to work better as a member of a team. I highly recommend the book for everyone.
 
+#### The Pragmatic Programmer, 20th Anniversary Edition
+
+<figure markdown>
+  ![Pragmatic Programmer](./prag-prog-cover.jpg){ width="200", loading=lazy }
+</figure>
+
+_The Pragmatic Programmer_ is hands-down the best book on the life as a professional software developer. The chapters on taking ownership and avoiding lame excuses have had a profound influence on how I think about my work. The essence of software design is condensed in the book to the simple phrase "Good design is easy to change", which is both easy to remember and widely applicable. The book includes advanced concepts such as functional programming in very hands-on and pragmatic manner. is The full list of tips from the book is available online at [pragprog.com](https://pragprog.com/tips/).
+
 #### Software Engineering at Google
 
 <figure markdown>

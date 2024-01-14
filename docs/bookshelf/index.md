@@ -18,7 +18,9 @@ The advice in this book is useful for everyone who wants to improve the relation
   ![Pragmatic Programmer](./prag-prog-cover.jpg){ width="200", loading=lazy }
 </figure>
 
-_The Pragmatic Programmer_ is hands-down the best book on the life as a professional software developer. The chapters on taking ownership and avoiding lame excuses have had a profound influence on how I think about my work. The essence of software design is condensed in the book to the simple phrase "Good design is easy to change", which is both easy to remember and widely applicable. The book includes advanced concepts such as functional programming in very hands-on and pragmatic manner. is The full list of tips from the book is available online at [pragprog.com](https://pragprog.com/tips/).
+_The Pragmatic Programmer_ is hands-down the best book on the life as a professional software developer. The chapters on taking ownership and avoiding lame excuses have had a profound influence on how I think about my work. The essence of software design is condensed to the simple phrase "Good design is easy to change", which is both easy to remember and widely applicable. The book includes advanced concepts such as functional programming in very hands-on and pragmatic manner.
+
+The full list of tips from the book is available online at [pragprog.com](https://pragprog.com/tips/).
 
 #### Software Engineering at Google
 
@@ -26,7 +28,9 @@ _The Pragmatic Programmer_ is hands-down the best book on the life as a professi
   ![Software Engineering at Google](./swe_at_google.jpg){ width="200", loading=lazy }
 </figure>
 
-_Software Engineering at Google_ is a fantastic reference on professional software engineering. The book provides very practical advice how to work in a team, how to lead a team, how to review code, how to test software etc. The book is available as free online version in [abseil.io](https://abseil.io/resources/swe-book).
+_Software Engineering at Google_ is a fantastic reference on professional software engineering. The book provides very practical advice how to work in a team, how to lead a team, how to review code, how to test software etc.
+
+The book is available as free online version in [abseil.io](https://abseil.io/resources/swe-book).
 
 #### Ideal Team Player
 

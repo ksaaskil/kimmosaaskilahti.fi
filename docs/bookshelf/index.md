@@ -11,3 +11,19 @@ This page presents some books that I've enjoyed. Many of them have had a big imp
 _The Making of a Manager_ by Julie Zhuo is my favorite book on management and teamwork. The book starts from the basics and explains what management is about: getting better outcomes from a group of people working together. It then goes on to describe the first three months as a manager, how to lead a small team, how to run amazing meetings, etc. One of my favorite chapters explains how to manage yourself to become a better person, employee and colleague.
 
 The advice in this book is useful for everyone who wants to improve the relationship with their manager and to learn to work better as a member of a team. I highly recommend the book for everyone.
+
+#### Software Engineering at Google
+
+<figure markdown>
+  ![Software Engineering at Google](./swe_at_google.jpg){ width="200", loading=lazy }
+</figure>
+
+_Software Engineering at Google_ is a fantastic reference on professional software engineering. The book provides very practical advice how to work in a team, how to lead a team, how to review code, how to test software etc. The book is available as free online version in [abseil.io](https://abseil.io/resources/swe-book).
+
+#### Ideal Team Player
+
+<figure markdown>
+  ![Ideal Team Player](./ideal-team-player.jpg){ width="200", loading=lazy }
+</figure>
+
+_Ideal Team Player_ by Patrick Lencioni is a story about how to work efficiently as a team. It shows how a team consisting of hungry, humble and smart individuals can overcome challenges and be more than the sum of its parts. Being a good team player is not only about being efficient and doing your work, but lifting the whole team up by being a good person.

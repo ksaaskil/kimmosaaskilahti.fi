@@ -13,11 +13,13 @@ authors:
 
 # How to run amazing meetings
 
-This post is a summary of Chapter 6: "Amazing Meetings" from [_The Making of a Manager_](https://www.juliezhuo.com/book/manager.html) by Julie Zhuo.
+> This post is a summary of Chapter 6, "Amazing Meetings", from [_The Making of a Manager_](https://www.juliezhuo.com/book/manager.html) by Julie Zhuo.
+
+Good meetings are simple and straightforward. Practice clarity and ruthless efficiency with your meetings, and people will thank you for respecting the sanctity of their time.
 
 <!-- more -->
 
-Good meetings are simple and straightforward. You leave them feeling:
+You leave good meetings feeling the same way every time:
 
 - The meeting was a great use of my time.
 - I learned something new that will help me be more effective at my job.
@@ -25,9 +27,9 @@ Good meetings are simple and straightforward. You leave them feeling:
 - Everyone was engaged.
 - I felt welcomed.
 
-Meeting should usually have one well-defined purpose. Think beforehand: _What does a great outcome look like for this meeting?_
+Think beforehand: _What does a great outcome look like for this meeting?_
 
-There are five different types of meetings per purpose.
+Meeting should generally have only one purpose. There are five different purposes a meeting can have.
 
 **Making a decision**
 
@@ -72,3 +74,5 @@ A great team-bonding meeting enables the following:
 - Creates better understanding and trust between participants
 - Encourages people to be open and authentic
 - Makes people feel cared for
+
+Every meeting should be clear on which of the above it's trying to accomplish. Don't try to make a single meeting do too much, and remind the group of its primary purpose when the conversation starts to deviate. Decision meeting is not a good place for generating ideas.

@@ -44,3 +44,11 @@ Run all files if needed:
 ```sh
 pre-commit run --all-files
 ```
+
+Create Python environment with Conda:
+
+```sh
+# Run this once
+conda env create -f condaenv.yaml
+conda activate kimmosaaskilahti.fi
+```

@@ -6,7 +6,7 @@ tags:
   - Teamwork
 date: 2024-01-17
 categories:
-  - Career development
+  - Software development
 authors:
   - ksaaskil
 ---

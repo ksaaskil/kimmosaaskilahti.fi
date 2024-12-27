@@ -1,4 +1,5 @@
-ksaaskil:
-  name: Kimmo Sääskilahti
-  description: Creator
-  avatar: https://github.com/ksaaskil.png
+authors:
+  ksaaskil:
+    name: Kimmo Sääskilahti
+    description: Creator
+    avatar: https://github.com/ksaaskil.png

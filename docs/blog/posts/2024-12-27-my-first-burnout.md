@@ -13,7 +13,7 @@ authors:
 
 # How I suffered my first burnout as software developer
 
-This is a story of how I burned myself a few years ago. Thanks to some of my great colleagues, I managed to get out of the pit after a short sick leave with relatively little damage. I also learned a lot about myself.
+This is a story of how I burned myself our a few years ago. Thanks to some of my great colleagues, I managed to get out of the pit relatively quickly and little long-term damage. I also learned a lot about myself.
 
 <!-- more -->
 

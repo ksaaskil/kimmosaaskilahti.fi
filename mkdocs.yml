@@ -52,6 +52,8 @@ plugins:
       tags_file: blog/tags.md
   - blog:
       post_excerpt: required
+      authors: true
+      authors_file: "{blog}/.authors.yml"
   - glightbox
 extra:
   social:

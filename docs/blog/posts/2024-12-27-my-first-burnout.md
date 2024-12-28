@@ -17,6 +17,8 @@ This is a story of how I burned myself out for the first time in my working care
 
 <!-- more -->
 
+## Background
+
 From 2020 to 2023, I was working as a software developer in a Finnish AI consulting company. I started as a senior software developer, working in an R&D team focused on developing internal tooling.
 
 During my time in the company, I mostly worked on internal product development. I lead the development of an annotation tool used to create training data for machine learning models involving image and text. This tool was used both internally and also sold as a service to some of our clients.
@@ -24,6 +26,8 @@ During my time in the company, I mostly worked on internal product development. 
 Beside working on internal product development, I also contributed to a few client projects. At the end of year 2020, I joined half-time in a client project for a company that used gaming engines to generate synthetic training datasets for companies developing self-driving cars. My task in the project was to write a software that took raw synthetically-generated training data as input and produced visualizations of the data as output.
 
 During the project, I learned a lot about large-scale image training datasets, but I was also unhappy about how mechanical the work felt: the software I created did involve any "smartness" but only converted data from one format to various types of pictures. Therefore, I regularly complained to my account owner that I wanted to work on something more challenging and interesting. In the Spring of 2021, we had finished the work that was in scope for the project and the project ended. I moved back to full-time internal product development.
+
+## Enter MLOps
 
 In the Spring of 2021, I joined a new internal R&D team focused on building MLOps tooling that we could use internally for client projects and education and also as a platform or service sold to our clients. Working together within the European IML4E project, we went on to build a Kubernetes-based open-source MLOps platform that was later open-sourced.
 
@@ -45,10 +49,26 @@ The client organization did not accept using our own software or email accounts 
 
 The lead solution architect of the company (our boss) was not part of any team within the client organization. Their goal was, I believe, to supervise the development work performed by the teams and to help and direct them to use efficient tools to build high-quality solutions faster. However, each team had their own project owner responsible for delivering their season objectives in time. Because reaching these objectives was the primary goal of each team, there was noticeable tension between teams working on their own objectives and listening to what our boss wanted them to do.
 
+## Summer
+
 Our first task in the client was to compare the various MLOps solutions available on the market. During the Summer of 2022, we performed small proofs-of-concept using plaforms such as Amazon Sagemaker, Iguazio (developer of MLRun) and Valohai. Because we did not work together with any of the teams that we were supposed to help, our proofs-of-concept were not based on real datasets or models used by the teams in their daily work. Instead, we worked with toy examples.
 
 After we had evaluated different solutions (by filling a massive Excel file), the findings were finally presented to the teams. The architect presented the alternative tools and platforms that we had evaluated and what we had decided. As perhaps expected, reception from the teams was lukewarm.
 
 In hindsight, this presentation was a good example of the problematic top-down culture of the organization. Instead of presenting the teams with our honest findings and asking for their feedback and input, we tried to _sell_ them the tools selected for adoption by the lead architect. Our presentation even hid some of the challenges we had faced during our evaluation, apparently to make the teams more eager to adopt the tools chosen for them.
 
-While I liked evaluating different tools and platforms and I learned a lot about performing such evaluations, I also noticed that our boss did not trust us to do our work well. Even during their summer holiday, they expected us to meet them in an online meeting to report on our work. In short, they wanted to micromanage.
+During this evaluation period, I noticed that our boss did not trust us to do our work well. They wanted to micromanage the work. Even during their summer holiday, they expected us to meet them in an online meeting to report on our work a few times a week.
+
+## Autumn
+
+After the MLOps tooling evaluation, our focus moved to data engineering. Teams in the company already used tools such as Dask and xarray to manage and process their datasets. Our architect was determined to build a data lake for them. Data stored as xarray datasets was to be accessed via Intake using a Dask-capable computing platform provided for them. For the compute platform, we talked with services such as SaturnCloud and Coiled.
+
+We built an internal demo using SaturnCloud. The purpose of the demo was to show the teams how easily they could use SaturnCloud to access company-wide datasets using Intake and Dask. Preparing for the internal demo made the top-down culture visible. Before the demo, our boss made clear that there was no room for technical difficulties in the demo. We were expected to show the teams a 100 % working solutions with as many features as possible. If there were some unsolved challenges, those were not to be mentioned.
+
+For example, one of the challenges we faced with SaturnCloud was how to scaleably handle authentication for all the teams within the company. Our boss wanted us to try and solve the problem as soon as possible, even before the demo as possible. This was before we had a single team to adopt SaturnCloud. I guess our boss wanted the solution to be perfect, because otherwise the teams might choose to not adopt it.
+
+In hindsight, this is a perfect example of what internal platform teams should not do. Platform teams should help teams solve their problems so that the teams can deliver better-quality solutions faster. Platform team is not supposed to tell other teams what they must or must not do. If they do, they will receive pushback.
+
+Micromanagement got worse during the autumn. I was getting more and more stressed about juggling meeting invites received in two different emails to two different calendars. We had no scheduled daily meetings with our boss as he used to send meeting invites every day at short notice. One time, I forgot to check the client's email in the morning. Unaware of the invite sent by our boss for a meeting at 10 am, I missed the meeting. I felt terrible about it. After this incident, our boss wanted us to start to report them at hour-level precision when we had worked for them and what we had done at that time.
+
+I have always been a conscientious worker. I take my work seriously and want to do my work well. I think about work problems outside working hours and always seek to improve my skills so as to do my work as well as possible. However, I'm also not a robot. The fact that our boss visibly demonstrated their mistrust in me and my skills was a hard blow to my self-esteem.

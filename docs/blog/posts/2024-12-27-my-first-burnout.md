@@ -95,12 +95,34 @@ I was too tired to fight back. In hindsight, I think he did not even know what A
 
 On one morning, I had a video call with one of my dear colleagues from the MLOps team. We were discussing something related to the work we had done before. During the call, I noticed that I was not feeling well. I found it impossible to focus on what my colleague was saying. I felt nauseous and dizzy. I had to end the call and tell my colleague that I wasn't feeling well. I went home and took the rest of the day as sick leave.
 
-Next morning, I was walking to the bus stop some 100 meters away from my home. During the walk, I noticed being out-of-breath. My heart raced and pounded in my chest. The thought of commuting to work made me feel even worse. I realized that something was wrong.
+Next morning, I was walking to the bus stop some 100 meters away from my home. During the walk, I noticed being out-of-breath. My heart raced and pounded in my chest. The thought of commuting to work made me feel even worse. I realized that something was wrong. I was deep in the pit.
 
-I can't remember that well what happened on the next few days, but here is my best guess. I contacted occupation healthcare and explained my symptoms to the doctor. I felt that he did not take me seriously. He told me to discuss my situation inside my company and assigned 2-3 days of sick leave.
+I can't remember that well what happened on the next few days. I contacted occupation healthcare and explained my symptoms to the doctor. He told me to discuss my situation inside my company and assigned 2-3 days of sick leave. I felt that he did not show much empathy nor take my situation seriously.
 
 I talked to one of the managers in my company. He said that I could take a few days more of sick leave and then try to return to the client work. He would talk to my account owner and see how they could improve my wellbeing in the project.
 
-The thought of returning to work for the client made me absolutely sick. I knew that, for the sake of my own health, I could not go back. However, there was no clear way out of the project. I felt that by leaving the project I would disappoint my own company and cause some terrible damage, only due to me being unable to handle a little pressure. It also felt a lot of shame about the thought of leaving the project due to personal health issues – I was a lead developer and supposed to lead by example.
+The thought of returning to work for the client made me feel terrible. I knew that, for the sake of my own health, I could not go back. However, there was no clear way out of the project. I felt that by leaving the project I would disappoint my own company and cause some terrible damage, only due to me being unable to handle a little pressure. It also felt a lot of shame about the thought of leaving the project due to personal health issues – I was a lead developer and supposed to lead by example.
 
-Altogether, I was away from work only a week or so.
+## Path to recovery
+
+During my sick leave, I took long walks to try and recover. I was terribly angry. I was angry at my boss for everything I felt he had done wrong. During my walks, I was mostly looking down in the ground and angrily thinking everything that wrong with him.
+
+Slowly, I managed to also start to look up. I noticed the wind in the trees and the fresh breeze on my face. I felt grateful that I was recovering.
+
+I knew I had some dear colleagues that I could talk to. They were the best people specialists I have known. Even at the time, I did not think of them so much as colleagues as friends.
+
+I had a video call with both of them. They asked how I was doing and I explained. I cried. It felt good to get all the dark thoughts out from me and to be able to share them to people who I knew would listen to me. I trusted them to think about my best interest and not the company's.
+
+After the calls, my account owner called me and told me that I would be free to leave the client project. In a great display of empathy, he told me he had had similar experiences of burning out in the past – he understood my situation and my desire to leave the project. Health should come first. They would find someone else to join the project.
+
+It was one of the greatest moments of relief in my life. I felt that everything would turn out for the better again.
+
+Altogether, I was away from work only for 1-2 weeks. I was very lucky to climb out of the pit so quickly. I could not have done it without my great colleagues, to whom I'm always grateful. In hindsight, it probably was also for the better that my sick leave was so short: I had to go back and face my demons earlier and could not build an impeneterable wall between myself and returning to work. Returning to work forced me to try and fix the situation.
+
+I know that serious burnouts can lead to sick leaves of months or even years – mine was not a serious burnout in that sense. However, if I had not been surrounded by such great and loving colleagues, it could have been much worse. I'm very grateful to all the people who helped me climb out from the pit.
+
+## What I learned
+
+I am not angry at my boss anymore. I don't have any negative thoughts about them. I was a terrible fit work in his team. Another person from our company joined the project in my place and thrived.
+
+Learned: four pillars of intrinsic motivation. Autonomy. Purpose.

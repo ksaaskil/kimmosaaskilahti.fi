@@ -89,6 +89,18 @@ I decided to use AWS CDK, as that was the infrastructure as code tool recommende
 
 I went on to build the first parts of the required infrastructure using AWS CDK. After a few days of work, I presented my work so far to our boss. He looked at the AWS CDK code for a few seconds and said to me: "This is wrong. Infrastructure should not be defined with code. It must be defined with configuration files. You should have used Terraform."
 
-I was too tired to fight back. In hindsight, I think he did not even know what AWS CDK was. Maybe he thought that I was building infrastructure using imperative commands with AWS SDK.
+I was too tired to fight back. In hindsight, I think he did not even know what AWS CDK was. Maybe he thought that I was building infrastructure using imperative commands with AWS SDK. After this incident, my motivation plummeted.
 
 ## The crash
+
+On one morning, I had a video call with one of my dear colleagues from the MLOps team. We were discussing something related to the work we had done before. During the call, I noticed that I was not feeling well. I found it impossible to focus on what my colleague was saying. I felt nauseous and dizzy. I had to end the call and tell my colleague that I wasn't feeling well. I went home and took the rest of the day as sick leave.
+
+Next morning, I was walking to the bus stop some 100 meters away from my home. During the walk, I noticed being out-of-breath. My heart raced and pounded in my chest. The thought of commuting to work made me feel even worse. I realized that something was wrong.
+
+I can't remember that well what happened on the next few days, but here is my best guess. I contacted occupation healthcare and explained my symptoms to the doctor. I felt that he did not take me seriously. He told me to discuss my situation inside my company and assigned 2-3 days of sick leave.
+
+I talked to one of the managers in my company. He said that I could take a few days more of sick leave and then try to return to the client work. He would talk to my account owner and see how they could improve my wellbeing in the project.
+
+The thought of returning to work for the client made me absolutely sick. I knew that, for the sake of my own health, I could not go back. However, there was no clear way out of the project. I felt that by leaving the project I would disappoint my own company and cause some terrible damage, only due to me being unable to handle a little pressure. It also felt a lot of shame about the thought of leaving the project due to personal health issues – I was a lead developer and supposed to lead by example.
+
+Altogether, I was away from work only a week or so.

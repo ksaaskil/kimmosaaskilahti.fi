@@ -69,6 +69,26 @@ For example, one of the challenges we faced with SaturnCloud was how to scaleabl
 
 In hindsight, this is a perfect example of what internal platform teams should not do. Platform teams should help teams solve their problems so that the teams can deliver better-quality solutions faster. Platform team is not supposed to tell other teams what they must or must not do. If they do, they will receive pushback.
 
-Micromanagement got worse during the autumn. I was getting more and more stressed about juggling meeting invites received in two different emails to two different calendars. We had no scheduled daily meetings with our boss as he used to send meeting invites every day at short notice. One time, I forgot to check the client's email in the morning. Unaware of the invite sent by our boss for a meeting at 10 am, I missed the meeting. I felt terrible about it. After this incident, our boss wanted us to start to report them at hour-level precision when we had worked for them and what we had done at that time.
+One part of the demo was to convince teams of the benefits of using Amazon S3 as the data storage for their training datasets. At the time, some teams were pulling their training data from internal REST APIs, and our boss told them that using S3 would be better than using an API. One of the developers commented that S3 is an API as well. Lead architect responded with a taste of contempt and frustration: "C'mon guys. S3 is _not_ an API. S3 is a cloud object storage". Silence fell and discussion ended.
+
+Of course, they were both right. S3 is a special kind of API designed for practically infinitely scalable data storage and retrieval. There were clear benefits in using S3 for analytical tasks such as machine learning. However, our boss failed to communicate those benefits clearly and respectfully. That was one of the moments when I realized that our work would turn out to be futile: teams would not be pushed to using something new only because they were told to do so.
+
+Micromanagement from our boss got worse during the autumn. I was getting more and more stressed about juggling emails and meeting invites received in two different emails and finding my way to meetings stored in two different calendars. We had no scheduled daily meetings with our boss – instead, he would send meeting invites every day at a few hours' short notice.
+
+One time, I forgot to check the client's email in the morning. Unaware of the invite sent by our boss for a meeting at 10 am, I missed the meeting. I felt terrible about it. After this incident, our boss wanted us to start to report them at hour-level precision when we had worked for them and what we had done at that time.
 
 I have always been a conscientious worker. I take my work seriously and want to do my work well. I think about work problems outside working hours and always seek to improve my skills so as to do my work as well as possible. However, I'm also not a robot. The fact that our boss visibly demonstrated their mistrust in me and my skills was a hard blow to my self-esteem.
+
+## My last task
+
+One of my last tasks during the Autumn was to pull data from internal message broker (Kafka) to our "data lake" in S3. I was lacking credentials to connect to Kafka, so I was told to connect one of the employees in the client organization for credentials. I waited for weeks to get their time and attention to finally get the credentials – this was corporation bureauracy at its worst.
+
+As part of building data ingestion from Kafka to S3, I needed to build infrastructure in AWS. Client organization was mostly using click-ops and at the time – they had not adopted infrastructure as code (IaaC). Since we wanted to adopt IaaC, I asked my boss if they had preferred tools for building the infrastructure, like Terraform, AWS CDK or Pulumi. They said that any tool would be OK for them.
+
+I decided to use AWS CDK, as that was the infrastructure as code tool recommended by AWS at the time. AWS CDK allows declaring infrastructure using common programming languages such as TypeScript or Python. The code is compiled (or transpiled?) to CloudFormation templates. At the time, AWS CDK was relatively new, but declaring infrastructure as TypeScript code seemed to have clear benefits compared to using purely declarative languages based on configuration files. Examples of such languages include the HashiCorp Configuration Language (HCL) used by Terraform.
+
+I went on to build the first parts of the required infrastructure using AWS CDK. After a few days of work, I presented my work so far to our boss. He looked at the AWS CDK code for a few seconds and said to me: "This is wrong. Infrastructure should not be defined with code. It must be defined with configuration files. You should have used Terraform."
+
+I was too tired to fight back. In hindsight, I think he did not even know what AWS CDK was. Maybe he thought that I was building infrastructure using imperative commands with AWS SDK.
+
+## The crash

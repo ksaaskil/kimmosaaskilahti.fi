@@ -125,21 +125,11 @@ I know that serious burnouts can lead to sick leaves of months or even years –
 
 My burnout recovery time was a period of learning about what I need to thrive professionally. My learnings are easiest to summarize via the theory of intrinsic motivation – the drive to engage in an activity for its own sake – and its four key pillars: autonomy, competence, relatedness, and beneficence.
 
-<!-- The most important factor contributing to my burnout was the lack of autonomy. Autonomy refers to the feeling of having choice and control over our own actions and decisions. We want to feel like we are are the authors of our own experiences, rather than being controlled by external forces.
-
-During my client work, I had very little autonomy. My boss told me what to do and which tools to use. I was effectively reduced to a robot, whose purpose was to complete the tasks assigned by my master. I heard similar experiences about lacking autonomy from two of my colleagues who had worked in other teams inside the same client company. They were also only expected to complete one ticket after another from the backlog.
-
-Autonomy does not mean that we only do what we want to do. Autonomy means that we're included in the whole process of problem solving. We are explained why solving the problem is important to the business and we have an opportunity to discuss and question it. As part of the larger team, we can contribute to the technical planning and plan together how to solve the problem at hand. -->
-
 For me, the most significant contributing factor was a profound lack of autonomy. Autonomy is about feeling in control of your actions and decisions, being the author of your own work rather than a mere executor of someone else's. In my client work, there was very little autonomy. I was mostly told what to do, which tools to use, effectively reduced to a cog in a machine, completing tasks dictated by my boss. This wasn't an isolated experience. I heard similar stories from two colleagues working in other teams at the same client. They, too, were mostly expected to churn through backlog tickets, one after another.
 
 It's important to understand what autonomy isn't. It's not about doing only what you want, when you want. True autonomy means being included in the entire problem-solving process. It means understanding why a problem is important to the business, having the opportunity to discuss and question it, and contributing to the technical planning. It's about collaborating with the team to determine how to best address the challenge at hand.
 
-<!-- Competence: -->
-
 Competence, the feeling of mastery and effectiveness in one's work, was also undermined. While I felt I possessed the necessary skills to succeed in the project, the rigid and siloed organizational hierarchy made it difficult to collaborate with others and created significant roadblocks. I felt frustrated and unable to contribute as effectively as I knew I could.
-
-<!-- Relatedness refers to the need to connect with others and feel a sense of belonging. It provides us with a sense of security, support, and validation. Unfortunately, I did not feel any sense of belonging with my boss and felt only little belonging with the other consultant in our three-person team. With the latter, we did not interact that often or work together. After the summer's platform evaluation period, our tasks were mostly isolated from each other. -->
 
 Relatedness – the need for connection, belonging, and social support – was another missing piece. I felt little connection with my boss and only a tenuous link with the other consultant in our three-person team. Our interactions with the other consultant were infrequent, and after the summer's platform evaluation, our work became largely siloed.
 
@@ -148,5 +138,3 @@ Finally, beneficence — the feeling that your work contributes to the well-bein
 ## Aftermath
 
 I am not angry at my boss anymore. I don't have any negative thoughts about them. I was a terrible fit work in his team. Another person from our company joined the project in my place and thrived.
-
-Learned: four pillars of intrinsic motivation. Autonomy. Purpose.

@@ -1,6 +1,6 @@
 # Books I have read
 
-I like to read books. Since 2022, I have kept track of which books I have read. Books that made a lasting impression to me have been marked with the star.
+I like to read books. Since 2022, I have kept track of which books I have read. Books that I especially liked or that made a big impression on me have been marked with the star.
 
 ## 2024
 
@@ -8,7 +8,7 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **The Song of Achilles** – Madeline Miller :star:
 
-**The Woman in Me** – Britney Spears :star:
+**The Woman in Me** – Britney Spears
 
 **The Ants** – Bert Hölldobler and Edward O. Wilson :star:
 

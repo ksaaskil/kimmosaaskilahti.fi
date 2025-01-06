@@ -123,7 +123,7 @@ I know that serious burnouts can lead to sick leaves of months or even years –
 
 ## What I learned
 
-My burnout recovery time was a period of learning about what I need to thrive professionally. My learnings are easiest to summarize via the theory of intrinsic motivation – the drive to engage in an activity for its own sake – and its four key pillars: autonomy, competence, relatedness, and beneficence.
+My burnout recovery time was a period of learning about what I need to thrive professionally. My learnings are easiest to summarize via the theory of intrinsic motivation – the drive to engage in an activity for its own sake – and its [four key pillars](https://frankmartela.fi/2012/07/02/the-four-ultimate-elements-of-motivation-how-to-get-the-best-out-of-you-and-others-and-how-robots-will-save-the-world/): autonomy, competence, relatedness, and beneficence.
 
 For me, a major contributing factor was a lack of autonomy. Autonomy is about feeling in control of your actions and decisions, being the author of your own work rather than a mere executor of someone else's.
 

@@ -30,6 +30,7 @@ nav:
       - blog/tags.md
   - Photography:
       - Photography: photography/index.md
+  - Books: books/index.md
   - Bookshelf: bookshelf/index.md
   - Strengths: strengths/index.md
 markdown_extensions:
@@ -47,6 +48,9 @@ markdown_extensions:
   - tables
   - toc:
       toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 plugins:
   - tags:
       tags_file: blog/tags.md

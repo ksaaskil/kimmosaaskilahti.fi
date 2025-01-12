@@ -2,6 +2,10 @@
 
 I like to read books. Since 2022, I have kept track of which books I have read. Books that I especially liked or that made a big impression on me have been marked with the star.
 
+## 2025
+
+**A Game of Thrones** – George R. R. Martin
+
 ## 2024
 
 **Piranesi** – Susanna Clarke

@@ -12,7 +12,7 @@ I postprocess photos using Adobe Lightroom Classic and Adobe Photoshop. I use Ni
 Wigeons are among the most beautiful waterfowl species. Their small, round head gives them a very elegant look. Especially the females and the young have beautiful feather ornaments in their back.
 
 <figure markdown>
-  ![Tawny Owl](./images/20180324-IMG_2408-Edit.jpg){ loading=lazy }
+  ![Tawny Owl](./images/20180324-IMG_2408-Edit.webp){ loading=lazy }
   <figcaption>Tawny Owl photographed in March 2018.</figcaption>
 </figure>
 

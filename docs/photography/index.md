@@ -132,7 +132,7 @@ Wigeons are among the most beautiful waterfowl species. Their small, round head 
 </figure>
 
 <figure markdown>
-  ![alt text](./images/20200410-IMG_4555-Edit){ loading=lazy }
+  ![alt text](./images/20200410-IMG_4555-Edit.webp){ loading=lazy }
   <figcaption></figcaption>
 </figure>
 
@@ -187,7 +187,7 @@ Wigeons are among the most beautiful waterfowl species. Their small, round head 
 </figure>
 
 <figure markdown>
-  ![alt text](./images/IMG_3513){ loading=lazy }
+  ![alt text](./images/IMG_3513.webp){ loading=lazy }
   <figcaption></figcaption>
 </figure>
 

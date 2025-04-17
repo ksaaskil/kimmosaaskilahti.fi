@@ -155,3 +155,5 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 **Tiedonjano** – Esko Valtaoja
 
 **Metsäjänis – Utelias älykkö** – Eija Kujansuu :star:
+
+**The Death of Democracy: Hitler's Rise to Power and the Downfall of the Weimar Republic** – Benjamin Carter Hett

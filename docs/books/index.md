@@ -8,6 +8,10 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **A Wizard of EarthSea** – Ursula K. Le Guin
 
+**Nexus** – Yuval Noah Harari
+
+**Steve Jobs** – Walter Isaacson :star:
+
 ## 2024
 
 **Piranesi** – Susanna Clarke

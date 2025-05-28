@@ -6,7 +6,7 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **A Game of Thrones** – George R. R. Martin
 
-**A Wizard of EarthSea** – Ursula K. Le Guin
+**A Wizard of Earthsea** – Ursula K. Le Guin
 
 **Nexus** – Yuval Noah Harari
 

@@ -12,6 +12,8 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Steve Jobs** – Walter Isaacson :star:
 
+**Circe** – Madeline Miller :star:
+
 ## 2024
 
 **Piranesi** – Susanna Clarke

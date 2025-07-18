@@ -41,10 +41,18 @@ This rewrite was a great opportunity for me to learn to work together with the o
 
 At the end of 2023, it had became clear that developing and maintaining the RTA dashboard was happening at the cost of news personalization. We had not improved personalization at all, which negatively impact our readers. It was therefore decided that teh personalization and analytics responsibilities would be split between two teams, creating a personalization team lead by the lead data scientist Max and a new analytics team lead by a new PO. I stayed in the personalization team and stopped contributing to the RTA product (which had stopped being a project and become a product).
 
-- In the new team, our first larger task was to rewrite the old "most read" system
-- We learned teamwork: Created tech designs together, split tasks between developers at fine-grained level and ensured the system was production-grade from the start
-- Learned how to build production-grade systems in AWS: CodePipeline, CodeDeploy, CloudWatch, Datadog, throwing exceptions, shadow launch
-- System built on Lambda and DynamoDB has been very robust and has not had a single production issue to date
+Our first major task in the new team was to stabilize and rewrite the "most read" service, which is responsible for delivering the list of most read articles to our news sites. The existing implementation was done using Kinesis Analytics, which was deprecated and very unstable.
+
+We started designing the new system by mapping the needs and listing all architecture alternatives with their pros and cons. As a team, we created architecture tradeoff analyzes and decision records for all choices that mattered. We compared, for example, Python and TypeScript for programming languages, Lambda and Flink for data processing, and DynamoDB, Aurora and Redis for data storage.
+
+Once we had a plan on what to build, we split the development into multiple milestones. Each milestone was split into small tasks that we maintained in Jira or Confluence. We had learned from the RTA project that every component should be built together as a team instead of letting one developer build, say, the data processing while having other developer build the API. We had some challenges in splitting the development tasks between developers, mostly because some of the developers were used to working on larger tasks alone, but I think all-in-all we were very successful in splitting the work. Every piece in the system was built by at least two developers.
+
+As we were building a business-critical system, we kept the DevOps principles in mind and minimized the risk of production issues at every step of the way. Every piece in the system was carefully unit-tested. We built an integration test to automatically verify that data flowed through the system as expected, all the way from data collection to the "most-read" API. We ran this test as part of the CI/CD pipeline and blocked deployments that failed the test. We implemented custom Datadog dashboard for the system and added custom metrics for the business metrics that mattered. We implemented canary release for every component, to ensure that if faulty components were deployed and any alarms triggered, changes would automatically be rolled back. At the code level, we made sure that exception was thrown for every unexpected situation, ensuring that we would notice such issues when they happened and be able to fix them as soon as possible.
+
+Once the system was getting ready for production, we implemented [shadow launch](https://devops.com/what-is-a-shadow-deployment/) to test the system under realistic production load without the risk of affecting our users. After the shadow launch, we gradually moved traffic from the old system to the new system and continuously monitored that everything worked as expected.
+
+The new system was very robust – there has not been a single production issue since. Later, we even removed the manual approval step in the deployment pipeline, letting all changes committed to the main branch to automatically move to production (assuming the tests pass, of course). Personally, I created ~150 pull requests in the repository.
+
 - We also improved our conversion rates by optimizing sales in personalization
 - Improved MLOps by adding Firehose logging of all scoring calls. This helped us debug many production issues.
 - Improved A/B testing capabilities

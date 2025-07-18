@@ -19,7 +19,7 @@ This is a recap of my first two years at Sanoma Media Finland.
 
 ## Fall 2023: Joining the team
 
-In the Spring of 2023, I had grown a little frustrated about the state of product development in Silo AI and was open for new opportunities. I was contacted by a Sanoma-affiliated headhunter in May 2023, who told me that their news personalization team for looking for a new lead developer. I knew that SMF had values that aligned with mine (they had, for example, partnered with Helsinki Pride) and I was looking for a position that would feel more meaningful than consulting, so I accepted to join interviews.
+In the Spring of 2023, I had grown a little frustrated about the state of product development in Silo AI and was open for new opportunities. I was contacted by a headhunter in May 2023, who told me that Sanoma Media Finland (SMF) was searching for a new lead developer in their news personalization team. I knew that SMF had values that aligned with mine (they had, for example, partnered with Helsinki Pride) and I was looking for a position that would feel more meaningful than consulting, so I accepted to join interviews.
 
 I was interviewed three times, interviewers including my future manager Jyrki, personalization team lead Katriina, lead data scientist Max and the two lead developers in SMF, Miro and Janne. I liked everyone I met and I learned that SMF had both interesting data & AI related challenges as well as high quality standards for professional software development. I was not elected as the lead developer, but I was offered a position as a senior developer in the same personalization team. It was agreed that I would have lead-like responsibilities in everything related to data processing, which suited me well.
 

@@ -17,7 +17,7 @@ This is a recap of my first two years at Sanoma Media Finland.
 
 <!-- more -->
 
-## Joining the team
+## Fall 2023: Joining the team
 
 In the Spring of 2023, I had grown a little frustrated about the state of product development in Silo AI and was open for new opportunities. I was contacted by a Sanoma-affiliated headhunter in May 2023, who told me that their news personalization team for looking for a new lead developer. I knew that SMF had values that aligned with mine (they had, for example, partnered with Helsinki Pride) and I was looking for a position that would feel more meaningful than consulting, so I accepted to join interviews.
 
@@ -37,9 +37,9 @@ In the fall 2023, I created 204 pull requests in the RTA repository. By December
 
 This rewrite was a great opportunity for me to learn to work together with the other developers in the personalization team. We meticulously documented every issue in Confluence and created a step-by-step plan to issues one by one. We learned to communicate together and to write pull requests that were easy to review. We gained the stakeholders' trust by giving realistic time estimations and by focusing on building a production-grade system from the start.
 
-## New team
+## Spring 2024: New team, new habits
 
-At the end of 2023, it had became clear that developing and maintaining the RTA dashboard was happening at the cost of news personalization. We had not improved personalization at all, which negatively impact our readers. It was therefore decided that teh personalization and analytics responsibilities would be split between two teams, creating a personalization team lead by the lead data scientist Max and a new analytics team lead by a new PO. I stayed in the personalization team and stopped contributing to the RTA product (which had stopped being a project and become a product).
+By the end of 2023, it had became clear that developing and maintaining the RTA dashboard was happening at the cost of news personalization. We had not improved personalization at all, which negatively impact our readers. It was therefore decided that teh personalization and analytics responsibilities would be split between two teams, creating a personalization team lead by the lead data scientist Max and a new analytics team lead by a new PO. I stayed in the personalization team and stopped contributing to the RTA product (which had stopped being a project and become a product).
 
 Our first major task in the new team was to stabilize and rewrite the "most read" service, which is responsible for delivering the list of most read articles to our news sites. The existing implementation was done using Kinesis Analytics, which was deprecated and very unstable.
 
@@ -53,9 +53,11 @@ Once the system was getting ready for production, we implemented [shadow launch]
 
 The new system was very robust – there has not been a single production issue since. Later, we even removed the manual approval step in the deployment pipeline, letting all changes committed to the main branch to automatically move to production (assuming the tests pass, of course). Personally, I created ~150 pull requests in the repository.
 
-- We also improved our conversion rates by optimizing sales in personalization
-- Improved MLOps by adding Firehose logging of all scoring calls. This helped us debug many production issues.
-- Improved A/B testing capabilities
+In addition to revising the above service, we improved our personalization in many ways. We improved conversion rates by integrating the personalization service with the near-real-time sales data, letting us boost the visibility of articles that generated a lot of subscriptions. We improved our "MLOps" capabilities by adding Firehose+S3 logging for all our scoring service calls, which gave us direct visibility to the inputs and outputs of our machine learning components and thereby helped us debug many production issues. We also implemented server-side A/B testing, giving us the flexibility to run controlled A/B tests in the new mobile apps.
+
+In the Spring of 2024, we also set up new ways of working for the team. We established biweekly retros, where we reflected on how things could be better. We created "deployment Mondays", where we would every week automatically create a ticket for deploying all our services to production. Deployment covered merging all unmerged dependency updates and checking Datadog for any uncaught errors or warnings. Our ten-ish services were divided evenly between the developers, giving every developer only a few services to update.
+
+Through deployment Mondays, we also improved other aspects of maintaining our services. Together with the rest of the news and feature organization, we enabled automerge for dependency updates. This reduced the developer burden on deployment Mondays, because most dependency updates were already automatically merged. We created integration tests for all our services, helping developers rely on deployment pipelines and their test automation to ensure that services work as expected.
 
 ## Summer 2024: New features and old updates
 

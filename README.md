@@ -8,46 +8,34 @@ My home page made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-
 
 ### Install dependencies
 
+Install [uv](https://docs.astral.sh/uv/) and run:
+
 ```sh
-pip install -r requirements.txt
+uv sync
 ```
 
 ### Run development server
 
 ```sh
-mkdocs serve
+uv run mkdocs serve
 ```
 
 ### Export static files
 
 ```sh
-mkdocs build
+uv run mkdocs build
 ```
 
 ## Development
 
-Install development dependencies:
-
-```sh
-pip install -r requirements-dev.txt
-```
-
 Install pre-commit hooks:
 
 ```sh
-pre-commit install
+uv run pre-commit install
 ```
 
 Run all files if needed:
 
 ```sh
-pre-commit run --all-files
-```
-
-Create Python environment with Conda:
-
-```sh
-# Run this once
-conda env create -f condaenv.yaml
-conda activate kimmosaaskilahti.fi
+uv run pre-commit run --all-files
 ```

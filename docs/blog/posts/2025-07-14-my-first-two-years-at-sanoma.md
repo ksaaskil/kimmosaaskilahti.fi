@@ -63,14 +63,15 @@ During the Spring of 2024, I gave two presentations to the developer community i
 
 ## Summer 2024: New features and old updates
 
-In the Summer of 2024, our team's focus was to improve existing systems. I implemented a new simple algorithm for controlling the amount of paywalled articles shown in the frontpage.
+In the Summer of 2024, our team's focus was to improve existing systems. We implemented a new simple algorithm for controlling the amount of paywalled articles shown in the frontpage.
 
-I spent most of the summer updating a legacy service that was used to automatically propose the relevant tags for new articles. Updating the system was again a big "DevOps" overhaul, adding everything considered a best practice in modern software development: linters, formatting, type-checking, monitoring, and proper dependency management. By adding proper packaging, I was able to remove all the `sys.path` hacks littered around the codebase. Errors were handled by simply swallowing them (so-called [Pokemon error handling](https://softwareengineering.stackexchange.com/questions/319088/is-indiscriminately-catching-exceptions-pokemon-exception-handling-ever-accept)), making it impossible to verify automatically if the system worked as expected. I ensured exceptions were thrown for all unexpected exceptions, which enabled the automated monitoring for the system.
+I spent most of the summer updating the "tagging service" that was used to automatically propose the relevant tags for new articles. Updating the service included again a big "DevOps" overhaul, where we added everything considered a best practice in modern software development: linters, formatting, type-checking, monitoring, and proper dependency management. By adding proper Python packaging, we were able to remove all the `sys.path` hacks littered around the codebase. We also improved error handling, migrating away from so-called [Pokemon error handling](https://softwareengineering.stackexchange.com/questions/319088/is-indiscriminately-catching-exceptions-pokemon-exception-handling-ever-accept) and instead raising exceptions and crashing the service for any unexpected exceptions. This enabled powerful automated monitoring for the system.
 
-There were no tests of any kind in the service. The external developer who built the system years ago had even boasted that they did not believe in unit tests. Therefore, refactoring and maintaining the system was a big pain. I added simple unit tests to all the critical functionality and ensured that these tests were run as part of the pull request checks and the deployment pipeline, which greatly improved the confidence in test automation and enabled refactoring the code as needed. I also added end-to-end tests in the deployment pipeline to verify that training new models worked as expected.
+There were no tests of any kind in the tagging service. The external developer who built the system years ago had even boasted that they did not believe in unit tests. Therefore, refactoring and maintaining the system was a big pain. We added simple unit tests to all the critical functionality and ensured that these tests were run as part of the pull request checks and the deployment pipeline, which greatly improved the confidence in test automation and enabled refactoring the code as needed. We also added end-to-end tests in the deployment pipeline to verify that training new models worked as expected.
 
-- Write a document about how our scoring system works, add shared evaluation scripts, learn about NumPyro and Bayesian inference, compare SVI and MCMC
-- Presentations on software design, event-driven architecture, Datadog
+Once the tagging service was considered production-grade, I moved to spending the rest of the summer on understanding in depth how our recommendation system works under the hood. I refreshed my memory about Bayesian data analysis (I took the [BDA course](https://avehtari.github.io/BDA_course_Aalto/) during my doctoral studies), learned about [Pyro](https://pyro.ai/) and [NumPyro](https://num.pyro.ai/en/latest/index.html#introductory-tutorials) and wrote an in-depth document with math equations about how user interest is modelled in our recommendation service. I also studied different [evaluation metrics for recommendation systems](https://aman.ai/recsys/metrics/) and implemented new metrics based on [counterfactual evaluation](https://eugeneyan.com/writing/counterfactual-evaluation/), with little benefit. I also compared different sampling algorithms, such as the [Markov Chain Monte Carlo](https://docs.pyro.ai/en/dev/mcmc.html) algorithm used in production and [stochastic variational inference](https://num.pyro.ai/en/latest/svi.html), finding that the latter produced similar results faster and with less computational resources.
+
+In our tech improvement weekly, I presented an introduction to Bayesian inference based on everything I had learned during the summer. This presentation was fun to make, but it was probably the worst presentation I have given during my time in Sanoma. There was too much obscure math for a community of software engineers and my "simple" examples did not manage to convey the big ideas behind Bayesian inference. I had more success in presenting software design, mostly based on my favorite programming book [The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/).
 
 ## Fall 2024
 
@@ -78,7 +79,7 @@ There were no tests of any kind in the service. The external developer who built
 - Implement personalized groups
 - Remove manual approvals from pipelines
 - Add user purchase propensities as a service, implement dynamic paid-rate
-- Presentation on Google's approach to measuring engineering productivity and an introduction to Bayesian inference
+- Presentation on Google's approach to measuring engineering productivity
 
 ## Spring 2025
 

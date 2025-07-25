@@ -61,28 +61,25 @@ Through deployment Mondays, we also improved other aspects of maintaining our se
 
 ## Summer 2024: New features and old updates
 
-- June 2024: New paid-rate algorithm
-- DevOps updates: Automerge, CI/CD notifications,
+- June 2024: New paid-rate algorithm to simplify the existing solution
 - Tagging-tool improvements: Linters, formatting, unit tests, Datadog with custom tracing, removed error catching and sys.path hacks, integration tests, Poetry, pyright
-- Write a document about how our scoring system works, add shared evaluation scripts, compare SVI and MCMC
-- Presentation on software design
-- Presentation on event-driven architecture
-- Presentation on Datadog
+  - Developer (consultant) had said that they do not believe in unit tests (!)
+- Write a document about how our scoring system works, add shared evaluation scripts, learn about NumPyro and Bayesian inference, compare SVI and MCMC
+- Presentations on software design, event-driven architecture, Datadog
 
 ## Fall 2024
 
 - Add support for collecting audio events
-- Personalized groups
+- Implement personalized groups
 - Remove manual approvals from pipelines
-- User purchase propensities as a service, dynamic paid-rate
-- Presentation on Google's approach to measuring engineering productivity
-- Introduction to Bayesian inference
+- Add user purchase propensities as a service, implement dynamic paid-rate
+- Presentation on Google's approach to measuring engineering productivity and an introduction to Bayesian inference
 
 ## Spring 2025
 
 - Hefaistos: New scoring system based on user-article vectors, Databricks + FastAPI
 - Rewrite Glue Spark code for exporting GDPR data
-- Create data integration
+- Create data integration for podcast metadata
 
 ## S2-2025
 

@@ -19,7 +19,7 @@ This is a recap of my first two years at Sanoma Media Finland.
 
 ## Fall 2023: Joining the team
 
-In the Spring of 2023, I had grown a little frustrated about the state of product development in Silo AI and was open for new opportunities. I was contacted by a headhunter in May 2023, who told me that Sanoma Media Finland (SMF) was searching for a new lead developer in their news personalization team. I knew that SMF had values that aligned with mine (they had, for example, partnered with Helsinki Pride) and I was looking for a position that would feel more meaningful than consulting, so I accepted to join interviews.
+In the Spring of 2023, I had grown a little frustrated about the state of product development and R&D in Silo AI. I was therefore open for new opportunities. I was contacted by a headhunter in May 2023, who told me that Sanoma Media Finland (SMF) was searching for a new lead developer in their news personalization team. I knew that SMF had values that aligned with mine (they had, for example, partnered with Helsinki Pride in earlier years) and I felt that working there would feel personally more meaningful to me than working consulting. Therefore, I accepted to join the interviews.
 
 I was interviewed three times, interviewers including my future manager Jyrki, personalization team lead Katriina, lead data scientist Max and the two lead developers in SMF, Miro and Janne. I liked everyone I met and I learned that SMF had both interesting data & AI related challenges as well as high quality standards for professional software development. I was not elected as the lead developer, but I was offered a position as a senior developer in the same personalization team. It was agreed that I would have lead-like responsibilities in everything related to data processing, which suited me well.
 
@@ -73,21 +73,16 @@ Once the tagging service was considered production-grade, I moved to spending th
 
 In our tech improvement weekly, I presented an introduction to Bayesian inference based on everything I had learned during the summer. This presentation was fun to make, but it was probably the worst presentation I have given during my time in Sanoma. There was too much obscure math for a community of software engineers and my "simple" examples did not manage to convey the big ideas behind Bayesian inference. I had more success in presenting software design, mostly based on my favorite programming book [The Pragmatic Programmer](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/).
 
-## Fall 2024
+## Fall 2024 – Spring 2025
 
-- Add support for collecting audio events
-- Implement personalized groups
-- Remove manual approvals from pipelines
-- Add user purchase propensities as a service, implement dynamic paid-rate
-- Presentation on Google's approach to measuring engineering productivity
+After a summer spent on learning and improving the maintainability of existing services, we spent the rest of year building new features for our core personalization services. We implemented support for collecting data about audio events from our websites and apps, allowing us to use the data for personalization and analytics. We started building a new experimental ML model for predicting users' purchase propensities and using it for personalizing the content on the frontpage. We implemented support for more structured personalized frontpage by extending our personalization to personalizing articles per topic and A/B-tested these changes. I gave a tech improvement presentation on how Google measures engineering productivity and improved our GDPR data exporting pipelines by refactoring the Glue Spark code, writing unit tests and adding new fields in the data export.
 
-## Spring 2025
+In the Fall of 2024, our team also started prototyping a new recommendation algorithm based on graph neural networks (GNNs). In the Spring of 2025, we built the infrastructure necessary for serving these new GNN-based recommendations to our users. This involved a lot of ML and data engineering happening mostly in Databricks, storing user and article embeddings to a vector database and creating a web server for serving the predictions. I contributed mostly to making sure these new services were production-grade, by watching over the system and code design and improving the deployment pipelines and monitoring.
 
-- Hefaistos: New scoring system based on user-article vectors, Databricks + FastAPI
-- Rewrite Glue Spark code for exporting GDPR data
-- Create data integration for podcast metadata
+## Summer 2025
 
-## S2-2025
+In the Spring of 2025, I had started to feel that my time in the personalization team was coming to an end. The team was building and maintaining high-quality production services with the best practices from DevOps and MLOps. I felt that I had contributed in the best way I could and learned what I could about the news personalization.
 
-- Moved to the new team, promoted to lead developer
-- Newsgathering automation
+It was internally announced in the Spring that the company was looking for a new lead developer to work in a new team that would be improving the newsroom automation with AI. I jumped to the opportunity, talked with various stakeholders and was finally offered the position. We interviewed and hired two developers and developer trainees to the new team, in which I joined full-time in May 2025.
+
+Writing this in July 2025, I have been working in the team for almost three months. It has been great so far. Our new hires were very successful and we managed to build a team of very capable and enthusiastic people. We have established our ways of working and we're delivering software at a fast pace. We work in close collaboration with the newsrooms and I have high confidence that we will build very valuable products for our journalists. I feel that I have finally found a position where I can contribute to building high-quality products using a methodology that I believe in, which closes the circle started in the Summer of 2023.

@@ -13,7 +13,7 @@ authors:
 
 # My first two years at Sanoma Media Finland
 
-This is a recap of my first two years at Sanoma Media Finland.
+This is a recap of my first two years at Sanoma Media Finland. During this time, I have had the opportunity to work in great teams, get to know great people and to learn a lot.
 
 <!-- more -->
 
@@ -59,7 +59,9 @@ In the Spring of 2024, we also set up new ways of working for the team. We estab
 
 Through deployment Mondays, we also improved other aspects of maintaining our services. Together with the rest of the news and feature organization, we enabled automerge for dependency updates. This reduced the developer burden on deployment Mondays, because most dependency updates were already automatically merged. We created integration tests for all our services, helping developers rely on deployment pipelines and their test automation to ensure that services work as expected.
 
-During the Spring of 2024, I gave two presentations to the developer community in our department. The first presentation showed how we used Datadog to monitor our new most-read service, including custom metrics, monitors, SLOs and dashboards. I also gave a presentation about event-driven architecture, focusing on AWS EventBridge.
+I also gave two presentations to the developer community in our department. The first presentation showed how we used Datadog to monitor our new most-read service, including custom metrics, monitors, SLOs and dashboards. I also gave a presentation about event-driven architecture, focusing on AWS EventBridge.
+
+During this time, I also had the pleasure to start mentoring a junior developer as part of the [Sanoma Media Trainee](https://www.sanoma.com/fi/news/2024/sanoma-media-trainee-2025-haku-auki/) program. The trainee period was very fruitful to both of us and I learned a lot about mentoring a junior developer. The trainee was offered a permanent position at the end of 2024 and they're still part of the team.
 
 ## Summer 2024: New features and old updates
 
@@ -81,8 +83,8 @@ In the Fall of 2024, our team also started prototyping a new recommendation algo
 
 ## Summer 2025
 
-In the Spring of 2025, I had started to feel that my time in the personalization team was coming to an end. The team was building and maintaining high-quality production services with the best practices from DevOps and MLOps. I felt that I had contributed in the best way I could and learned what I could about the news personalization.
+In the Spring of 2025, I had started to feel that my time in the personalization team was coming to an end. We had built a high-performing team with high standards for quality and where both developers and scientists thrived and had plenty of opportunities to grow both professionally and as a person. The team was routinely building and maintaining high-quality production services with the best practices from DevOps and MLOps. I felt that I had contributed to the team in the best way I could and learned what I could about the news personalization. I'm very grateful for the time I got to spend in the personalization team.
 
-It was internally announced in the Spring that the company was looking for a new lead developer to work in a new team that would be improving the newsroom automation with AI. I jumped to the opportunity, talked with various stakeholders and was finally offered the position. We interviewed and hired two developers and developer trainees to the new team, in which I joined full-time in May 2025.
+In March 2025, it was announced internally that the company was looking for a lead developer to lead technical development in a new "Newsroom AI" team. I jumped to the opportunity, talked with various stakeholders and was finally offered the position. We interviewed and hired two developers and developer trainees to the new team, and I joined the team full-time in May 2025.
 
-Writing this in July 2025, I have been working in the team for almost three months. It has been great so far. Our new hires were very successful and we managed to build a team of very capable and enthusiastic people. We have established our ways of working and we're delivering software at a fast pace. We work in close collaboration with the newsrooms and I have high confidence that we will build very valuable products for our journalists. I feel that I have finally found a position where I can contribute to building high-quality products using a methodology that I believe in, which closes the circle started in the Summer of 2023.
+Writing this in July 2025, I have been working in the team for almost three months. It has been great so far. Our new hires were very successful and we have managed to build a team of very capable and enthusiastic people. Everything I learned about teamwork and ways of working in the personalization team has been immensely valuable in setting up the new team as well. We have established our ways of working and we're delivering software at a fast pace. We work in close collaboration with the users and stakeholders and I have high confidence that we will build very valuable products for our journalists. I have found a position where I can contribute to building great products using a methodology that I believe in, closing the circle started in the Summer of 2023.

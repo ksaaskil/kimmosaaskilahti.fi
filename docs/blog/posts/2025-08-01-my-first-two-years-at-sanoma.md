@@ -4,7 +4,7 @@ draft: true
 tags:
   - Philosophy
   - Career
-date: 2025-07-14
+date: 2025-08-01
 categories:
   - Software development
 authors:

@@ -14,6 +14,16 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Circe** – Madeline Miller :star:
 
+**Machines Like Me** – Ian McEwan
+
+**Keskellä virtaa Kongo** – Sami Sillanpää
+
+**Kohti korkeuksia: Ajatusmatkalla avaruudessa** – Marcus Rosenlund
+
+**Vankina Thaimaassa** – Kati Pukki
+
+**Moral Ambition: Stop Wasting Your Talent and Start Making a Difference** – Rutger Bregman :star:
+
 ## 2024
 
 **Piranesi** – Susanna Clarke

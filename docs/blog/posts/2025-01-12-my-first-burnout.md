@@ -6,7 +6,7 @@ tags:
   - Career
 date: 2025-01-12
 categories:
-  - Software development
+  - Career development
 authors:
   - ksaaskil
 ---

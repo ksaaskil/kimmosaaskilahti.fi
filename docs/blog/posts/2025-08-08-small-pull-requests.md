@@ -23,3 +23,17 @@ If I had to pick one programming belief that I believe in, it would be that _mos
 [Pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) are a mechanism in version control providers such as [GitHub](https://github.com/) to propose changes to a codebase and integrate those changes to together, as explained in this definition from GitHub:
 
 > _A pull request is a proposal to merge a set of changes from one branch into another. In a pull request, collaborators can review and discuss the proposed set of changes before they integrate the changes into the main codebase. Pull requests display the differences, or diffs, between the content in the source branch and the content in the target branch._
+
+## Notes
+
+<figure markdown>
+  ![Slide 1](./images/small-pull-requests-1.jpg){ width="200", loading=lazy }
+</figure>
+
+<figure markdown>
+  ![Slide 2](./images/small-pull-requests-2.jpg){ width="200", loading=lazy }
+</figure>
+
+<figure markdown>
+  ![Slide 3](./images/small-pull-requests-3.jpg){ width="200", loading=lazy }
+</figure>

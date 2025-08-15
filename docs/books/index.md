@@ -24,6 +24,8 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Moral Ambition: Stop Wasting Your Talent and Start Making a Difference** – Rutger Bregman :star:
 
+**Miksi Suomi pysähtyi?** – Risto Murto
+
 ## 2024
 
 **Piranesi** – Susanna Clarke

@@ -46,8 +46,23 @@ Small pull requests improve knowledge sharing in the team. Large, difficult-to-r
 
 ### Better developer productivity
 
-- The goal is not to finish tickets faster. The goal is to have stable and predictable pace of development, with high attention on quality at every step of the way.
-- Better measure of progress is the number of finished pull requests
+Modern software development practices such as [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), [continuous integration](https://martinfowler.com/articles/continuousIntegration.html) and [DevOps](https://www.atlassian.com/devops) push developers to take smaller steps to get faster feedback about their changes. In trunk-based development, developers make small changes to a single shared main branch (via pull requests) instead of creating long-lived branches for new features or releases. Continuous integration asks developers to merge their work to the trunk on a daily basis, to integrate the team's work together as soon as possible. DevOps highlights the importance of getting early feedback about code changes, by "shifting left" in the developer workflow to catch bugs before they affect the end-users.
+
+Small pull requests are perfectly aligned with all of these development practices. Small, fast pull requests allow the team to continuously integrate their work together, enabling automated pipelines to continously test the new versions as a whole. Automated testing and monitoring delivers early feedback to the developers, notifying them about bugs and inadvertent behaviour as soon as possible.
+
+A common practice in software development teams is to link pull requests to development "tickets". Tickets are used in work management platforms such as [Jira](https://www.atlassian.com/software/jira) to keep track of tasks and to assign them to developers. I believe there are two traps in development teams about tickets.
+
+The first trap is the belief that there should be a single pull request per ticket. Such one-to-one mapping may seem handy, because it allows project managers to track features directly to code changes. However, this practice also encourages creating large pull requests that may affect multiple code components at a single time.
+
+Second trap is the common misconception, especially among more junior developers, that developers should finish tickets as early as possible to be seen as productive. The number of completed tickets is not a good measure of productivity, because it encourages sacrificing quality for speed.
+
+When a developer tries to finish their tickets as soon as possible, they have tendency to either (1) assume that the first idea that comes to their mind is the best solution, creating lower-quality software, or (2) take shortcuts in the development, creating technical debt. Developers should rather be enrouraged to deeply understand the problem at hand and to find the best solution available. They should interact with their peers for advice and feedback. The team should also keep a very close eye on software quality, especially in the code review phase. Pull request authors should be asked to refactor their code when needed, possibly in separate refactoring pull requests that are not expected to affect the system behaviour.
+
+A better proxy metric of productivity for individual developers is the number of pull requests they have created and the speed at which they were reviewed.
+
+Software development teams should attempt to deliver high-quality software to users at a _sustainable_ pace. They should keep up with their roadmap development plan while keeping their customers happy and delivering new features and product at a predictable pace. If the team tries, instead, to deliver software as fast as possible, their productivity may soar in the beginning, but will slow down in the long run.
+
+Small pull requests improve developer productivity by reducing the risk of breaking applications or pipelines, saving developers' time from debugging, fixing and reverting. Small changes are less likely to break than large changes. Small changes are easier to fix and revert than large changes, because when changes are made incrementally, the software is always close to a working version.
 
 ### Better project management
 

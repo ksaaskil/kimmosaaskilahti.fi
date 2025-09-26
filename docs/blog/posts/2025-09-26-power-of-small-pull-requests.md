@@ -88,4 +88,4 @@ Small pull requests are aligned with all of these development practices. Small, 
 
 ## Conclusion
 
-In one of my earlier [posts](https://kimmosaaskilahti.fi/blog/2020/08/01/why-i-love-learning-functional-programming/), I said that most ideas considered as good programming style seem to stem from functional programming. This post extends the post to software development: most good ideas considered good software development seem to stem from small pull requests. Do you agree? Let me know!
+In one of my earlier [posts](https://kimmosaaskilahti.fi/blog/2020/08/01/why-i-love-learning-functional-programming/), I said that most ideas considered as good programming style seem to stem from functional programming. This post extends the post to software development: most ideas considered as good software development practices seem to stem from small pull requests. Do you agree? Let me know!

@@ -1,6 +1,6 @@
 ---
 title: The power of small pull requests
-draft: true
+draft: false
 tags:
   - Philosophy
 date: 2025-08-08
@@ -66,17 +66,19 @@ Finally, creating small pull requests is aligned with the "always take small ste
 
 ## Small pull requests simplify project management
 
-- Less wasted work
-- Work becomes easier to estimate
-- Work becomes more visible
+Developing in small iterations makes the project management smoother. Working in small pull requests forces developers to decompose the problem and to split the work into multiple phases. When work is split into phases like this, project managers have better visibility into what has been done and what still needs to be done to finish the feature. This makes it easier to estimate when the feature will be completed or if it will be delayed.
+
+Since developers get faster feedback about their contributions via small pull requests, developers spend less time working on the wrong things. Small, targeted problems are solved faster than large problems.
 
 ## Small pull requests improve the code quality
 
-- Microservice development mindset: Change and verify one component at a time
-- Small pull requests require decomposing the problem, which leads to higher quality
-- Small pull request -> easier to focus on smaller details instead of letting things slip through, avoiding the "broken windows" problem
+Working in small pull requests improves the code quality in many ways. Perhaps most importantly, small pull requests allow the reviewers to focus on smaller details instead of letting bad choices slip through. This is very important in the long term to avoid the [broken windows](https://en.wikipedia.org/wiki/Broken_windows_theory) effect, where small hacks and shortcuts profilerate in the codebase because such hacks have been done before.
 
-To maintain high software quality, the team should pay a lot attention to quality in the code review phase. Pull request authors should be asked to refactor their code when needed, possibly splitting their pull requests to separate refactoring PRs. Pull request authors should also be asked to maintain the microservice development mindset of changing one component at a time, keeping pull requests small and focused.
+Pull request authors should be asked to refactor their code when needed, possibly splitting their pull requests to separate refactoring PRs. There is a much smaller barrier in asking this kind of splitting is much easier done when working in small pull requests.
+
+Writing small pull requests encourages the "microservice development" mindset. Microservices should be possible to deploy and verify independently from other services. When the developer only changes one service at a time (say, the web application backend) instead of multiple (say, the backend and the frontend simultaneously), they put more effort into unit-testing that service alone. Instead of relying on manual testing in development environments, they write more detailed unit tests verifying that the service alone works as expected. They will also do this in backwards-compatible way, which makes deployments much more robust. This drastically improves the code quality in the long term.
+
+To maintain the microservice development mindset, the team should pay attention to only changing one component at a time when possible. Pull request authors should be asked to split large pull requests into smaller pieces, improving the code quality of each component affected by the change.
 
 ## Small pull requests support good software development practices
 
@@ -86,4 +88,4 @@ Small pull requests are aligned with all of these development practices. Small, 
 
 ## Conclusion
 
-This blog post recommends small pull requests as an software development process. Earlier in my blog posts, I have [advocated](https://kimmosaaskilahti.fi/blog/2020/08/01/why-i-love-learning-functional-programming/) a lot of functional programming. While I do not believe using pure functional programming languages to be productive in most software companies, I do believe that most good ideas in writing clean code stem from functional programming.
+In one of my earlier [posts](https://kimmosaaskilahti.fi/blog/2020/08/01/why-i-love-learning-functional-programming/), I said that most ideas considered as good programming style seem to stem from functional programming. This post extends the post to software development: most good ideas considered good software development seem to stem from small pull requests. Do you agree? Let me know!

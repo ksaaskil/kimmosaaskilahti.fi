@@ -74,7 +74,7 @@ Since developers get faster feedback about their contributions via small pull re
 
 Working in small pull requests improves the code quality in many ways. Perhaps most importantly, small pull requests allow the reviewers to focus on smaller details instead of letting bad choices slip through. This is very important in the long term to avoid the [broken windows](https://en.wikipedia.org/wiki/Broken_windows_theory) effect, where small hacks and shortcuts profilerate in the codebase because such hacks have been done before.
 
-Pull request authors should be asked to refactor their code when needed, possibly splitting their pull requests to separate refactoring PRs. There is a much smaller barrier in asking this kind of splitting is much easier done when working in small pull requests.
+Pull request authors should be asked to refactor their code when needed, possibly splitting their pull requests to separate refactoring PRs. There is a much smaller barrier in asking this kind of splitting when working in small pull requests.
 
 Writing small pull requests encourages the "microservice development" mindset. Microservices should be possible to deploy and verify independently from other services. When the developer only changes one service at a time (say, the web application backend) instead of multiple (say, the backend and the frontend simultaneously), they put more effort into unit-testing that service alone. Instead of relying on manual testing in development environments, they write more detailed unit tests verifying that the service alone works as expected. They will also do this in backwards-compatible way, which makes deployments much more robust. This drastically improves the code quality in the long term.
 

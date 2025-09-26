@@ -44,12 +44,6 @@ I believe that most of the [lone developer problem](https://evanhahn.com/the-lon
 
 Small pull requests improve knowledge sharing in the team. Large, difficult-to-review pull requests are often reviewed or even read only by 1-2 developers in the team. They might be so difficult to review and risky to approve that only the senior developers are willing to review them. Therefore, many of the business-critical features end up being only developed and read by this small set of developers. Small pull requests are more frequently reviewed also by developers who are not yet familiar with the full system. Reviewing pull requests is a great way to get started with sharing knowledge about complex systems.
 
-## Small pull requests are aligned and support other development practices
-
-Modern software development practices such as [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), [continuous integration](https://martinfowler.com/articles/continuousIntegration.html) and [DevOps](https://www.atlassian.com/devops) all encourage developers to take smaller steps to get faster feedback about their changes. In trunk-based development, developers make small pull requests to a single shared main branch instead of creating long-lived branches for new features or releases. Continuous integration asks developers to merge their work to the trunk on a daily basis, to integrate the developers' work together as soon as possible. DevOps helps teams to get early feedback about code changes, by "shifting left" in the developer workflow to catch bugs via automation and monitoring before they affect the end-users.
-
-Small pull requests are aligned with all of these development practices. Small, fast pull requests allow the team to continuously integrate their work together, enabling automated pipelines to continously test the new versions as a whole. Automated testing and monitoring delivers early feedback to the developers, notifying them about bugs and inadvertent behaviour as soon as possible.
-
 ## Small pull requests improve the development productivity
 
 Software development team can be considered to be productive, if it can deliver high-quality software to users at a _sustainable_ pace, keeping up with their roadmap development plan while keeping their existing users and customers happy. How can small pull requests support productivity?
@@ -78,38 +72,12 @@ Finally, creating small pull requests is aligned with the "always take small ste
 
 To avoid creating technical debt, the team should pay high attention to software quality especially in the code review phase. Pull request authors should be asked to refactor their code when needed, possibly in separate pull requests that are not expected to affect the system behaviour.
 
+## Small pull requests support good software development practices
+
+Modern software development practices such as [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), [continuous integration](https://martinfowler.com/articles/continuousIntegration.html) and [DevOps](https://www.atlassian.com/devops) all encourage developers to take smaller steps to get faster feedback about their changes. In trunk-based development, developers make small pull requests to a single shared main branch instead of creating long-lived branches for new features or releases. Continuous integration asks developers to merge their work to the trunk on a daily basis, to integrate the developers' work together as soon as possible. DevOps helps teams to get early feedback about code changes, by "shifting left" in the developer workflow to catch bugs via automation and monitoring before they affect the end-users.
+
+Small pull requests are aligned with all of these development practices. Small, fast pull requests allow the team to continuously integrate their work together, enabling automated pipelines to continously test the new versions as a whole. Automated testing and monitoring delivers early feedback to the developers, notifying them about bugs and inadvertent behaviour as soon as possible.
+
 ## Conclusion
 
 This blog post recommends small pull requests as an software development process. Earlier in my blog posts, I have [advocated](https://kimmosaaskilahti.fi/blog/2020/08/01/why-i-love-learning-functional-programming/) a lot of functional programming. While I do not believe using pure functional programming languages to be productive in most software companies, I do believe that most good ideas in writing clean code stem from functional programming.
-
-## Handbook for practical development
-
-Make backend-frontend changes step by step:
-
-1. API code changes (possibly preced by OpenAPI changes)
-1. Frontend code changes
-
-If API changes require database changes, commit them step-by-step:
-
-1. Database changes
-1. API changes
-
-Make backend infrastructure changes step-by-step:
-
-1. Backend code changes (with feature flags)
-1. Backend infrastructure changes with disabled feature flags
-1. Enable feature flags
-
-## Notes
-
-<figure markdown>
-  ![Slide 1](./images/small-pull-requests-1.jpg){ width="200", loading=lazy }
-</figure>
-
-<figure markdown>
-  ![Slide 2](./images/small-pull-requests-2.jpg){ width="200", loading=lazy }
-</figure>
-
-<figure markdown>
-  ![Slide 3](./images/small-pull-requests-3.jpg){ width="200", loading=lazy }
-</figure>

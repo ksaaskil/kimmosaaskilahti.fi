@@ -62,7 +62,7 @@ Another aspect of productivity beside cycle time is what the developers spend th
 
 If a buggy release is made, changes created via small pull requests are also easier to fix and revert than large changes. When changes are made incrementally, the software is always close to a working version.
 
-Finally, creating small pull requests is aligned with the "always take small steps" principle advocated by [Google](https://abseil.io/resources/swe-book/html/ch02.html). Every pull request is an opportunity for the developer to get feedback about their work from fellow developers. If the feature development starts to drift in the wrong direction, getting this feedback early on can save a huge amount of development time, again improving the team productivity. Developers creating small pull requests also spend less time waiting for pull request review, making them more productive.
+Finally, creating small pull requests is aligned with the "fail early, fail fast, fail often" principle advocated by [Google](https://abseil.io/resources/swe-book/html/ch02.html). Every pull request is an opportunity for the developer to get feedback about their work from fellow developers. If the feature development starts to drift in the wrong direction, getting this feedback early on can save a huge amount of development time, again improving the team productivity. Developers creating small pull requests also spend less time waiting for pull request review, making them more productive.
 
 ## Small pull requests simplify project management
 

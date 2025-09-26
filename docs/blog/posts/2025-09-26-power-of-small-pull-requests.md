@@ -3,7 +3,7 @@ title: The power of small pull requests
 draft: false
 tags:
   - Philosophy
-date: 2025-08-08
+date: 2025-09-26
 categories:
   - Software development
 authors:

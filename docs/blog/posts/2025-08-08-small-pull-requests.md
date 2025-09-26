@@ -66,11 +66,17 @@ Finally, creating small pull requests is aligned with the "always take small ste
 
 ## Small pull requests simplify project management
 
+- Less wasted work
+- Work becomes easier to estimate
+- Work becomes more visible
+
 ## Small pull requests improve the code quality
 
-- Small pull request -> easier to focus on smaller details instead of letting things slip through
+- Microservice development mindset: Change and verify one component at a time
+- Small pull requests require decomposing the problem, which leads to higher quality
+- Small pull request -> easier to focus on smaller details instead of letting things slip through, avoiding the "broken windows" problem
 
-To avoid creating technical debt, the team should pay high attention to software quality especially in the code review phase. Pull request authors should be asked to refactor their code when needed, possibly in separate pull requests that are not expected to affect the system behaviour.
+To maintain high software quality, the team should pay a lot attention to quality in the code review phase. Pull request authors should be asked to refactor their code when needed, possibly splitting their pull requests to separate refactoring PRs. Pull request authors should also be asked to maintain the microservice development mindset of changing one component at a time, keeping pull requests small and focused.
 
 ## Small pull requests support good software development practices
 

@@ -26,7 +26,19 @@ What are pull requests? [Pull requests](https://docs.github.com/en/pull-requests
 
 This blog post focuses on explaining why I think small pull requests to be so valuable. In the next posts, I would like to expand on what is needed to succeed with them and, in my experience, what the major challenges are in adopting them.
 
-Small pull requests improve the software development process at various levels. They improve the teamwork, individual developer productivity, project management and the overall software quality. Let us start with teamwork.
+Before getting started, I would like to share one experience that has affected my beliefs about the importance of small pull requests.
+
+## What can go wrong
+
+In my previous company, I was working as the lead contributor on a web application that was used both internally and in client projects. I was the sole permanent contributor in the project – other contributors were consultants in-between client projects. Because of this volatility in the maintainer base, I found it very important to keep high quality standards in the development, especially when it came to important design decisions such as API design.
+
+One time, a new developer joined the project. I explained to them how the project works and how decisions are made. They were of the quiet type, but seemed to be experienced enough to work alone on a larger new feature – showing analytical data in the web application. This was a large task, because it required designing a new view in the frontend, designing new API endpoints and implementing both the frontend and the backend.
+
+The new developer started working. I did not hear anything from them any days, so I asked how they were doing and if they needed any support. They said they were doing well, and because I did not want to micromanage, I decided to patiently wait what they would come up with. Two weeks later, they published a big pull request implementing the feature completely. Unfortunately, the feature was built on a crumbling foundation. In my pull request review, I said that there were various flaws both in the API design and the implementation. Fixing these would essentially mean scrapping the work done so far and starting from scratch.
+
+Needless to say, the developer did not take these news well. They were furious about the requested changes and how much work they had wasted. Our relationship never recovered from this. Eventually they published a new version with requested changes. I thought there were still major problems in the design and implementation, but because I did not want to make the situation any worse, I approved the changes. They left the project and I learned an important lesson: working together requires that the expectations are clearly set and that the implementation is made in small steps.
+
+This incident made a firm believer in the power of small pull requests. Working in small steps improves the software development process at various levels. They improve the teamwork, individual developer productivity, project management and the overall software quality. Let us start with the benefits for teamwork.
 
 ## Small pull requests encourage better teamwork
 

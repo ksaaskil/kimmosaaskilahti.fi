@@ -26,6 +26,10 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Miksi Suomi pysähtyi?** – Risto Murto
 
+**Co-Intelligence: Living and Working with AI** – Ethan Mollick
+
+**Material World** – Ed Conway
+
 ## 2024
 
 **Piranesi** – Susanna Clarke

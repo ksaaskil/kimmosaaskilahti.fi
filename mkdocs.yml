@@ -30,8 +30,9 @@ nav:
       - blog/tags.md
   - Photography:
       - Photography: photography/index.md
-  - Drawing: drawing/index.md
   - Books: books/index.md
+  - Music: music/index.md
+  - Drawing: drawing/index.md
   - Bookshelf: bookshelf/index.md
   - Strengths: strengths/index.md
 markdown_extensions:

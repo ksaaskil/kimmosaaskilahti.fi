@@ -1,4 +1,4 @@
-# Drawing
+# My drawings
 
 I like drawing with pencils. This page contains some of my drawings.
 

@@ -1,4 +1,4 @@
-# Bookshelf
+# My favorite tech books
 
 This page presents some books that I've enjoyed. Many of them have had a big impact on what I know and how I see the world.
 

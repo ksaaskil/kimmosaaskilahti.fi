@@ -8,7 +8,7 @@ All songs are recorded using [Ableton Live](https://www.ableton.com/en/live/) as
 
 _23.11.2025_
 
-Recorded as MIDI using NY Steinway D Gentle from [Pianoteq 9](https://www.modartt.com/pianoteq_overview?ref=cGFnZT1waWFub3RlcSZleHQ9).
+Recorded as MIDI using New York Steinway D Gentle from [Pianoteq 9](https://www.modartt.com/pianoteq_overview?ref=cGFnZT1waWFub3RlcSZleHQ9).
 
 <audio controls="controls" style="width: 100%;">
   <source type="audio/mp3" src="./audio/SwanLake.mp3"></source>
@@ -18,10 +18,20 @@ Recorded as MIDI using NY Steinway D Gentle from [Pianoteq 9](https://www.modart
 
 _23.11.2025_
 
-Recorded as MIDI using NY Steinway D Gentle from Pianoteq 9.
+Recorded as MIDI using New York Steinway D Gentle from Pianoteq 9.
 
 <audio controls="controls" style="width: 100%;" >
   <source type="audio/mp3" src="./audio/HouseOfTheRisingSun.mp3"></source>
+</audio>
+
+### Erie Canal
+
+_23.11.2025_
+
+Recorded as MIDI using Hamburg Steinway D Mix from Pianoteq 9.
+
+<audio controls="controls" style="width: 100%;" >
+  <source type="audio/mp3" src="./audio/ErieCanal.mp3"></source>
 </audio>
 
 ### Coffee House Boogie

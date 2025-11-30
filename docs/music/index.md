@@ -10,7 +10,7 @@ _Note: Even though the title says "My music", none of the songs below are compos
 
 _23.11.2025_
 
-Recorded as MIDI using New York Steinway D Gentle from [Pianoteq 9](https://www.modartt.com/pianoteq_overview?ref=cGFnZT1waWFub3RlcSZleHQ9).
+Recorded as MIDI using New York Steinway D Gentle from Pianoteq 9.
 
 <audio controls="controls" style="width: 100%;">
   <source type="audio/mp3" src="./audio/SwanLake.mp3"></source>

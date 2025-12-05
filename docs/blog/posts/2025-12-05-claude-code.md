@@ -1,8 +1,8 @@
 ---
 title: Tips for efficient coding with Claude Code
-draft: true
+draft: false
 tags:
-  - AI
+  - AI-assisted development
 date: 2025-12-05
 categories:
   - Software development
@@ -22,7 +22,7 @@ To get started with Claude Code, I recommend reading [Claude Code overview](http
 
 After installing Claude Code, run `claude` inside your code repository to start Claude Code in your terminal. Before doing anything else, I suggest setting up [`CLAUDE.md`](https://www.claude.com/blog/using-claude-md-files) and [`./claude/settings.json`](https://code.claude.com/docs/en/settings).
 
-To create `CLAUDE.md`, first check that your repository README.md is up-to-date and contains all the relevant documentation and commands any human developer would need in order to perform tasks such as installing dependencies, formatting, linting, running unit tests, etc. Then you can ask Claude to explore the code base and create the `CLAUDE.md` file by running the `/init` command.
+To create `CLAUDE.md`, first check that your repository `README.md` is up-to-date and contains all the relevant documentation and commands any human developer would need in order to perform tasks such as installing dependencies, formatting, linting, running unit tests, etc. Then you can ask Claude to explore the code base and create the `CLAUDE.md` file by running the `/init` command.
 
 Carefully review the `CLAUDE.md` file that Claude proposes. It might be overly verbose and focus on aspects that you do not care about. Keep `CLAUDE.md` relatively short! The longer the file is, the larger Claude Code's context will become and the worse results you will get in daily coding. The file should explain, at least, the repository structure, code quality standards (briefly) and the most important commands to run for each language in the repository. You do not need to tell Claude the intricacies of the whole system architecture – you can explicitly explain those if the need arises.
 

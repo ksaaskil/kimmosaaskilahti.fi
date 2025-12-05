@@ -86,7 +86,7 @@ uv run pytest -m "not db"
 ```
 ````
 
-After setting up `CLAUDE.md`, I recommend setting up also the `.claude/settings.json` file. Typical file might look something as follows:
+After setting up `CLAUDE.md`, I recommend setting up also the `.claude/settings.json` file. Typical file for Bedrock users might look something as follows:
 
 ```json
 {
@@ -99,10 +99,6 @@ After setting up `CLAUDE.md`, I recommend setting up also the `.claude/settings.
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",
     "ANTHROPIC_MODEL": "Sonnet"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "input=$(cat); printf \"\\033[36m(%s)\\033[0m %s in \\033[32m%s\\033[0m\" \"${AWS_PROFILE:-default}\" \"$(echo \"$input\" | jq -r '.model.display_name')\" \"$(basename \"$(echo \"$input\" | jq -r '.workspace.current_dir')\")\""
   },
   "permissions": {
     "allow": [
@@ -125,17 +121,17 @@ After setting up `CLAUDE.md`, I recommend setting up also the `.claude/settings.
 }
 ```
 
-In the `env` section, specify all the necessary environment variables you need to setup connection to the large language model. The example above is for Bedrock. The `statusLine` configures Claude Code to show the currently active AWS profile, model name and current working directory.
+In the `env` section, specify all the necessary environment variables you need to setup connection to the large language model. You can also add [`statusLine`](https://code.claude.com/docs/en/statusline) to configure Claude Code to show, say, the currently active AWS profile, model name and the current working directory in the terminal window.
 
-Under `permissions`, we can explicitly give Claude the permission to run specific commands without asking. Useful permitted commands include installing dependencies, type-checking, running unit-tests, formatting and linting. I have also given Claude the permission to view pull request details.
+Under `permissions`, configure Claude with permissions to run specific commands without asking. Useful permitted commands include, for example, installing dependencies, type-checking, running unit-tests, formatting and linting.
 
 Actively expand and modify both `CLAUDE.md` and `settings.json` as you gain more confidence and experience about working with Claude Code.
 
 ## Use the plan mode
 
-Okay, you're ready to start coding now. I highly recommend starting with [the plan mode](https://code.claude.com/docs/en/common-workflows#use-plan-mode-for-safe-code-analysis) for all but the simplest task. Press `Shift+Tab` twice to activate the plan mode.
+Okay, you're ready to start coding now. I highly recommend using [the plan mode](https://code.claude.com/docs/en/common-workflows#use-plan-mode-for-safe-code-analysis) for all but the simplest tasks. Press `Shift+Tab` twice to activate the plan mode.
 
-Here's an example prompt I have recently used in the plan mode:
+Here's an example prompt I recently used in the plan mode:
 
 > I want to explore the proper number of clusters using different embedding cluster valuers. I want to use the silhouette analysis similar to https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html.
 >

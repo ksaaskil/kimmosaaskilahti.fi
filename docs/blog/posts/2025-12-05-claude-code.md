@@ -127,4 +127,28 @@ After setting up `CLAUDE.md`, I recommend setting up also the `.claude/settings.
 
 In the `env` section, specify all the necessary environment variables you need to setup connection to the large language model. The example above is for Bedrock. The `statusLine` configures Claude Code to show the currently active AWS profile, model name and current working directory.
 
-Under `permissions`, we can explicitly give Claude the permission to run specific commands without asking. Useful permitted commands include installing dependencies, type-checking, running unit-tests, formatting and linting. I have also given Claude the permission to view pull request details. Actively expand and modify the list of permitted and denied commands as you gain more confidence and experience about working with Claude Code.
+Under `permissions`, we can explicitly give Claude the permission to run specific commands without asking. Useful permitted commands include installing dependencies, type-checking, running unit-tests, formatting and linting. I have also given Claude the permission to view pull request details.
+
+Actively expand and modify both `CLAUDE.md` and `settings.json` as you gain more confidence and experience about working with Claude Code.
+
+## Use the plan mode
+
+Okay, you're ready to start coding now. I highly recommend starting with [the plan mode](https://code.claude.com/docs/en/common-workflows#use-plan-mode-for-safe-code-analysis) for all but the simplest task. Press `Shift+Tab` twice to activate the plan mode.
+
+Here's an example prompt I have recently used in the plan mode:
+
+> I want to explore the proper number of clusters using different embedding cluster valuers. I want to use the silhouette analysis similar to https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html.
+>
+> Create new file tools/model_selection_pipeline/explore_clustering.py that can be executed as a script using given train_file. The script should run over cluster numbers from 10 to 100 on steps of 10 and provide the average silhouette scores. The script should also provide helpful images about clustering to make it easier to understand how many clusters we need for classification.
+
+After giving Claude this task to plan, it started exploring the codebase and came up with a reasonably good plan. I was not completely happy with the plan, though, so I asked to Claude to modify the plan. After a few iterations, I accepted the plan and gave Claude the permission to implement the plan. The final result was exactly what I wanted.
+
+It is very useful to give Claude as much context as possible already in the prompt. If you know already what files Claude should be looking at or modifying, add them to Claude's context with `@<path-to-file>`. This reduces frustration and saves both time and money.
+
+Always take small steps. Personally, I do not recommend asking Claude to complete big tasks in one go even in the planning mode. Split the large task into smaller milestones using _your_ expertise as a software developer.
+
+For example, If the feature you're building requires modifications in the backend, frontend and infrastructure code, you can split the task into one milestone per component. Implement each milestone via the plan mode, adding unit tests and other necessary quality assurance along the way. Remember to [keep pull requests small](./2025-09-26-power-of-small-pull-requests.md) even when working with Claude!
+
+## Use Git worktree
+
+## Use Claude to create Git commits and pull requests

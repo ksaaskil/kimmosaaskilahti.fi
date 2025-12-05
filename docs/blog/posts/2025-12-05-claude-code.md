@@ -39,7 +39,7 @@ Here's an example of one of my team's repositories for quality standards for Pyt
 - Write unit tests with pytest
 - Use SQLAlchemy for database models
 - Use `logger = src.get_logger(__name__)` for logging
-- Small try-except blocks; log with `logger.exception()` without including error in message
+- Use small try-except blocks; log with `logger.exception()` without including error in message
 - Raise exceptions instead of swallowing them
 - Add imports at top-level
 
@@ -53,7 +53,7 @@ Here's an example of one of my team's repositories for quality standards for Pyt
 - In PR description, include concise summary explaining changes in functionality and the list of changes
 ```
 
-There are similar quality standards setup also for TypeScript and Markdown files.
+There are similar quality standards set up for TypeScript and Markdown files as well.
 
 After quality standards, our `CLAUDE.md` explains the commands to run for various tasks:
 
@@ -86,7 +86,7 @@ uv run pytest -m "not db"
 ```
 ````
 
-After setting up `CLAUDE.md`, I recommend setting up also the `.claude/settings.json` file. Typical file for Bedrock users might look something as follows:
+After setting up `CLAUDE.md`, I also recommend setting up the `.claude/settings.json` file. A typical file for Bedrock users might look as follows:
 
 ```json
 {
@@ -139,7 +139,7 @@ Here's an example prompt I recently used in the plan mode:
 
 After giving Claude this task to plan, it started exploring the codebase and came up with a reasonably good plan. I was not completely happy with the plan, though, so I asked to Claude to modify the plan. After a few iterations, I accepted the plan and gave Claude the permission to implement the plan. The final result was exactly what I wanted.
 
-It is very useful to give Claude as much context as possible already in the prompt. If you know already what files Claude should be looking at or modifying, add them to Claude's context with `@<path-to-file>`. This reduces frustration and saves both time and money.
+It is very useful to give Claude as much context as possible in the prompt. If you know already what files Claude should be looking at or modifying, add them to Claude's context with `@<path-to-file>`. This reduces frustration and saves both time and money.
 
 Always take small steps. Personally, I do not recommend asking Claude to complete big tasks in one go even in the planning mode. Split the large task into smaller milestones using _your_ expertise as a software developer.
 

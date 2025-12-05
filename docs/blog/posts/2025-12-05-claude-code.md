@@ -12,7 +12,7 @@ authors:
 
 # Tips for Efficient Coding with Claude Code
 
-This Fall I have adopted Claude Code as my primary AI coding assistant. In this blog post, I'd like to share some of my learnings how to use the tool efficiently.
+I have recently adopted Claude Code as my primary AI coding assistant. In this blog post, I'd like to share some of my learnings on how to use the tool efficiently.
 
 <!-- more -->
 
@@ -145,6 +145,43 @@ Always take small steps. Personally, I do not recommend asking Claude to complet
 
 For example, If the feature you're building requires modifications in the backend, frontend and infrastructure code, you can split the task into one milestone per component. Implement each milestone via the plan mode, adding unit tests and other necessary quality assurance along the way. Remember to [keep pull requests small](./2025-09-26-power-of-small-pull-requests.md) even when working with Claude!
 
-## Use Git worktree
+## Use Git working trees
+
+As you gain more experience about working with Claude, you will notice that you're able to work on multiple tasks in the background. At this point, using [Git working trees](https://git-scm.com/docs/git-worktree) becomes very helpful. Using git working trees is also documented as a recommended workflow in [Claude Code common workflows](https://code.claude.com/docs/en/common-workflows#run-parallel-claude-code-sessions-with-git-worktrees).
+
+Git working trees enable working on multiple features simultaneously in the same repository. Each working tree is an isolated workspace with its own feature branch. To start working in a new working tree, first create a new terminal window, create the working tree with the `git worktree add` command (shortcut `gwta` in the oh-my-zsh Git plugin) and navigate to the new folder. Start Claude inside the new folder and give it any time-consuming planning or implementation task. Claude can then freely work on the codebase in isolation without affecting other working trees.
+
+Enable terminal notifications to get a notification when Claude Code is waiting for your input. Claude may get stuck at any point, waiting for additional information or permissions to run some commands.
 
 ## Use Claude to create Git commits and pull requests
+
+You can tell Claude simply to "commit" and it will know what to do, asking for your permission to add files to Git index and then create a new Git commit with a descriptive message. The commit messages are usually very descriptive, sometimes even too verbose. Modify `CLAUDE.md` to your liking. You can also tell Claude to "push" to push the branch to GitHub.
+
+Claude can also create pull requests. If you're working on GitHub, install the [GitHub CLI](https://cli.github.com/) and log in. Tell Claude to create a pull request and it will ask for permission to run `gh pr create` command with a very descriptive description. Update the Git section in your `CLAUDE.md` to tell Claude how to create pull requests as you like them. For example, you probably want all pull requests to be created in the draft mode.
+
+You can also tell Claude "commit push pr" and it will perform all three steps.
+
+## Use Claude to fix "papercuts"
+
+Recent [blog post](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic) by Anthropic contained very interesting insights on how Claude Code is used for engineering at Anthropic. One of the observations in the post said:
+
+> Claude fixes a lot of “papercuts”. 8.6% of Claude Code tasks involve fixing minor issues that improve quality of life, like refactoring code for maintainability (that is, “fixing papercuts”) that people say would typically be deprioritized. These small fixes could add up to larger productivity and efficiency gains.
+
+My experience supports this observation. I have used Claude Code to fix many minor issues that would not have been prioritized by the team. Using Git working trees, I can work on minor issues in the background and simultaneously work on something "more important" in the foreground. In the long run, I believe the fixing of papercuts with Claude greatly improves the overall health of the codebase.
+
+As an example, I recently used Claude Code to implement daily Slack notifications about our services' usage statistics and customer feedback. This was a nice-to-have feature that probably would not have been prioritized in the team's cycle planning. With Claude Code, I was able to implement the feature in the background with relatively little effort. The reception to this feature has been very positive. Developers, product managers and stakeholders alike enjoy these daily notifications as they turn complex statistics into simple and easy-to-understand summaries and make them available without extra effort.
+
+## Create new skills using the skill-creator skill
+
+Anthropic recently introduced [agent skills](https://code.claude.com/docs/en/skills) for Claude.
+According to the docs, "skills are modular capabilities that extend Claude’s functionality through organized folders containing instructions, scripts, and resources."
+
+To create new skills in Claude Code, I recommend using the [`skill-creator`](https://github.com/anthropics/skills/tree/main/skills/skill-creator) skill from Anthropic. The skill can be installed using the `/plugin` command as explained in the repository [`README.md`](https://github.com/anthropics/skills/tree/main). Invoke the skill with `/skill-creator` and explain Claude what skill you want to build. The skill provides guidance for creating new effective skills and I recommend using the `skill-creator` skill always when updating your own skills.
+
+As an example, I recently created a skill for developing the machine learning models in one of our code repositories. Using the skill, I can tell Claude Code to run machine learning experiments, try new model architectures, evaluate models and analyze datasets without me having to explicitly tell Claude how to achieve these tasks.
+
+We also have a dedicated resource inside the skill for creating [model cards](https://modelcards.withgoogle.com/). When we ask Claude to create a new model card for given experiment, the skill reads the resource to know how to create the model card in the format we expect.
+
+## Conclusion
+
+Do you have any tips or tricks for working with Claude Code? Let me know and thank you for reading!

@@ -30,6 +30,8 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Material World** – Ed Conway
 
+**Chip War: The Fight for the World's Most Critical Technology** – Chris Miller
+
 ## 2024
 
 **Piranesi** – Susanna Clarke

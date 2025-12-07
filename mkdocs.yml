@@ -25,15 +25,15 @@ extra_css:
 nav:
   - Home:
       - Home: index.md
-  - My blog:
+  - Blog:
       - blog/index.md
       - blog/tags.md
-  - My photos: photography/index.md
-  - My bookshelf: books/index.md
-  - My music: music/index.md
-  - My drawings: drawing/index.md
-  - My fav tech books: bookshelf/index.md
-  - My strengths: strengths/index.md
+  - Photos: photography/index.md
+  - Bookshelf: bookshelf/index.md
+  - Music: music/index.md
+  - Drawings: drawing/index.md
+  - Favorite tech books: fav-tech-books/index.md
+  - Strengths: strengths/index.md
 markdown_extensions:
   - attr_list
   - md_in_html

@@ -1,4 +1,4 @@
-# My photos
+# Photography
 
 I photograph beings in nature with a Canon EOS 750D camera. For wildlife photography, I mostly use Canon EF 70-300mm f/4-5.6 IS II USM lens.
 

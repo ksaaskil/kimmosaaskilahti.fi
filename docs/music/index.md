@@ -1,10 +1,10 @@
-# My music
+# Music
 
 I like playing the piano and the guitar. On this page you can find some of my home recordings. These songs are recorded only for fun and to keep track of my progress.
 
 All songs are recorded using [Ableton Live](https://www.ableton.com/en/live/) as the digital audio workstation (DAW). Piano songs are recorded as MIDI by connecting the digital piano to the computer. MIDI recordings are converted to audio using virtual instruments such as [Pianoteq 9](https://www.modartt.com/pianoteq_overview?ref=cGFnZT1waWFub3RlcSZleHQ9). For recording audio directly, I use [Focusrite Scarlett](https://focusrite.com/scarlett) 2i2 as the audio interface.
 
-_Note: Even though the title says "My music", none of the songs below are composed nor arranged by me._
+_Note: None of the songs below are composed nor arranged by me._
 
 ### Swan Lake
 

@@ -1,41 +1,179 @@
-# My favorite tech books
+# Bookshelf
 
-This page presents some books that I've enjoyed. Many of them have had a big impact on what I know and how I see the world.
+I like to read books. Since 2022, I have kept track of which books I have read. Books that I especially liked or that made a big impression on me have been marked with the star.
 
-#### The Making of a Manager
+## 2025
 
-<figure markdown>
-  ![Making of a Manager](./making-of-a-manager.jpg){ width="200", loading=lazy }
-</figure>
+**A Game of Thrones** – George R. R. Martin
 
-_The Making of a Manager_ by Julie Zhuo is my favorite book on management and teamwork. The book starts from the basics and explains what management is about: getting better outcomes from a group of people working together. It then goes on to describe the first three months as a manager, how to lead a small team, how to run amazing meetings, etc. One of my favorite chapters explains how to manage yourself to become a better person, employee and colleague.
+**A Wizard of Earthsea** – Ursula K. Le Guin
 
-The advice in this book is useful for everyone who wants to improve the relationship with their manager and to learn to work better as a member of a team. I highly recommend the book for everyone.
+**Nexus** – Yuval Noah Harari
 
-#### The Pragmatic Programmer, 20th Anniversary Edition
+**Steve Jobs** – Walter Isaacson :star:
 
-<figure markdown>
-  ![Pragmatic Programmer](./prag-prog-cover.jpg){ width="200", loading=lazy }
-</figure>
+**Circe** – Madeline Miller :star:
 
-_The Pragmatic Programmer_ is hands-down the best book on the life as a professional software developer. The chapters on taking ownership and avoiding lame excuses have had a profound influence on how I think about my work. The essence of software design is condensed to the simple phrase "Good design is easy to change", which is both easy to remember and widely applicable. The book includes advanced concepts such as functional programming in very hands-on and pragmatic manner.
+**Machines Like Me** – Ian McEwan
 
-The full list of tips from the book is available online at [pragprog.com](https://pragprog.com/tips/).
+**Keskellä virtaa Kongo** – Sami Sillanpää
 
-#### Software Engineering at Google
+**Kohti korkeuksia: Ajatusmatkalla avaruudessa** – Marcus Rosenlund
 
-<figure markdown>
-  ![Software Engineering at Google](./swe_at_google.jpg){ width="200", loading=lazy }
-</figure>
+**Vankina Thaimaassa** – Kati Pukki
 
-_Software Engineering at Google_ is a fantastic reference on professional software engineering. The book provides very practical advice how to work in a team, how to lead a team, how to review code, how to test software etc.
+**Moral Ambition: Stop Wasting Your Talent and Start Making a Difference** – Rutger Bregman :star:
 
-The book is available as free online version in [abseil.io](https://abseil.io/resources/swe-book).
+**Miksi Suomi pysähtyi?** – Risto Murto
 
-#### Ideal Team Player
+**Co-Intelligence: Living and Working with AI** – Ethan Mollick
 
-<figure markdown>
-  ![Ideal Team Player](./ideal-team-player.jpg){ width="200", loading=lazy }
-</figure>
+**Material World** – Ed Conway
 
-_Ideal Team Player_ by Patrick Lencioni is a story about how to work efficiently as a team. It shows how a team consisting of hungry, humble and smart individuals can overcome challenges and be more than the sum of its parts. Being a good team player is not only about being efficient and doing your work, but lifting the whole team up by being a good person.
+**Chip War: The Fight for the World's Most Critical Technology** – Chris Miller
+
+## 2024
+
+**Piranesi** – Susanna Clarke
+
+**The Song of Achilles** – Madeline Miller :star:
+
+**The Woman in Me** – Britney Spears
+
+**The Ants** – Bert Hölldobler and Edward O. Wilson :star:
+
+**Kuoleman ja unohtamisen aikakirjat** – Kari Enqvist
+
+**My Russia: War or Peace?** – Mihail Šiškin
+
+**Kuinkas tässä näin kävi?** – Björn Wahlroos
+
+**Evoluutio** – Juha Valste
+
+**Käännekohta** – Antti Tuisku
+
+**Elolliset** – Iida Turpeinen :star:
+
+**Bakteerien planeetta** – Matti Vuento
+
+**Alexi Laiho: Kitara, kaaos ja kontrolli** – Petri Silas
+
+**A Sting in the Tale: My Adventures with Bumblebees** – Dave Goulson
+
+**George Michael: A Life** – James Gavin
+
+## 2023
+
+**Station Eleven** – Emily St. John Mandel :star:
+
+**The Goblet of Fire** – J. K. Rowling
+
+**The Prisoner of Azkaban** – J. K. Rowling
+
+**Tulevaisuuden lukujärjestys** – Perttu Pölönen
+
+**Lessons in Chemistry** – Bonnie Garmus :star:
+
+**Joustava mieli** – Arto Pietikäinen :star:
+
+**Epätäydellisyyden lahjat** – Brené Brown
+
+**Mitä meille tapahtui?** – Jussi Pullinen
+
+**Menesty!** – Antti Tuisku
+
+**Frankenstein** – Mary Shelley :star:
+
+**Järjettömiä asioita** – Saara Turunen
+
+**Olemisen porteilla** – Kari Enqvist
+
+**Educated** – Tara Westover :star:
+
+**Pöllöt – Metsiemme hiljaiset saalistajat** – Matti Ala-Saarela
+
+**Annihilation** – Jeff VanderMeer
+
+**Margarita** – Anni Kytömäki
+
+**Esseitä eläimistä** – Elisa Aaltola :star:
+
+**Difficult Women** – Helen Lewis
+
+**Chatter. The Voice in Your Head, Why It Matters, and How to Harness It** – Ethan Kross
+
+**Helmipöllö – Metsän ja ihmisen hyvinvoinnin vartija** – Erkki Korpimäki
+
+## 2022
+
+**Paranoidi optimisti** – Risto Siilasmaa
+
+**Yksi elämä, yksi planeetta** – David Attenborough
+
+**The Book of Hope** – Jane Goodall
+
+**Ilmaista rahaa kaikille** – Rutger Bregman
+
+**Hyvän historia** – Rutger Bregman :star:
+
+**Pienen hauen pyydystys** – Juhani Karila :star:
+
+**Suon villi laulu** – Delia Owens
+
+**Et taida kuunnella** – Kate Murphy
+
+**Maailman onnellisin mies** – Eddie Jaku :star:
+
+**Neo Nature** – Christo Foerster
+
+**Saatan olla väärässä** – Björn Natthiko Lindeblad :star:
+
+**Kommunistinen manifesti** – Karl Marx, Friedrich Engels
+
+**Copenhagen Trilogy** – Tove Ditlevsen
+
+**Echo Chamber** – John Boyne
+
+**1984** – George Orwell :star:
+
+**Creativity Inc.** – Amy Wallace, Edwin Catmull
+
+**The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win** – Gene Kim, Kevin Behr, George Spafford
+
+## 2021 and Before
+
+**Never Split the Difference** – Christopher Voss
+
+**Design of Everyday Things** – Don Norman
+
+**No Rules Rules** – Erin Meyer, Reed Hastings
+
+**Nervous States: Democracy and the Decline of Reason** – William Davies :star:
+
+**Think Again** – Adam Grant
+
+**Indistractable: How to Control Your Attention and Choose Your Life** – Nir Eyal
+
+**Animal Farm** – George Orwell :star:
+
+**Give and Take** – Adam Grant
+
+**Everything is Fucked: A Book About Hope** – Mark Manson
+
+**Brave New World** – Aldous Huxley
+
+**Dichotomy of Leadership** – Jocko Willink, Leif Babin
+
+**Ideal Team Player** – Patrick Lencioni :star:
+
+**Extreme Ownership** – Jocko Willink, Leif Babin
+
+**Endurance: Shackleton's Incredible Voyage** – Alfred Lansing
+
+**Start With Why** – Simon Sinek
+
+**Tiedonjano** – Esko Valtaoja
+
+**Metsäjänis – Utelias älykkö** – Eija Kujansuu :star:
+
+**The Death of Democracy: Hitler's Rise to Power and the Downfall of the Weimar Republic** – Benjamin Carter Hett

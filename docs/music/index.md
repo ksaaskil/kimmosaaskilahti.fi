@@ -6,6 +6,16 @@ All songs are recorded using [Ableton Live](https://www.ableton.com/en/live/) as
 
 _Note: None of the songs below are composed nor arranged by me._
 
+### Liebestraum
+
+_7.12.2025_
+
+Recorded as MIDI using Grotrian Prelude from Pianoteq 9.
+
+<audio controls="controls" style="width: 100%;">
+  <source type="audio/mp3" src="./audio/Liebestraum.mp3"></source>
+</audio>
+
 ### Swan Lake
 
 _23.11.2025_

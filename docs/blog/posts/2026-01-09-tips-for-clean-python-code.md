@@ -24,6 +24,8 @@ There are many different ways to write good code in Python (or any language). Be
 
 My first core belief about good code is that it should read like a good story. The code should be (on high level) as easy to read as a story about going for grocery shopping. There's a clear intent, setup, middle part and an ending.
 
+Why does making the code read like a good story improve the design? One of the most important if not the most important ideas in computer science is _problem decomposition_. By writing code to read like a good story, we force ourselves to decompose the problem into small parts. If we decompose the problem well, the code will read like a good story, so I think the two principles are essentially equivalent.
+
 As an example, consider an application for processing audio recordings. Suppose that when a user uploads a new recording to a site such as xeno-canto.org, we start a background process that processes the recording and enriches it with useful additional information such as the [spectrogram](https://en.wikipedia.org/wiki/Spectrogram). The spectrogram should be stored for future reference to a file storage.
 
 If I were to write a "story" about this application in pseudo-code, it would proceed something like this:
@@ -43,8 +45,6 @@ write_enrichment_result(recording_id, enrichment, ...)
 ```
 
 The [ellipsis literal](https://en.wikipedia.org/wiki/Spectrogram) `...` stands for all the so-far-unknown dependencies that are needed to make the code in practice. At this level, it's not necessary for me to know exactly how the code works under the hood, but the story is clear to me. If I wanted to change any part of the story, I would know where to do that.
-
-One of the most important (if not the most important) ideas in computer science is _problem decomposition_. By writing code to read like a good story, we force ourselves to decompose the problem into smaller parts. If we decompose the problem well, the code will read like a good story, so maybe the two principles are essentially equivalent.
 
 The principle sounds simple enough, but in practice I often see (and myself write) code that does not read like a good story. I asked Claude Code to write an example of code that's not a good story, with this result:
 
@@ -164,7 +164,7 @@ def test_upload_spectrogram_uploads_to_s3(mock_boto3_client):
     mock_s3_client.put_object.assert_called_once_with(...)
 ```
 
-I prefer to always avoid monkey-patching if at all possible. I think monkey-patching is evil and should be avoided in almost all cases, with the rare exception of mocking out environment variables. Monkey-patching provides a quick escape hatch for bad software design. I have seen unit tests that require five patched functions to work. Working with this code almost made me rip the hair out of my head – all the dependencies to external systems were hidden in the codebase and it was very difficult to change anything.
+I prefer to always avoid monkey-patching if at all possible. In my experience, monkey-patching is evil and should be avoided in almost all cases, with the rare exception of mocking out environment variables. Monkey-patching provides a quick escape hatch for bad software design. I have seen unit tests that require five patched functions to work. Working with this code almost made me rip the hair out of my head – all the dependencies to external systems were hidden in the codebase and it was very difficult to change anything.
 
 We can avoid monkey-patching in our function by making the S3 dependency explicit:
 

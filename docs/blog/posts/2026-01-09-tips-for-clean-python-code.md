@@ -24,29 +24,29 @@ There are many different ways to write good code in Python (or any language). Be
 
 My first core belief about good code is that it should read like a good story. The code should be (on high level) as easy to read as a story about going for grocery shopping. There's a clear intent, setup, middle part and an ending.
 
-Why does making the code read like a good story improve the design? One of the most important if not the most important ideas in computer science is _problem decomposition_. By writing code to read like a good story, we force ourselves to decompose the problem into small parts. If we decompose the problem well, the code will read like a good story, so I think the two principles are essentially equivalent.
+Why does making the code read like a good story improve the design? One of the most important if not the most important ideas in computer science is [_problem decomposition_](https://www.youtube.com/watch?v=bmSAYlu0NcY): taking a complicated problem or system and chopping it up into pieces that you can build relatively independently. By writing code to read like a good story, we force ourselves to decompose the problem into small parts. If we decompose the problem well, the code will read like a good story, so I think the two principles are essentially equivalent.
 
-As an example, consider an application for processing audio recordings. Suppose that when a user uploads a new recording to a site such as xeno-canto.org, we start a background process that processes the recording and enriches it with useful additional information such as the [spectrogram](https://en.wikipedia.org/wiki/Spectrogram). The spectrogram should be stored for future reference to a file storage.
+As an example, consider an application for processing audio recordings. Suppose that when a user uploads a new recording to a site such as [xeno-canto.org](https://xeno-canto.org/), we want to launch a background process for the recording to enrich it with useful additional information such as the [spectrogram](https://en.wikipedia.org/wiki/Spectrogram). The spectrogram should be stored for future reference to a file storage.
 
-If I were to write a "story" about this application in pseudo-code, it would proceed something like this:
+The "story" about this application in pseudo-code might go something like this:
 
 1. Read what recording should be processed
 1. Download the recording
-1. Enrich the recording (possibly with multiple steps)
-1. Write the results to a file storage
+1. Enrich the recording (including possibly with multiple steps)
+1. Write the results to storage
 
-Turning this to code, I would it read something like this:
+Turning this to code, I would expect the code to read something like this:
 
 ```python
 recording_id = get_recording_id(...)
-recording = download_recording(recording_id, ...)
-enrichment = enrich_recording(recording, ...)
-write_enrichment_result(recording_id, enrichment, ...)
+recording = download_recording(...)
+enrichment = enrich_recording(...)
+write_enrichment_result(...)
 ```
 
-The [ellipsis literal](https://en.wikipedia.org/wiki/Spectrogram) `...` stands for all the so-far-unknown dependencies that are needed to make the code in practice. At this level, it's not necessary for me to know exactly how the code works under the hood, but the story is clear to me. If I wanted to change any part of the story, I would know where to do that.
+The [ellipsis literal](https://en.wikipedia.org/wiki/Spectrogram) `...` stands for all the so-far-unknown function arguments that are needed to make the code in practice. At this level, it's not necessary for me to know exactly how the code works under the hood, but the story is clear to me. If I wanted to change any part of the story, I would know where to do that.
 
-The principle sounds simple enough, but in practice I often see (and myself write) code that does not read like a good story. I asked Claude Code to write an example of code that's not a good story, with this result:
+The principle sounds simple enough, but in practice I often see (and myself write) code that does not read like a good story. I asked Claude Code to write an example of code for this use case that's not a good story, with this result:
 
 ```python
 def process_recording(event, context):
@@ -111,19 +111,18 @@ def process_recording(event, context):
     return {'statusCode': 200, 'body': json.dumps({'recording_id': recording_id, 'status': 'completed'})}
 ```
 
-There are obviously many issues in this code, the main one being that Claude has simply inlined the implementation without extracting any functions. This buries the main flow under technical details, making the code hard to reason about, unit-test and to change. We have not decomposed the problem at all.
+There are obviously many issues in this code, the main one being that the implementation is completely inlined without extracting any functions. This buries the main flow under technical details, making the code hard to understand, difficult to unit-test and troublesome to change. In short, we have failed to decompose the problem.
 
-Of course, we still need to implement those technical details somewhere. Those technical details should be hidden under suitable abstraction, so that we can achieve the goal of making the code read like a good story.
-
-I do not claim that this principle is invented by me or that it is anyhow revolutionary, but I do believe that it helps me in my day-to-day work as a software developer.
+I do not claim that this principle is invented by me or that it is anyhow revolutionary, but it helps me in my day-to-day work as a software developer and architect.
 
 ### Design for testability
 
-Another main design principle for good code is that the code should be easy-to-test. Easy-to-test code is easy-to-change and vice versa.
+Another main design principle for good code is that it should be easy to test. Easy-to-test code is easy to change and vice versa.
 
-Take the example from above and assume we make the code read like a good story:
+Take the example from above and assume we have make the main flow read like a good story:
 
 ```python
+# handler.py
 def process_recording(event, context):
     recording_id = parse_recording_id_from_event(event)
     recording = download_recording(recording_id)
@@ -136,6 +135,8 @@ def process_recording(event, context):
 Suppose that the `upload_spectrogram` function is implemented as follows:
 
 ```python
+# handler.py
+
 def upload_spectrogram(spectrogram: np.ndarray) -> None:
     # Convert to bytes
     spectrogram_bytes = BytesIO()
@@ -150,10 +151,12 @@ def upload_spectrogram(spectrogram: np.ndarray) -> None:
         # TODO Handle exception
 ```
 
-This implementation works, though it could still be refactored to be easier to read. The main problem with the implementation is though that is not easy to test. Writing a unit test for the function would require us to monkey-patch the call `s3_client = boto3.client('s3')` using `mock.patch()` decorator to replace the client with a mock implementation:
+The main problem with this implementation is that it is not easy enough to unit-test. We don't want to make calls to S3 APIs from our tests, so writing a unit test for the function requires us to monkey-patch the call `s3_client = boto3.client('s3')` using `mock.patch()` decorator to replace the client with a mock implementation:
 
 ```python
-@patch('your_module.boto3.client')
+# test_handler.py
+
+@patch('handler.boto3.client')
 def test_upload_spectrogram_uploads_to_s3(mock_boto3_client):
     mock_s3_client = Mock()
     mock_boto3_client.return_value = mock_s3_client
@@ -164,11 +167,13 @@ def test_upload_spectrogram_uploads_to_s3(mock_boto3_client):
     mock_s3_client.put_object.assert_called_once_with(...)
 ```
 
-I prefer to always avoid monkey-patching if at all possible. In my experience, monkey-patching is evil and should be avoided in almost all cases, with the rare exception of mocking out environment variables. Monkey-patching provides a quick escape hatch for bad software design. I have seen unit tests that require five patched functions to work. Working with this code almost made me rip the hair out of my head – all the dependencies to external systems were hidden in the codebase and it was very difficult to change anything.
+I do not like monkey-patching at all and I prefer to avoid it if possible (with the rare exception of mocking out environment variables). Monkey-patching is evil because it provides a quick escape hatch for bad (or missing) software design. I have seen unit tests that require five patched functions to work. Working with this code was very painful, because all the dependencies to external systems were hidden from plain sight, making it very difficult to change anything.
 
-We can avoid monkey-patching in our function by making the S3 dependency explicit:
+We can easily avoid monkey-patching in our function by making the S3 dependency explicit:
 
 ```python
+# handler.py
+
 def upload_spectrogram(spectrogram: np.ndarray, s3_client: Any) -> None:
     # Convert to bytes
     spectrogram_bytes = BytesIO()
@@ -182,9 +187,11 @@ def upload_spectrogram(spectrogram: np.ndarray, s3_client: Any) -> None:
         # TODO Handle exception
 ```
 
-Now anyone seeing (or calling) this function knows that it depends on S3 client, which should be mocked out in tests. Unit-testing this function now becomes trivial as we can simply replace `s3_client` call with a `MagicMock` in our unit tests:
+Now anyone reading (or calling) this function knows that it depends on S3 client, which should be mocked out in tests. Unit-testing the function becomes trivial as we can replace `s3_client` call with a `MagicMock` in our unit tests:
 
 ```python
+# test_handler.py
+
 def test_upload_spectogram():
   spectogram = make_spectrogram()
   s3_client = mock.MagicMock()
@@ -192,7 +199,9 @@ def test_upload_spectogram():
   s3_client.put_object.assert_called_once_with(...)
 ```
 
-It should be mentioned that AWS infrastructure can be easily "mocked out" in unit tests using the [Moto](https://docs.getmoto.org/en/latest/index.html) library. With the library, we can wrap our test function in a `@mock_aws` decorator and all calls to AWS are automatically mocked out. This is very helpful and we heavily rely on the Moto library to unit-test code that interacts on AWS infrastructure. Typical unit test written with Moto would then be something like:
+The disadvantage of making the dependencies explicit is that we need to pass them around the codebase, which can sometimes lead to problems of its own. However, I believe that the pros of explicit dependency passing far exceed the cons.
+
+It should be mentioned here that interactions with AWS infrastructure can easily be mocked out in unit tests using the [Moto](https://docs.getmoto.org/en/latest/index.html) library. Using Moto, we can wrap our test function in `@mock_aws` decorator and all calls to AWS are automatically mocked out. Typical unit test written with Moto would then be something like:
 
 ```python
 @pytest.fixture(scope="function")
@@ -215,7 +224,9 @@ def test_upload_spectogram(s3_client, s3_bucket):
   # Verify the contents
 ```
 
-Using Moto library does not, in my opinion, remove the need to make dependencies explicit. Explicit dependencies make the code easier to reason about and therefore easier to change and maintain.
+Here, we have created [pytest fixtures](https://docs.pytest.org/en/6.2.x/fixture.html) to pass mocked instances of S3 client and S3 bucket name to our test, making the dependencies explicit. Using Moto also helps us avoid testing implementation details: instead of asserting that a specific `put_object` call was made, we can simply read the object from mock S3 and verify that the expected object is found.
+
+Using Moto library does not remove the need to make dependencies explicit. Explicit dependencies make the code easier to reason about and therefore easier to change and maintain. So even when using Moto, I prefer to write code where the S3 client (or any similar storage client of our own) is passed as an explicit dependency to all the functions that depend on it.
 
 ### Raise exceptions
 

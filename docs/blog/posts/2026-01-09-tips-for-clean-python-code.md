@@ -230,6 +230,54 @@ Using Moto library does not remove the need to make dependencies explicit. Expli
 
 ### Raise exceptions
 
+A very common anti-pattern in code is to swallow exceptions instead of raising them. As an extreme example, see the code in the example above:
+
+```python
+# Update DynamoDB
+dynamodb = boto3.resource('dynamodb', region_name='eu-west-1')
+table = dynamodb.Table('recordings-metadata-prod')
+try:
+    table.update_item(Key={'recording_id': recording_id}, UpdateExpression='SET spectrogram_url = :url, processing_status = :status, updated_at = :timestamp', ExpressionAttributeValues={':url': f's3://recordings-bucket-prod/spectrograms/{recording_id}.npy', ':status': 'completed', ':timestamp': int(time.time())})
+except Exception as e:
+    print(f"ERROR updating DynamoDB: {str(e)}")
+```
+
+The code swallows the exception by printing the error and ignoring it, returning a successful response to the client. The code was not able to do its task (updating the metadata) but to the outside everything seems to working as expected.
+
+Swallowing exceptions like this is a bad idea, because it hides issues in the code and can lead to data corruption. In most cases, if the code cannot do what it's supposed to do, it should crash. The Pragmatic Programmer book summarizes this in [tip 38](https://pragprog.com/tips/):
+
+> **Crash Early**
+>
+> A dead program normally does a lot less damage than a crippled one.
+
+Crashinge arly makes the bad behaviour visible in alerts and monitoring, enabling the team to fix the issue. It also reduces the probability of the broken system harming itself or other systems by behaving unexpectedly.
+
+Unnecessary swallowing of exceptions is very common in code written by both developers and AI agents. I think this could be rooted in the misconception that production-grade code should handle exceptions gracefully instead of crashing.
+
+Crashing is the right thing to do when anything "unexpected" or "unacceptable" happens. What is considered "expected" or "acceptable" and how the application should handle unexpected situations depends on the context.
+
+When running an HTTP server, for example, the server code responsible for handling the client request should raise an exception if it cannot serve the request as expected. This exception can be handled gracefully in the error handling middleware, by logging the exception and returning 5xx response code (Internal Server Error). We often likely not want to crash the whole application, because that would prevent serving all requests. In this case, the team's alerting and monitoring should be setup to monitor for 5xx status codes.
+
+If our application comprises of multiple components and the failing component is not critical to keep the software functioning at acceptable level, we most likely do not want to crash the application but rather log a warning or increment some operational failure metric. Examples of "acceptable" failures include, for example, sending "nice-to-have" analytics events.
+
+When the code code is running in a client device such as mobile application, we rarely want to crash the application. If the server returns an internal server error to the client, the client will most likely consider that to be "expected" and gracefully tell the user that there was an error, without crashing the app. However, the client code should still use assertions to prevent unexpected situations and most likely crash if any of those fail. This is [tip 39](https://pragprog.com/tips/) from Pragmatic Programmer:
+
+> **Use Assertions to Prevent the Impossible**
+>
+> If it can’t happen, use assertions to ensure that it won’t. Assertions validate your assumptions. Use them to protect your code from an uncertain world.
+
+Finally, letting code crash does not mean that the code should not use try-catch blocks. There should be a try-catch block around every risky or long-running operation. Typical pattern is:
+
+```python
+try:
+    result = run_risky_operation(id)
+except:
+    logger.exception(f"Risky operation failed for id: {id}")
+    raise
+```
+
+This pattern transparently logs the failing operation by using `logger.exception`, which includes the error details in the logs when run inside a catch block. After logging, the code re-raises the exception (possibly converting the exception class to something more domain-specific) so that any upstream consumer can handle the exception as they see best.
+
 ### Avoid nesting
 
-### Avoid unnecessary classes
+### Avoid classes

@@ -4,13 +4,13 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 ## 2026
 
-**Children of Time** – Adrian Tchaikovsky :star:
-
-**The House of Suns** – Adrian Reynolds
+**A Clash of Clans** – George R. R. Martin
 
 **Raising Hare** – Chloe Dalton :star:
 
-**A Clash of Clans** – George R. R. Martin
+**The House of Suns** – Adrian Reynolds
+
+**Children of Time** – Adrian Tchaikovsky :star:
 
 ## 2025
 

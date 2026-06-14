@@ -12,6 +12,14 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Children of Time** – Adrian Tchaikovsky :star:
 
+**Project Hail Mary** – Andy Weir
+
+**The Elements of Marie Curie** – Dava Sobel
+
+**The Perfect Theory: A Century of Geniuses and the Battle Over General Relativity** – Pedro G. Ferreira
+
+**Dogs of War** – Adrian Tchaikovsky :star:
+
 ## 2025
 
 **A Game of Thrones** – George R. R. Martin

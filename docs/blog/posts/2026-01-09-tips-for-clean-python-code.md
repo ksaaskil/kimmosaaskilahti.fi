@@ -280,4 +280,49 @@ This pattern transparently logs the failing operation by using `logger.exception
 
 ### Avoid nesting
 
+Avoid [arrow code](https://blog.codinghorror.com/flattening-arrow-code/).
+
 ### Avoid classes
+
+Example: Abstraction for candidate search for ranking:
+
+```python
+class CandidateSearch(Protocol):
+    def __call__(
+        self,
+        query: str,
+        n_candidates: int,
+    ) -> CandidateSearchResult:
+        ...
+```
+
+```python
+# Bad: Unnecessary class for implementation
+
+class DefaultCandidateSearch:
+    def __init__(
+        self,
+        db_session: DatabaseSession
+    ):
+        self.db_session = db_session
+
+    def __call__(
+        self,
+        query: str,
+        n_candidates: int,
+    ) -> CandidateSearchResult:
+        ...
+```
+
+```python
+# Good: Use factory function
+
+def create_candidate_search(
+    db_session: DatabaseSession
+) -> CandidateSearch:
+  def candidate_search(
+        query: str,
+        n_candidates: int,
+  ) -> CandidateSearchResult:
+        ...
+```

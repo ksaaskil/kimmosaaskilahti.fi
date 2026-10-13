@@ -36,6 +36,8 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Dungeon Crawler Carl** – Matt Dinniman
 
+**Berta – Musakirja unelmoijille** – Sirja Mikkola
+
 ## 2025
 
 **A Game of Thrones** – George R. R. Martin

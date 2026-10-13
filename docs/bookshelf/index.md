@@ -20,6 +20,22 @@ I like to read books. Since 2022, I have kept track of which books I have read. 
 
 **Dogs of War** – Adrian Tchaikovsky :star:
 
+**Kunpa he pitäisivät minusta** – Aliisa Holkko
+
+**Remarkably Bright Creatures** – Shelby Van Pelt
+
+**Pitkä vuoro – Kuinka moderni orjuus juurtui Suomeen** – Paavo Teittinen :star:
+
+**The Will of the Many** – James Islington :star:
+
+**The Mercy of the Gods** – James S. A. Carey
+
+**The Faith of Beasts** – James S. A. Carey
+
+**Pakumatkalla** – Aino Huilaja
+
+**Dungeon Crawler Carl** – Matt Dinniman
+
 ## 2025
 
 **A Game of Thrones** – George R. R. Martin
